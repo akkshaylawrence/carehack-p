@@ -63,7 +63,7 @@ select {
 }
 
 .mform {
-   border-radius: 5px;
+   border-radius: 0px;
    padding: 20px 35px 35px 35px;
    min-width: 310px;
    max-width: 500px;
@@ -140,4 +140,10 @@ select {
    height: 50px;
    width: auto;
    padding-top: 10px;
+}
+
+@media screen and (min-width: 387px) {
+   .mform {
+      border-radius: 5px;
+   }
 }
