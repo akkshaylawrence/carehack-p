@@ -1,0 +1,47 @@
+.bg {
+   background-image: url('https://images.unsplash.com/photo-1461532257246-777de18cd58b?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=7acc1740ec4bfb32dfbfd2db288036cd');
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+   background-color: #999;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+/* line 3, ../sass/style.scss */
+
+body,
+input,
+button {
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 400;
+   font-size: 18px;
+   color: #ccc;
+}
+
+/* line 12, ../sass/style.scss */
+
+html {
+   background-color: #f5f5f5;
+   height: 100%;
+   display: table;
+   width: 100%;
+}
+
+/* line 19, ../sass/style.scss */
+
+body {
+   display: table-cell;
+   vertical-align: middle;
+}
+
+/* line 24, ../sass/style.scss */
+
+h1 {
+   text-transform: uppercase;
+   text-align: center;
+   margin: 0;
+   padding: 40px 0 20px;
+   margin-left: 50%;
+}
