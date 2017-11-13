@@ -1,0 +1,14 @@
+{
+  "presets": [
+    "env",
+    "stage-3"
+  ],
+  "ignore": [
+    "/node_modules/",
+    "/build-utils/",
+    "/dist/"
+  ],
+  "plugins": [
+    "transform-decorators-legacy"
+  ]
+}
