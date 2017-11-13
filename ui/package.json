@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "core-js": "^2.5.1",
+    "flatpickr": "^4.1.0",
     "uikit": "^3.0.0-beta.34",
     "velocity": "^0.7.2",
     "whatwg-fetch": "^2.0.3"

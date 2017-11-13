@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,300");
 @import-normalize;
-
 html.bg {
   background: -moz-linear-gradient(left, #74ebd5 0%, #acb6e5 100%);
   background: -webkit-linear-gradient(left, #74ebd5 0%, #acb6e5 100%);
@@ -34,14 +33,6 @@ select {
   border-radius: 5px !important;
 }
 
-/* .footer-bottom {
-   color: white;
-   position: absolute;
-   right: 0;
-   bottom: 0;
-   left: 0;
-} */
-
 .ftxt {
   padding: 3px 0px 3px 10px;
   margin-bottom: 0px;
@@ -70,29 +61,10 @@ select {
   filter: brightness(100%);
 }
 
-.nreg {
-  font-weight: 500;
-  border-radius: 5px;
-  letter-spacing: 0.5px;
-  border: none;
-  color: #6771e5;
-  background: #fff;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-  transition: all 0.22s;
-}
-
 .nreg:hover {
   color: #6771e5;
   background: #fff;
-  transform: translateY(-1px);
-  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
-}
-
-.nreg:active {
-  color: #6771e5;
-  background: #fff;
-  transform: translateY(1px);
-  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.11), 0 3px 6px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
 }
 
 .brand-logo {

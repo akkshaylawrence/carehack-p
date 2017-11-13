@@ -7,151 +7,109 @@
    <title>FindCare</title>
    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.34/css/uikit.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 
 <body>
-   <!-- <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-      <div class="uk-navbar-left">
-         <a class="uk-navbar-item uk-logo uk-margin-remove-bottom" href="index.html">
-            <img class="brand-logo" src="images/logo.png" alt="Phoenix">
-         </a>
-      </div>
-   </nav> -->
-   <div class="uk-section uk-padding">
-      <div class="uk-container">
-         <div uk-grid>
-            <div class="uk-width-1-2@m hero">
-               <a class="uk-logo" href="index.html">
-                  <img class="brand-logo" src="images/logo.png" alt="Phoenix">
-               </a>
-               <h1 class="herot uk-light uk-position-medium">Register or Book your appointment now.</h1>
-            </div>
-            <div class="uk-width-1-2@m">
-               <div class="mform uk-card centre uk-card-default uk-card-body">
-                  <div class="uk-hidden" uk-switcher="animation: uk-animation-fade">
-                     <button class="uk-button uk-width-1-1 uk-button-default" type="button">Item</button>
-                     <button class="uk-button uk-width-1-1 uk-button-default" type="button">Item</button>
-                  </div>
-                  <ul class="uk-switcher">
-                     <li>
-                        <h2>Book Appointment</h2>
-                        <p class="uk-text-meta">Book appponment to any doctor.</p>
-                        <hr class="uk-margin-small">
-                        <form class="uk-form-stacked">
-                           <div id="phone" class="uk-margin-small">
-                              <label class="uk-form-label" for="form-stacked-text">Phone Number</label>
-                              <div class="uk-inline uk-width-1-1">
-                                 <span class="uk-form-icon" uk-icon="icon: phone"></span>
-                                 <input id="phone" class="uk-input" type="text">
-                              </div>
-                           </div>
-                           <div class="uk-margin">
-                              <label class="uk-form-label" for="form-stacked-text">Select Department</label>
-                              <select class="uk-select">
-                                 <option>Cardiology</option>
-                                 <option>Gastroenterology</option>
-                                 <option>Gynecology</option>
-                                 <option>Neurology</option>
-                                 <option>Oncology</option>
-                                 <option>Orthopaedics</option>
-                                 <option>Ophthalmology</option>
-                              </select>
-                           </div>
-                           <div class="uk-margin">
-                              <label class="uk-form-label" for="form-stacked-text">Select Doctor</label>
-                              <select class="uk-select">
-                                 <option>Doctor 1</option>
-                                 <option>Doctor 2</option>
-                                 <option>Doctor 3</option>
-                                 <option>Doctor 4</option>
-                                 <option>Doctor 5</option>
-                                 <option>Doctor 6</option>
-                                 <option>Doctor 7</option>
-                              </select>
-                           </div>
-                           <div class="uk-margin-small">
-                              <label class="uk-form-label" for="form-stacked-text">Time</label>
-                              <div class="uk-grid-small" uk-grid>
-                                 <div class="uk-width-1-3">
-                                    <select class="uk-select">
-                                       <option>1</option>
-                                       <option>2</option>
-                                       <option>3</option>
-                                       <option>4</option>
-                                       <option>5</option>
-                                       <option>6</option>
-                                       <option>7</option>
-                                       <option>8</option>
-                                       <option>9</option>
-                                       <option>10</option>
-                                       <option>11</option>
-                                       <option>12</option>
-                                    </select>
-                                 </div>
-                                 <div class="uk-width-1-3">
-                                    <select class="uk-select">
-                                       <option>00</option>
-                                       <option>15</option>
-                                       <option>30</option>
-                                    </select>
-                                 </div>
-                                 <div class="uk-width-1-3">
-                                    <select class="uk-select">
-                                       <option>AM</option>
-                                       <option>PM</option>
-                                    </select>
-                                 </div>
-                              </div>
-                           </div>
-                           <hr>
-                           <div class="uk-margin-small">
-                              <button class="uk-button reg uk-button-primary uk-width-1-1">Book Appointment</button>
-                           </div>
-                           <div class="uk-margin-small">
-                              <button class="uk-button nreg uk-button-primary uk-width-1-1" uk-switcher-item="next">Not Registered?</button>
-                           </div>
-                        </form>
-                     </li>
-                     <li>
-                        <h2>Register</h2>
-                        <p class="uk-text-meta">Registration allows you to book appointments.</p>
-                        <hr class="uk-margin-small">
-                        <form class="uk-form-stacked">
-                           <div id="phone" class="uk-margin-small">
-                              <label class="uk-form-label" for="form-stacked-text">Phone Number</label>
-                              <div class="uk-inline uk-width-1-1">
-                                 <span class="uk-form-icon" uk-icon="icon: phone"></span>
-                                 <input id="phone" class="uk-input" type="text">
-                              </div>
-                              <label class="uk-form-label uk-text-right" for="form-stacked-text">
-                                 Enter OTP Below
-                              </label>
-                           </div>
-                           <div id="otp" class="uk-margin-small uk-margin-remove-top">
-                              <label class="uk-form-label" for="form-stacked-text">OTP</label>
-                              <div class="uk-inline uk-width-1-1">
-                                 <span class="uk-form-icon" uk-icon="icon: hashtag"></span>
-                                 <input class="uk-input" type="text">
-                              </div>
-                              <label class="uk-form-label uk-text-right" for="form-stacked-text">
-                                 <a class="uk-link-reset" href="">Resend?</a>
-                              </label>
-                           </div>
-                           <div class="uk-margin-small">
-                              <button class="uk-button reg uk-button-primary uk-width-1-1">Register</button>
-                           </div>
-                           <div class="uk-margin-small">
-                              <button class="uk-button uk-hidden nreg uk-button-primary uk-width-1-1">Book Appointment</button>
-                           </div>
-                        </form>
-                     </li>
-                  </ul>
-                  </form>
+<div class="uk-section uk-padding">
+   <div class="uk-container">
+      <div uk-grid>
+         <div class="uk-width-1-2@m hero">
+            <a class="uk-logo" href="index.html">
+               <img class="brand-logo" src="images/logo.png" alt="Phoenix">
+            </a>
+            <h1 class="herot uk-light uk-position-medium">Register or Book your appointment now.</h1>
+         </div>
+         <div class="uk-width-1-2@m">
+            <div class="mform uk-card uk-card-small centre uk-card-default uk-card-body">
+               <div class="uk-hidden" uk-switcher="animation: uk-animation-fade">
+                  <button class="uk-button uk-width-1-1 uk-button-default" type="button">Item</button>
+                  <button class="uk-button uk-width-1-1 uk-button-default" type="button">Item</button>
                </div>
+               <ul class="uk-switcher">
+                  <li>
+                     <h2 class="uk-padding-small uk-padding-remove-bottom uk-padding-remove-left">Book Appointment</h2>
+                     <p class="uk-text-meta">Book appponment to any doctor.</p>
+                     <hr class="uk-margin-small">
+                     <form class="uk-form-stacked">
+                        <div id="phone" class="uk-margin-small">
+                           <label class="uk-form-label" for="form-stacked-text">Phone Number</label>
+                           <div class="uk-inline uk-width-1-1">
+                              <span class="uk-form-icon" uk-icon="icon: phone"></span>
+                              <input id="phone" class="uk-input" type="text" placeholder="eg: 9961464050">
+                           </div>
+                        </div>
+                        <div class="uk-margin">
+                           <label class="uk-form-label" for="form-stacked-text">Select Department</label>
+                           <select id="sectionSel" class="uk-select">
+                           </select>
+                        </div>
+                        <div class="uk-margin">
+                           <label class="uk-form-label" for="form-stacked-text">Select Doctor</label>
+                           <select id="serviceSel" class="uk-select">
+                           </select>
+                        </div>
+                        <div class="uk-margin-small">
+                           <label class="uk-form-label" for="form-stacked-text">Date</label>
+                           <div class="uk-inline uk-width-1-1">
+                              <span class="uk-form-icon" uk-icon="icon: calendar"></span>
+                              <input class="uk-input" id="datepicker" placeholder="dd-mm-yyyy" />
+                           </div>
+                        </div>
+                        <div class="uk-margin-small">
+                           <label class="uk-form-label" for="form-stacked-text">Time</label>
+                           <div class="uk-inline uk-width-1-1">
+                              <span class="uk-form-icon" uk-icon="icon: clock"></span>
+                              <input class="uk-input" id="timepicker" placeholder="HH:mm" />
+                           </div>
+                        </div>
+                        <hr>
+                        <div class="uk-margin-small">
+                           <button class="uk-button reg uk-button-primary uk-width-1-1">Book Appointment</button>
+                        </div>
+                        <button class="uk-button-link nreg uk-button-primary uk-width-1-1" uk-switcher-item="next">Not Registered?</button>
+                     </form>
+                  </li>
+                  <li>
+                     <h2>Register</h2>
+                     <p class="uk-text-meta">Registration allows you to book appointments.</p>
+                     <hr class="uk-margin-small">
+                     <form class="uk-form-stacked">
+                        <div id="phone" class="uk-margin-small">
+                           <label class="uk-form-label" for="form-stacked-text">Phone Number</label>
+                           <div class="uk-inline uk-width-1-1">
+                              <span class="uk-form-icon" uk-icon="icon: phone"></span>
+                              <input id="phone" class="uk-input" type="text">
+                           </div>
+                           <label class="uk-form-label uk-text-right" for="form-stacked-text">
+                              Enter OTP Below
+                           </label>
+                        </div>
+                        <div id="otp" class="uk-margin-small uk-margin-remove-top">
+                           <label class="uk-form-label" for="form-stacked-text">OTP</label>
+                           <div class="uk-inline uk-width-1-1">
+                              <span class="uk-form-icon" uk-icon="icon: hashtag"></span>
+                              <input class="uk-input" type="text">
+                           </div>
+                           <label class="uk-form-label uk-text-right" for="form-stacked-text">
+                              <a class="uk-link-reset" href="">Resend?</a>
+                           </label>
+                        </div>
+                        <div class="uk-margin-small">
+                           <button class="uk-button reg uk-button-primary uk-width-1-1">Register</button>
+                        </div>
+                        <div class="uk-margin-small">
+                           <button class="uk-button uk-hidden nreg uk-button-primary uk-width-1-1">Book Appointment</button>
+                        </div>
+                     </form>
+                  </li>
+               </ul>
+               </form>
             </div>
          </div>
       </div>
    </div>
-  </body>
+</div>
+</body>
 
 </html>
