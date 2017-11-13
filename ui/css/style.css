@@ -1,19 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,300');
-html,
-body {
-   height: 100%;
-}
-
-body.bg {
-   background-image: url('https://images.unsplash.com/photo-1461532257246-777de18cd58b?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=7acc1740ec4bfb32dfbfd2db288036cd');
-   background-position: center center;
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-   background-color: #999;
+html.bg {
+   background: -moz-linear-gradient(left, #74ebd5 0%, #ACB6E5 100%);
+   background: -webkit-linear-gradient(left, #74ebd5 0%, #ACB6E5 100%);
+   background: linear-gradient(to right, #74ebd5 0%, #ACB6E5 100%);
 }
 
 input,
@@ -56,6 +45,7 @@ select {
    margin-bottom: 0px;
    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
+
 .reg {
    font-weight: 500;
    border-radius: 5px;
@@ -128,12 +118,23 @@ nav {
 
 .mform {
    border-radius: 5px;
-   min-width: 310px;
    max-width: 400px;
-   max-height: 600px;
-   -webkit-box-shadow: 29px 29px 64px -21px rgba(0, 0, 0, 0.63);
-   -moz-box-shadow: 29px 29px 64px -21px rgba(0, 0, 0, 0.63);
-   box-shadow: 29px 29px 64px -21px rgba(0, 0, 0, 0.63);
+   margin-bottom: 10px;
+}
+
+.mform:before {
+   content: '';
+   width: 100%;
+   height: .5rem;
+   top: 0;
+   left: 0;
+   background: -moz-linear-gradient(left, #00F260 0%, #0575E6 100%);
+   background: -webkit-linear-gradient(left, #00F260 0%, #0575E6 100%);
+   background: linear-gradient(to right, #00F260 0%, #0575E6 100%);
+   display: block;
+   position: absolute;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
 }
 
 .uk-form-label {
@@ -153,7 +154,7 @@ nav {
    margin-right: auto;
 }
 
-.uk-form-label.error{
+.uk-form-label.error {
    color: red;
 }
 
