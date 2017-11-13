@@ -8,7 +8,9 @@ body {
    background-image: url('https://images.unsplash.com/photo-1461532257246-777de18cd58b?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=7acc1740ec4bfb32dfbfd2db288036cd');
    background-position: center center;
    background-repeat: no-repeat;
-   background-attachment: fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
    background-size: cover;
    background-color: #999;
 }
@@ -54,92 +56,9 @@ select {
    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.mform {
-   border-radius: 0px;
-   padding: 20px 35px 35px 35px;
-   min-width: 310px;
-   max-width: 500px;
-   -webkit-box-shadow: 29px 29px 64px -21px rgba(0, 0, 0, 0.63);
-   -moz-box-shadow: 29px 29px 64px -21px rgba(0, 0, 0, 0.63);
-   box-shadow: 29px 29px 64px -21px rgba(0, 0, 0, 0.63);
+nav {
+   height: 60px;
 }
-
-.uk-form-label {
-   padding-left: 3px;
-}
-
-.uk-form-label.uk-text-right {
-   font-size: 12px;
-   color: rgb(90, 90, 248);
-   padding-right: 20px;
-   margin-top: 1px;
-}
-
-/* Use thi to hide and show otp field */
-
-#otp {
-   /* display: none; */
-}
-
-.reg {
-   font-weight: 500;
-   border-radius: 5px;
-   letter-spacing: .5px;
-   border: none;
-   background: #6771E5;
-   box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
-   transition: all .22s;
-}
-
-.reg:hover {
-   transform: translateY(-1px);
-   box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
-   filter: brightness(130%);
-}
-
-.reg:active {
-   transform: translateY(1px);
-   box-shadow: 0 7px 14px rgba(50, 50, 93, .11), 0 3px 6px rgba(0, 0, 0, .08);
-   filter: brightness(100%);
-}
-
-.nreg {
-   font-weight: 500;
-   border-radius: 5px;
-   letter-spacing: .5px;
-   border: none;
-   color: #6771E5;
-   background: #fff;
-   box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
-   transition: all .22s;
-}
-
-.nreg:hover {
-   color: #6771E5;
-   background: #fff;
-   transform: translateY(-1px);
-   box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
-}
-
-.nreg:active {
-   color: #6771E5;
-   background: #fff;
-   transform: translateY(1px);
-   box-shadow: 0 7px 14px rgba(50, 50, 93, .11), 0 3px 6px rgba(0, 0, 0, .08);
-}
-
-.brand-logo {
-   height: 30px;
-   width: auto;
-}
-nav{
-   height: 50px;
-}
-@media screen and (min-width: 387px) {
-   .mform {
-      border-radius: 5px;
-   }
-}}
 
 .footer-bottom {
    color: white;
@@ -149,20 +68,19 @@ nav{
    left: 0;
 }
 
-.ftxt {
-   padding: 3px 0px 3px 10px;
-   margin-bottom: 0px;
-   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
 .mform {
    border-radius: 0px;
-   padding: 20px 35px 35px 35px;
    min-width: 310px;
    max-width: 500px;
    -webkit-box-shadow: 29px 29px 64px -21px rgba(0, 0, 0, 0.63);
    -moz-box-shadow: 29px 29px 64px -21px rgba(0, 0, 0, 0.63);
    box-shadow: 29px 29px 64px -21px rgba(0, 0, 0, 0.63);
+}
+
+@media screen and (min-width: 387px) {
+   .mform {
+      border-radius: 5px;
+   }
 }
 
 .uk-form-label {
@@ -176,67 +94,29 @@ nav{
    margin-top: 1px;
 }
 
-/* Use thi to hide and show otp field */
-
-#otp {
-   /* display: none; */
-}
-
-.reg {
-   font-weight: 500;
-   border-radius: 5px;
-   letter-spacing: .5px;
-   border: none;
-   background: #6771E5;
-   box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
-   transition: all .22s;
-}
-
-.reg:hover {
-   transform: translateY(-1px);
-   box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
-   filter: brightness(130%);
-}
-
-.reg:active {
-   transform: translateY(1px);
-   box-shadow: 0 7px 14px rgba(50, 50, 93, .11), 0 3px 6px rgba(0, 0, 0, .08);
-   filter: brightness(100%);
-}
-
-.nreg {
-   font-weight: 500;
-   border-radius: 5px;
-   letter-spacing: .5px;
-   border: none;
-   color: #6771E5;
-   background: #fff;
-   box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
-   transition: all .22s;
-}
-
-.nreg:hover {
-   color: #6771E5;
-   background: #fff;
-   transform: translateY(-1px);
-   box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
-}
-
-.nreg:active {
-   color: #6771E5;
-   background: #fff;
-   transform: translateY(1px);
-   box-shadow: 0 7px 14px rgba(50, 50, 93, .11), 0 3px 6px rgba(0, 0, 0, .08);
-}
-
 .brand-logo {
-   height: 50px;
+   height: 20px;
    width: auto;
-   padding-top: 10px;
 }
 
 @media screen and (min-width: 387px) {
-   .mform {
-      border-radius: 5px;
+   .brand-logo {
+      height: 30px;
+      width: auto;
+   }
+   nav {
+      height: 60px;
+      padding-bottom: 10px;
+   }
+}
+
+@media screen and (min-width: 640px) {
+   .brand-logo {
+      height: 35px;
+      width: auto;
+   }
+   nav {
+      height: 60px;
+      padding-bottom: 20px;
    }
 }
