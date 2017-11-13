@@ -4,10 +4,11 @@ body {
    height: 100%;
 }
 
-.bg {
+body.bg {
    background-image: url('https://images.unsplash.com/photo-1461532257246-777de18cd58b?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=7acc1740ec4bfb32dfbfd2db288036cd');
    background-position: center center;
    background-repeat: no-repeat;
+   background-attachment: fixed;
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
@@ -54,16 +55,6 @@ select {
    padding: 3px 0px 3px 10px;
    margin-bottom: 0px;
    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.mform {
-   border-radius: 0px;
-   padding: 20px 35px 35px 35px;
-   min-width: 310px;
-   max-width: 500px;
-   -webkit-box-shadow: 29px 29px 64px -21px rgba(0, 0, 0, 0.63);
-   -moz-box-shadow: 29px 29px 64px -21px rgba(0, 0, 0, 0.63);
-   box-shadow: 29px 29px 64px -21px rgba(0, 0, 0, 0.63);
 }
 .reg {
    font-weight: 500;
@@ -121,13 +112,13 @@ nav {
    height: 60px;
 }
 
-/* .footer-bottom {
+.footer-bottom {
    color: white;
    position: absolute;
    right: 0;
    bottom: 0;
    left: 0;
-} */
+}
 
 .ftxt {
    padding: 3px 0px 3px 10px;
@@ -136,18 +127,13 @@ nav {
 }
 
 .mform {
-   border-radius: 0px;
+   border-radius: 5px;
    min-width: 310px;
-   max-width: 500px;
+   max-width: 400px;
+   max-height: 600px;
    -webkit-box-shadow: 29px 29px 64px -21px rgba(0, 0, 0, 0.63);
    -moz-box-shadow: 29px 29px 64px -21px rgba(0, 0, 0, 0.63);
    box-shadow: 29px 29px 64px -21px rgba(0, 0, 0, 0.63);
-}
-
-@media screen and (min-width: 387px) {
-   .mform {
-      border-radius: 5px;
-   }
 }
 
 .uk-form-label {
@@ -161,9 +147,20 @@ nav {
    margin-top: 1px;
 }
 
+.centre {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
 .brand-logo {
    height: 20px;
    width: auto;
+}
+
+.herot {
+   text-align: center;
+   font-size: 25px;
 }
 
 @media screen and (min-width: 387px) {
@@ -185,5 +182,13 @@ nav {
    nav {
       height: 60px;
       padding-bottom: 20px;
+   }
+}
+
+@media screen and (min-width:960px) {
+   .herot {
+      text-align: left;
+      padding-top: 100px;
+      font-size: 50px;
    }
 }
