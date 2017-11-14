@@ -47,3 +47,5 @@ class Register extends React.Component {
     </li>;
   }
 }
+
+export default Register;
