@@ -41,46 +41,10 @@ flatpickr("#timepicker", {
   defaultHour: 12,
   defaultMinute: 0
 });
-
 var sectionObj = {
-  Facials: [
-    "Plainum",
-    "Gold",
-    "Eschborn",
-    "Diamond",
-    "Pearl",
-    "Fruit",
-    "Kesar",
-    "Choco",
-    "Anti Acne Pimple",
-    "Whitening",
-    "Whitening glow",
-    "Oxy glow",
-    "Natural"
-  ],
-  "Hair Cuts": [
-    "Kids cut",
-    "Straight Cut",
-    "Normal U",
-    "Deep U",
-    "Step Cut",
-    "Laser Cut",
-    "Feather cut",
-    "Mushroom cut",
-    "Bluts cut",
-    "Layer cut"
-  ],
-  "Hair Treatments": [
-    "Straitening",
-    "Soothening",
-    "Coloring",
-    "Henna",
-    "Shampoo",
-    "Rebounding",
-    "Volumizing",
-    "Hair Spa",
-    "Drandru  Treatment"
-  ],
+  Facials: ["Plainum", "Gold", "Eschborn", "Diamond", "Pearl", "Fruit"],
+  "Hair Cuts": ["Kids cut", "Straight Cut", "Normal U", "Deep U", "Step Cut"],
+  "Hair Treatments": ["Straitening", "Soothening", "Coloring", "Henna"],
   Bridal: ["Standard", "Express", "Deluxe", "Luxuary"],
   Others: ["Waxing", "Pedicure", "Manicure", "Wink & Pout care"]
 };

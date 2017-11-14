@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="bg">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>FindCare</title>
+   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.34/css/uikit.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+   <nav class="uk-navbar-container" uk-navbar>
+      <div class="uk-navbar-left">
+         <a class="uk-navbar-item uk-logo uk-margin-remove-bottom" href="index.html">
+            <img class="brand-logo" src="images/blogo.svg" alt="Biophoton">
+         </a>
+      </div>
+      <div class="uk-navbar-right">
+         <a class="uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon href="#" type="button" uk-toggle="target: #offcanvas-push"></a>
+         <div class="uk-container uk-visible@m">
+            <ul class="uk-navbar-nav">
+               <li class="uk-button uk-button-text">
+                  <a class="uk-margin-remove" href="index.html">Home</a>
+               </li>
+               <li class="uk-button uk-button-text">
+                  <a class="uk-margin-remove" href="#">Products</a>
+               </li>
+               <li class="uk-button uk-button-text">
+                  <a class="uk-margin-remove" href="#">Research</a>
+               </li>
+               <li class="uk-button uk-button-text">
+                  <a class="uk-margin-remove" href="about.html">About Us</a>
+               </li>
+               <li class="uk-button uk-button-text">
+                  <a class="uk-margin-remove" href="#">Contact</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div id="offcanvas-push" uk-offcanvas="flip: true; overlay: true">
+         <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+               <li class="uk-nav-header" onTranslate="global.menu.title">Menu</li>
+               <li class="uk-divider-icon"></li>
+               <li class="uk-parent">
+                  <a href="index.html">Home</a>
+               </li>
+               <li class="uk-parent">
+                  <a href="about.html">Products</a>
+               </li>
+               <li class="uk-parent">
+                  <a href="about.html">Research</a>
+               </li>
+               <li class="uk-parent">
+                  <a href="about.html">About Us</a>
+               </li>
+               <li class="uk-parent">
+                  <a href="services.html">Contact</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+   <div class="uk-section uk-padding-remove">
+      <div uk-slideshow="ratio: 7:3.6">
+         <ul class="uk-slideshow-items">
+            <li>
+               <img src="https://images.unsplash.com/photo-1461532257246-777de18cd58b?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=7acc1740ec4bfb32dfbfd2db288036cd"
+                  alt="" uk-cover>
+               <div class="herotextpar uk-position-left uk-position-medium uk-position-center-left uk-text-middle uk-text-left">
+                  <div class="uk-width-1-2@s">
+                     <p class="uk-margin-remove herotext">We bring together Electronics, Photonics and Biology experts under a single roof to realise socially
+                        relevant products.</p>
+                  </div>
+               </div>
+            </li>
+         </ul>
+      </div>
+   </div>
+   <div class="uk-section uk-padding-remove">
+      <div class="uk-container">
+         <div class="uk-child-width-1-2@s uk-grid-collapse uk-text-center uk-padding-small uk-padding-remove-horizontal" uk-grid>
+            <div class="uk-width-1-2@m">
+               <div class="uk-tile uk-tile-muted">
+                  <img class="uk-align-center" style="margin-bottom:2px;" src="images/science.svg" width="70" height="70" uk-svg>
+                  <p class="uk-text-lead uk-margin-remove-top">Biophoton Technologies is all about bringing affordable, brilliant and realistic solutions and ideas using
+                     over 200 man years of strong credentials and solid field experience.</p>
+               </div>
+            </div>
+            <div class="uk-width-1-2@m">
+               <div class="uk-tile uk-tile-muted">
+                  <img class="uk-align-center" style="margin-bottom:2px;" src="images/ppl.svg" width="70" height="70" uk-svg>
+                  <p class="uk-text-lead uk-margin-remove-top">We have an array of outstanding scientists from research organizations, business professionals, practicing
+                     doctors, academicians and a highly motivated work force to get the work done.</p>
+               </div>
+            </div>
+            <div class="uk-width-1-1@m">
+               <h2 class="uk-heading-primary uk-padding-small uk-padding-remove-horizontal uk-text-center">For Biophoton, expertise is the beginning of innovation. And innovation the solution to bring about change.</h2>
+            </div>
+            <div class="uk-width-expand@m">
+               <div class="uk-tile uk-tile-muted">
+                  <p class="uk-text-lead">In order to stay connected with the technological advancements and research ideas, Biophoton has associated
+                     with leading academic institutes and research organizations.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="uk-section uk-padding-remove uk-section-default footer">
+      <div class="uk-container">
+         <div class="uk-grid">
+            <div class="uk-width-1-2@m">
+               <address>
+                  <div class="uk-grid-collapse" uk-grid>
+                     <div class="uk-width-1-2@s uk-padding-small">
+                        <h5 class="uk-heading-line uk-light uk-padding-small uk-margin-remove-vertical uk-padding-remove-vertical">Registered Office</h5>
+                        <p class="uk-padding-small uk-text-left uk-text-small uk-margin-remove-vertical uk-padding-remove-vertical">
+                           <a class="uk-link-reset uk-text-break" href="https://goo.gl/maps/LKWtCfsvcaE2">Biophoton Technologies Pvt. Ltd, 34/790B, AARUSHI,Beena Anjumana Road, Edappally, Kochi - 682
+                              024
+                           </a>
+                        </p>
+                     </div>
+                     <div class="uk-width-1-2@s uk-padding-small uk-margin-remove-top">
+                        <h5 class="uk-heading-line uk-light uk-padding-small uk-margin-remove-vertical uk-padding-remove-vertical">In house R & D Unit</h5>
+                        <p class="uk-padding-small uk-text-left uk-text-small uk-margin-remove-vertical uk-padding-remove-vertical">
+                           <a class="uk-link-reset uk-text-break" href="https://goo.gl/maps/LKWtCfsvcaE2">Kinfra Hitech Park, Opposite Govt Medical College, H.M.T Colony P.O, Kalamassery, Kochi, Kerala,
+                              India - 683503
+                           </a>
+                        </p>
+                        <p class="uk-padding-small uk-text-left uk-text-small uk-margin-remove-vertical uk-padding-remove-vertical">+91 484 2110795</p>
+                     </div>
+                  </div>
+               </address>
+            </div>
+            <div class="uk-width-1-2@m uk-padding-small">
+               <p class="uk-padding-small uk-text-left uk-text-small uk-margin-remove-vertical uk-padding-remove-vertical">
+                  <a href="mailto:drkrsnair@gmail.com?Subject=Hello%20Sir" target="_top">Email: drkrsnair@gmail.com</a>
+               </p>
+               <p class="uk-padding-small uk-text-left uk-text-small uk-margin-remove-vertical uk-padding-remove-vertical">Phone: 8086385385
+               </p </div>
+            </div>
+         </div>
+         <div class="footer-bottom">
+            <p class="uk-text-center uk-text-middle uk-text-small uk-padding-small uk-padding-remove-vertical uk-margin-remove-bottom">Made
+               <span class="uk-icon uk-icon-image" style="margin-bottom:5px;background-image: url(images/atag.svg);"></span>
+               <a class="uk-link-reset" href="https://www.ancatag.com">Ancatag</a>
+            </p>
+         </div>
+      </div>
+</body>
+
+</html>
