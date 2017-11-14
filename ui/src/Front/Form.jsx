@@ -1,5 +1,6 @@
 import React from "react";
 import Login from "./Login";
+import Register from "./Register";
 
 function Form() {
   return (
@@ -26,7 +27,7 @@ function Form() {
           </button>
         </div>
         <ul className="uk-switcher">
-          <Login />
+          <Register />
         </ul>
       </div>
     </div>
