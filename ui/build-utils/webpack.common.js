@@ -4,7 +4,8 @@ const htmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
   entry: {
-    app: "./src/index.js"
+    app: "./src/index.js",
+    vendor: ["react", "react-dom", "react-router", "react-router-dom"]
   },
   output: {
     filename: "[chunkhash].bundle.js",
