@@ -38,7 +38,7 @@ module.exports = {
         })
       },
       {
-        test: /.jsq?$/,
+        test: /.jsx?$/,
         use: {
           loader: "babel-loader"
         },
