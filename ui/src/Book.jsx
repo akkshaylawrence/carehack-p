@@ -1,6 +1,25 @@
-import Render from "react";
+import React from "react";
+import flatpickr from "flatpickr";
+import uikit from "uikit";
 
 class Book extends React.Component {
+  componentDidMount() {
+    flatpickr("#datepicker", {
+      enableTime: false,
+      minDate: "today",
+      dateFormat: "d/m/Y",
+      maxDate: new Date().fp_incr(60)
+    });
+    flatpickr("#timepicker", {
+      enableTime: true,
+      noCalendar: true,
+      enableSeconds: false,
+      time_24hr: false,
+      dateFormat: "H:i",
+      defaultHour: 12,
+      defaultMinute: 0
+    });
+  }
   render() {
     return (
       <li>
@@ -11,7 +30,7 @@ class Book extends React.Component {
         <hr className="uk-margin-small" />
         <form className="uk-form-stacked">
           <div id="phone" className="uk-margin-small">
-            <label className="uk-form-label" for="form-stacked-text">
+            <label className="uk-form-label" htmlFor="form-stacked-text">
               Phone Number
             </label>
             <div className="uk-inline uk-width-1-1">
@@ -25,19 +44,19 @@ class Book extends React.Component {
             </div>
           </div>
           <div className="uk-margin">
-            <label className="uk-form-label" for="form-stacked-text">
+            <label className="uk-form-label" htmlFor="form-stacked-text">
               Select Department
             </label>
             <select id="sectionSel" className="uk-select" />
           </div>
           <div className="uk-margin">
-            <label className="uk-form-label" for="form-stacked-text">
+            <label className="uk-form-label" htmlFor="form-stacked-text">
               Select Doctor
             </label>
             <select id="serviceSel" className="uk-select" />
           </div>
           <div className="uk-margin-small">
-            <label className="uk-form-label" for="form-stacked-text">
+            <label className="uk-form-label" htmlFor="form-stacked-text">
               Date
             </label>
             <div className="uk-inline uk-width-1-1">
@@ -50,7 +69,7 @@ class Book extends React.Component {
             </div>
           </div>
           <div className="uk-margin-small">
-            <label className="uk-form-label" for="form-stacked-text">
+            <label className="uk-form-label" htmlFor="form-stacked-text">
               Time
             </label>
             <div className="uk-inline uk-width-1-1">
@@ -67,7 +86,7 @@ class Book extends React.Component {
               Continue
             </button>
           </div>
-          <div className="uk-child-width-1-2" uk-grid>
+          <div className="uk-child-width-1-2" data-uk-grid>
             <div>
               <button
                 className="uk-button-link nreg uk-button-primary uk-width-1-1"

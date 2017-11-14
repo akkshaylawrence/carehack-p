@@ -53,6 +53,7 @@
   "dependencies": {
     "babel-preset-react": "^6.24.1",
     "core-js": "^2.5.1",
+    "flatpickr": "^4.1.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-router": "^4.2.0",

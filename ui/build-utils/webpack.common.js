@@ -24,10 +24,6 @@ const config = {
             options: {
               limit: 1000
             }
-          },
-          {
-            loader:
-              "image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false"
           }
         ]
       },
