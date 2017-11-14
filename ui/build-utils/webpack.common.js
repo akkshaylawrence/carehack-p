@@ -4,14 +4,14 @@ const htmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
   entry: {
-    app: "./src/js/app.js"
+    app: "./src/index.js"
   },
   output: {
     filename: "[chunkhash].bundle.js",
     path: commonPaths.outputPath
   },
   resolve: {
-    extensions: [".js"]
+    extensions: [".js", ".jsx"]
   },
   module: {
     rules: [
@@ -39,7 +39,7 @@ const config = {
   plugins: [
     new webpack.ProgressPlugin(),
     new htmlWebpackPlugin({
-      template: "src/index.html"
+      template: "public/index.html"
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: "vendor",
