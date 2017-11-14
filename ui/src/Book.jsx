@@ -1,5 +1,6 @@
 import React from "react";
 import flatpickr from "flatpickr";
+import "flatpickr/dist/flatpickr.css";
 import uikit from "uikit";
 
 class Book extends React.Component {
