@@ -1,4 +1,5 @@
 import React from "react";
+import Login from "./Login";
 
 function Form() {
   return (
@@ -24,7 +25,9 @@ function Form() {
             Item
           </button>
         </div>
-        <ul className="uk-switcher" />
+        <ul className="uk-switcher">
+          <Login />
+        </ul>
       </div>
     </div>
   );
