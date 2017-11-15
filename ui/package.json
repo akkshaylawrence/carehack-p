@@ -51,6 +51,7 @@
     "workbox-webpack-plugin": "^2.0.1"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "babel-preset-react": "^6.24.1",
     "core-js": "^2.5.1",
     "flatpickr": "^4.1.0",

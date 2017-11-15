@@ -1,6 +1,6 @@
 import React from "react";
 
-class New extends React.Component {
+class Sidebar extends React.Component {
   render() {
     return (
       <div>
@@ -13,16 +13,20 @@ class New extends React.Component {
           <hr />
           <dl className="uk-description-list">
             <dt>
-              <span uk-icon="icon: calendar" /> 5th, November 2017
+              <span uk-icon="icon: calendar" />
+              <span>5th, November 2017</span>
             </dt>
             <dd>
-              <span uk-icon="icon: user" /> Dr. Unnikrishnan
+              <span uk-icon="icon: user" />
+              <span>Dr. Unnikrishnan</span>
             </dd>
             <dt>
-              <span uk-icon="icon: calendar" /> 7th, December 2017
+              <span uk-icon="icon: calendar" />
+              <span>7th, December 2017</span>
             </dt>
             <dd>
-              <span uk-icon="icon: user" /> Dr. Unnikrishnan
+              <span uk-icon="icon: user" />
+              <span>Dr. Unnikrishnan</span>
             </dd>
           </dl>
         </div>
@@ -30,4 +34,4 @@ class New extends React.Component {
     );
   }
 }
-export default New;
+export default Sidebar;

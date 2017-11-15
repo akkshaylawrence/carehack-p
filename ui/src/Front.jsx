@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./logo.png";
 import Heading from "./Front/Heading";
+import { Route } from "react-router-dom";
 import Form from "./Front/Form";
 
 class Front extends React.Component {

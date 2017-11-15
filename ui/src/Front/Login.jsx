@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Login extends React.Component {
   render() {
@@ -30,11 +31,8 @@ class Login extends React.Component {
             <button className="uk-button reg uk-button-primary uk-width-1-1">
               Login and Book
             </button>
-            <button
-              className="uk-button-link nreg uk-button-primary"
-              uk-switcher-item="0"
-            >
-              Back
+            <button className="uk-button-link nreg uk-button-primary">
+              <Link to="/">Back</Link>
             </button>
           </div>
         </form>

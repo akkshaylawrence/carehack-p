@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Front from "./Front";
 import Profile from "./Profile";
 
@@ -8,8 +8,10 @@ class App extends React.Component {
     return (
       <Router>
         <div>
-          {/* <Profile /> */}
-          <Front />
+          <Switch>
+            <Route path="/profile" component={Profile} />
+            <Route path="/" component={Front} />
+          </Switch>
         </div>
       </Router>
     );

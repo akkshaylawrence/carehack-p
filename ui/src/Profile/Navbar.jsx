@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../logo.png";
+import { Link } from "react-router-dom";
 
 class Navbar extends React.Component {
   render() {
@@ -7,12 +8,12 @@ class Navbar extends React.Component {
       <div>
         <nav className="uk-navbar-container" data-uk-navbar>
           <div className="uk-navbar-left">
-            <a
+            <Link
               className="uk-navbar-item uk-logo uk-margin-remove-bottom"
-              href="index.html"
+              to="/"
             >
               <img className="brand-logo" src={logo} alt="FindCare" />
-            </a>
+            </Link>
           </div>
           <div className="uk-navbar-right uk-visible@s">
             <div className="uk-container uk-visible">

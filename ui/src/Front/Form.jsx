@@ -1,4 +1,5 @@
 import React from "react";
+import { Route } from "react-router-dom";
 import Login from "./Login";
 import Register from "./Register";
 import Book from "./Book";
@@ -7,35 +8,15 @@ function Form() {
   return (
     <div className="uk-width-1-2@m">
       <div className="mform uk-card uk-card-small centre uk-card-default uk-card-body">
-        <div className="uk-hidden" uk-switcher="animation: uk-animation-fade">
-          <button
-            className="uk-button uk-width-1-1 uk-button-default"
-            type="button"
-          >
-            Item
-          </button>
-          <button
-            className="uk-button uk-width-1-1 uk-button-default"
-            type="button"
-          >
-            Item
-          </button>
-          <button
-            className="uk-button uk-width-1-1 uk-button-default"
-            type="button"
-          >
-            Item
-          </button>
-        </div>
-        <ul className="uk-switcher">
+        <ul>
           <li>
-            <Book />
+            <Route exact path="/" component={Book} />
           </li>
           <li>
-            <Login />
+            <Route path="/login" component={Login} />
           </li>
           <li>
-            <Register />
+            <Route path="/register" component={Register} />
           </li>
         </ul>
       </div>

@@ -3,6 +3,7 @@ import flatpickr from "flatpickr";
 import Flatpickr from "react-flatpickr";
 import uikit from "uikit";
 import app from "../js/app";
+import { Link } from "react-router-dom";
 import "flatpickr/dist/themes/material_green.css";
 
 class Book extends React.Component {
@@ -82,19 +83,13 @@ class Book extends React.Component {
           </div>
           <div className="uk-child-width-1-2" data-uk-grid>
             <div>
-              <button
-                className="uk-button-link nreg uk-button-primary uk-width-1-1"
-                uk-switcher-item="next"
-              >
-                Login
+              <button className="uk-button-link nreg uk-button-primary uk-width-1-1">
+                <Link to="/login">Login</Link>
               </button>
             </div>
             <div>
-              <button
-                className="uk-button-link nreg uk-button-primary uk-width-1-1"
-                uk-switcher-item="2"
-              >
-                Register
+              <button className="uk-button-link nreg uk-button-primary uk-width-1-1">
+                <Link to="/register">Register</Link>
               </button>
             </div>
           </div>
