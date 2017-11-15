@@ -83,7 +83,7 @@ dd {
 
 .nreg:hover {
   color: #6771e5;
-  background: #fff;
+  background: rgba(0, 0, 0, 0);
   cursor: pointer;
 }
 

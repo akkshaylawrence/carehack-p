@@ -179,14 +179,14 @@ select {
 nav.uk-navbar-container {
   padding-bottom: 0;
 }
-.secnav {
-  max-height: 30px;
-}
 hr {
   margin-top: 6px;
 }
 dd {
   margin-top: 5px;
+}
+.secnav {
+  max-height: 30px;
 }
 .uk-navbar-nav > li > a {
   line-height: 20px;
@@ -225,7 +225,7 @@ dd {
 }
 .nreg:hover {
   color: #6771e5;
-  background: #fff;
+  background: transparent;
   cursor: pointer;
 }
 .brand-logo {
@@ -250,6 +250,9 @@ dd {
 .mform,
 .pcard {
   border-radius: 5px;
+}
+.pcard {
+  max-width: 1000px;
 }
 .mform:before {
   content: "";

@@ -6,14 +6,14 @@ class List extends React.Component {
       <div>
         <div
           className="uk-card pcard uk-card-default uk-card-body"
-          uk-overflow-auto
+          uk-overflow-auto="true"
         >
           <h3 className="uk-card-title">Your Appointments</h3>
           <p>
             Given below are your Previous appointments. Press the "Rebook"
             button to repeat the same appointment.
           </p>
-          <table class="uk-table uk-table-justify uk-table-hover uk-table-divider">
+          <table className="uk-table uk-table-justify uk-table-hover uk-table-divider">
             <thead>
               <tr>
                 <th>Date</th>
@@ -29,7 +29,7 @@ class List extends React.Component {
                 <td>Table Data</td>
                 <td>
                   <button
-                    className="uk-button reg uk-button-primary uk-width-1-1"
+                    className="uk-button-link nreg uk-button-primary uk-width-1-1"
                     uk-switcher-item="next"
                   >
                     Rebook
@@ -42,7 +42,7 @@ class List extends React.Component {
                 <td>Table Data</td>
                 <td>
                   <button
-                    className="uk-button reg uk-button-primary uk-width-1-1"
+                    className="uk-button-link nreg uk-button-primary uk-width-1-1"
                     uk-switcher-item="next"
                   >
                     Rebook
@@ -55,7 +55,7 @@ class List extends React.Component {
                 <td>Table Data</td>
                 <td>
                   <button
-                    className="uk-button reg uk-button-primary uk-width-1-1"
+                    className="uk-button-link nreg uk-button-primary uk-width-1-1"
                     uk-switcher-item="next"
                   >
                     Rebook
@@ -68,7 +68,7 @@ class List extends React.Component {
                 <td>Table Data</td>
                 <td>
                   <button
-                    className="uk-button reg uk-button-primary uk-width-1-1"
+                    className="uk-button-link nreg uk-button-primary uk-width-1-1"
                     uk-switcher-item="next"
                   >
                     Rebook
@@ -81,7 +81,7 @@ class List extends React.Component {
                 <td>Table Data</td>
                 <td>
                   <button
-                    className="uk-button reg uk-button-primary uk-width-1-1"
+                    className="uk-button-link nreg uk-button-primary uk-width-1-1"
                     uk-switcher-item="next"
                   >
                     Rebook
@@ -94,7 +94,7 @@ class List extends React.Component {
                 <td>Table Data</td>
                 <td>
                   <button
-                    className="uk-button reg uk-button-primary uk-width-1-1"
+                    className="uk-button-link nreg uk-button-primary uk-width-1-1"
                     uk-switcher-item="next"
                   >
                     Rebook
@@ -107,7 +107,7 @@ class List extends React.Component {
                 <td>Table Data</td>
                 <td>
                   <button
-                    className="uk-button reg uk-button-primary uk-width-1-1"
+                    className="uk-button-link nreg uk-button-primary uk-width-1-1"
                     uk-switcher-item="next"
                   >
                     Rebook
