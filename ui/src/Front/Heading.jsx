@@ -5,7 +5,7 @@ function Heading() {
   return (
     <div className="uk-width-1-2@m hero">
       <a className="uk-logo" href="index.html">
-        <img className="brand-logo" src={logo} alt="FindCare" />
+        <img className="home-logo centre" src={logo} alt="FindCare" />
       </a>
       <h1 className="herot uk-light uk-position-medium">
         Register or Book your appointment now.

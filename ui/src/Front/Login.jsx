@@ -3,7 +3,7 @@ import React from "react";
 class Login extends React.Component {
   render() {
     return (
-      <li>
+      <div>
         <h2>Login</h2>
         <p className="uk-text-meta">Login to book and view your profile.</p>
         <hr className="uk-margin-small" />
@@ -23,7 +23,7 @@ class Login extends React.Component {
             </label>
             <div className="uk-inline uk-width-1-1">
               <span className="uk-form-icon" uk-icon="icon: hashtag" />
-              <input className="uk-input" type="text" autofocus />
+              <input className="uk-input" type="text" />
             </div>
           </div>
           <div className="uk-margin-small">
@@ -38,7 +38,7 @@ class Login extends React.Component {
             </button>
           </div>
         </form>
-      </li>
+      </div>
     );
   }
 }

@@ -159,6 +159,12 @@ dd {
   margin-bottom: 20px;
 }
 
+.home-logo {
+  height: 30px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
 .herot {
   color: white;
   text-align: center;

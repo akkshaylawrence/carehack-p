@@ -2,6 +2,7 @@ import React from "react";
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.css";
 import uikit from "uikit";
+import app from "../js/app";
 
 class Book extends React.Component {
   componentDidMount() {
@@ -23,7 +24,7 @@ class Book extends React.Component {
   }
   render() {
     return (
-      <li>
+      <div>
         <h2 className="uk-padding-small uk-padding-remove-bottom uk-padding-remove-left">
           Book Appointment
         </h2>
@@ -48,7 +49,9 @@ class Book extends React.Component {
             <label className="uk-form-label" htmlFor="form-stacked-text">
               Select Department
             </label>
-            <select id="sectionSel" className="uk-select" />
+            <select id="sectionSel" className="uk-select">
+              <option value="0">Select Department</option>
+            </select>
           </div>
           <div className="uk-margin">
             <label className="uk-form-label" htmlFor="form-stacked-text">
@@ -97,7 +100,7 @@ class Book extends React.Component {
             </div>
           </div>
         </form>
-      </li>
+      </div>
     );
   }
 }

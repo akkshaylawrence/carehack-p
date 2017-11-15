@@ -3,13 +3,22 @@ import React from "react";
 class Register extends React.Component {
   render() {
     return (
-      <li>
+      <div>
         <h2>Register</h2>
         <p className="uk-text-meta">
           Registration allows you to book appointments.
         </p>
         <hr className="uk-margin-small" />
         <form className="uk-form-stacked">
+          <div className="uk-margin-small">
+            <label className="uk-form-label" htmlFor="form-stacked-text">
+              Name
+            </label>
+            <div className="uk-inline uk-width-1-1">
+              <span className="uk-form-icon" uk-icon="icon: user" />
+              <input id="name" className="uk-input" type="text" />
+            </div>
+          </div>
           <div id="phone" className="uk-margin-small">
             <label className="uk-form-label" htmlFor="form-stacked-text">
               Phone Number
@@ -53,7 +62,7 @@ class Register extends React.Component {
             </button>
           </div>
         </form>
-      </li>
+      </div>
     );
   }
 }

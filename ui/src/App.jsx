@@ -8,8 +8,8 @@ class App extends React.Component {
     return (
       <Router>
         <div>
-          <Profile />
-          {/* <Front/> */}
+          {/* <Profile /> */}
+          <Front />
         </div>
       </Router>
     );

@@ -1,5 +1,5 @@
-import "../css/style.css";
-import uikit from "uikit";
+// import "../css/style.css";
+// import uikit from "uikit";
 
 import "core-js/es6/map";
 import "core-js/es6/set";
