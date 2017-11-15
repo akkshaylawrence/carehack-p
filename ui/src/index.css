@@ -219,3 +219,7 @@ dd {
     padding-top: 100px;
   }
 }
+
+select:focus .placeholder-select {
+  display: none;
+}

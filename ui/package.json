@@ -54,7 +54,7 @@
     "axios": "^0.17.1",
     "babel-preset-react": "^6.24.1",
     "core-js": "^2.5.1",
-    "firebase": "^4.6.2",
+    "firebase": "^4.6.0",
     "flatpickr": "^4.1.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
