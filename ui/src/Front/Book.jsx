@@ -2,7 +2,7 @@ import React from "react";
 import flatpickr from "flatpickr";
 import Flatpickr from "react-flatpickr";
 import uikit from "uikit";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import axios from "../Shared/axios";
 import "flatpickr/dist/themes/material_green.css";
 
@@ -14,7 +14,8 @@ class Book extends React.Component {
       specialities: [],
       speciality: "",
       doctors: [],
-      selDoctor: ""
+      selDoctor: "",
+      phone: ""
     };
     this.onContinue = this.onContinue.bind(this);
     this.handleSpeciality = this.handleSpeciality.bind(this);
@@ -54,9 +55,9 @@ class Book extends React.Component {
       selDoctor: event.target.value
     });
     const formData = new FormData();
-    formData.append("spec", event.target.value);
+    formData.append("doctorid", event.target.value);
     axios
-      .post("book/getdoctor", formData)
+      .post("book/checkforslot", formData)
       .then(res => {
         this.setState({
           doctors: res.data.data
@@ -68,6 +69,14 @@ class Book extends React.Component {
   }
   onContinue(event) {
     event.preventDefault();
+    const bookOptions = {
+      phone: this.state.phone,
+      speciality: this.state.speciality,
+      doctor: this.state.selDoctor,
+      date: this.state.date
+    };
+    sessionStorage.setItem("booked", JSON.stringify(bookOptions));
+    this.props.history.push("/register");
   }
   handleInputChange(event) {
     const target = event.target;
@@ -96,9 +105,11 @@ class Book extends React.Component {
               <span className="uk-form-icon" uk-icon="icon: phone" />
               <input
                 id="phone"
+                name="phone"
                 className="uk-input"
                 type="text"
                 placeholder="eg: 9961464050"
+                onChange={this.handleInputChange}
               />
             </div>
           </div>
@@ -192,4 +203,4 @@ class Book extends React.Component {
   }
 }
 
-export default Book;
+export default withRouter(Book);
