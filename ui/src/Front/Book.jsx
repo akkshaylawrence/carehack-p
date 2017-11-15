@@ -94,7 +94,7 @@ class Book extends React.Component {
         <h2 className="uk-padding-small uk-padding-remove-bottom uk-padding-remove-left">
           Book Appointment
         </h2>
-        <p className="uk-text-meta">Book appponment to any doctor.</p>
+        <p className="uk-text-meta">Book appointment to any doctor.</p>
         <hr className="uk-margin-small" />
         <form className="uk-form-stacked">
           <div id="phone" className="uk-margin-small">

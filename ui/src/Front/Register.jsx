@@ -10,22 +10,9 @@ class Register extends React.Component {
       otp: "",
       smsSent: false
     };
-    this.initializeFirebase();
     this.handleInputChange = this.handleInputChange.bind(this);
     this.onSignUpSubmit = this.onSignUpSubmit.bind(this);
     this.getCodeFromUserInput = this.getCodeFromUserInput.bind(this);
-  }
-  initializeFirebase() {
-    const config = {
-      apiKey: "AIzaSyD2KHYE4_wQWeyPLKemMESWCxX0x0S7nFM",
-      authDomain: "findcare-5e020.firebaseapp.com",
-      databaseURL: "https://findcare-5e020.firebaseio.com",
-      projectId: "findcare-5e020",
-      storageBucket: "findcare-5e020.appspot.com",
-      messagingSenderId: "484085783680"
-    };
-    firebase.initializeApp(config);
-    firebase.auth().useDeviceLanguage();
   }
   componentDidMount() {
     window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(

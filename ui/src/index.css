@@ -223,3 +223,7 @@ dd {
 select:focus .placeholder-select {
   display: none;
 }
+
+ul {
+  list-style-type: none;
+}
