@@ -17,22 +17,15 @@ class Profile extends React.Component {
               <img className="brand-logo" src={logo} alt="FindCare" />
             </a>
           </div>
-          <div className="uk-navbar-right">
-            <a
-              className="uk-navbar-toggle uk-hidden@m"
-              data-uk-navbar-toggle-icon
-              href="#"
-              type="button"
-              uk-toggle="target: #offcanvas-push"
-            />
-            <div className="uk-container uk-visible@m">
+          <div className="uk-navbar-right uk-visible@s">
+            <div className="uk-container uk-visible">
               <ul className="uk-navbar-nav">
-                <li className="uk-button uk-padding-remove-right">
+                <li className="uk-button uk-padding-remove-horizontal">
                   <a className="uk-margin-remove" href="#">
                     Book Appointment
                   </a>
                 </li>
-                <li className="uk-button uk-padding-remove-left">
+                <li className="uk-button uk-padding-remove-horizontal">
                   <a className="uk-margin-remove" href="#">
                     Logout
                   </a>
@@ -40,29 +33,33 @@ class Profile extends React.Component {
               </ul>
             </div>
           </div>
-          <div id="offcanvas-push" uk-offcanvas="flip: true; overlay: true">
-            <div className="uk-offcanvas-bar uk-flex uk-flex-column">
-              <button
-                className="uk-offcanvas-close"
-                type="button"
-                data-uk-close
-              />
-              <ul className="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
-                <li className="uk-nav-header">Menu</li>
-                <li className="uk-divider-icon" />
-                <li className="uk-parent">
-                  <a href="index.html">Book Appointment</a>
-                </li>
-                <li className="uk-parent">
-                  <a href="about.html">Logout</a>
-                </li>
-              </ul>
-            </div>
-          </div>
         </nav>
+        <div
+          className=" uk-hidden@s"
+          uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky"
+        >
+          <nav className="uk-navbar-container secnav" data-uk-navbar>
+            <div className="uk-navbar-center">
+              <div className="uk-container uk-visible">
+                <ul className="uk-navbar-nav">
+                  <li className="uk-button uk-padding-remove-horizontal">
+                    <a className="uk-margin-remove" href="#">
+                      Book Appointment
+                    </a>
+                  </li>
+                  <li className="uk-button uk-padding-remove-horizontal">
+                    <a className="uk-margin-remove" href="#">
+                      Logout
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
         <div className="uk-section uk-padding-remove">
           <div className="uk-container">
-            <div className="uk-grid uk-padding-small">
+            <div className="uk-grid uk-grid-small uk-padding-small">
               <div className="uk-width-1-3@m">
                 <div className="uk- pcard uk-card-default uk-card-body">
                   <p className="uk-text-meta">Welcome</p>
@@ -88,7 +85,7 @@ class Profile extends React.Component {
                 </div>
               </div>
               <div className="uk-width-2-3@m">
-                <div className="uk- pcard uk-card-default uk-card-body">
+                <div className="uk-card pcard uk-card-default uk-card-body">
                   <h3 className="uk-card-title">Your Appointments</h3>
                   <p>
                     Lorem ipsum <a href="#">dolor</a> sit amet, consectetur

@@ -37,12 +37,20 @@ nav.uk-navbar-container {
   padding-bottom: 0px;
 }
 
+.secnav {
+  max-height: 30px;
+}
+
 hr {
   margin-top: 6px;
 }
 
 dd {
   margin-top: 5px;
+}
+
+.uk-navbar-nav > li > a {
+  line-height: 20px;
 }
 
 .ftxt {
