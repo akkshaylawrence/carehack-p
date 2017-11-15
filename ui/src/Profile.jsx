@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "./logo.png";
+import Icons from "uikit/dist/js/uikit-icons";
 class Profile extends React.Component {
   constructor(props) {
     super(props);
@@ -61,9 +62,41 @@ class Profile extends React.Component {
         </nav>
         <div className="uk-section uk-padding-remove">
           <div className="uk-container">
-            <div uk-grid>
-              <div className="uk-width-1-3@m" />
-              <div className="uk-width-2-3@m" />
+            <div className="uk-grid uk-padding-small">
+              <div className="uk-width-1-3@m">
+                <div className="uk- pcard uk-card-default uk-card-body">
+                  <p className="uk-text-meta">Welcome</p>
+                  <h2 className="uk-card-title uk-margin-remove-top">
+                    Akkshay Lawrence
+                  </h2>
+                  <p>Your Appointments</p>
+                  <hr />
+                  <dl class="uk-description-list">
+                    <dt>
+                      <span uk-icon="icon: calendar" /> 5th, November 2017
+                    </dt>
+                    <dd>
+                      <span uk-icon="icon: user" /> Dr. Unnikrishnan
+                    </dd>
+                    <dt>
+                      <span uk-icon="icon: calendar" /> 7th, December 2017
+                    </dt>
+                    <dd>
+                      <span uk-icon="icon: user" /> Dr. Unnikrishnan
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <div className="uk-width-2-3@m">
+                <div className="uk- pcard uk-card-default uk-card-body">
+                  <h3 className="uk-card-title">Your Appointments</h3>
+                  <p>
+                    Lorem ipsum <a href="#">dolor</a> sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -33,6 +33,18 @@ select {
   border-radius: 5px !important;
 }
 
+nav.uk-navbar-container {
+  padding-bottom: 0px;
+}
+
+hr {
+  margin-top: 6px;
+}
+
+dd {
+  margin-top: 5px;
+}
+
 .ftxt {
   padding: 3px 0px 3px 10px;
   margin-bottom: 0px;
@@ -72,10 +84,6 @@ select {
   width: auto;
 }
 
-nav.uk-navbar-container {
-  padding-bottom: 0px;
-}
-
 .footer-bottom {
   color: white;
   position: absolute;
@@ -94,6 +102,10 @@ nav.uk-navbar-container {
   border-radius: 5px;
   max-width: 400px;
   margin-bottom: 10px;
+}
+
+.pcard {
+  border-radius: 5px;
 }
 
 .mform:before {
