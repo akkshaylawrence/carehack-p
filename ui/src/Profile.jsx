@@ -25,13 +25,6 @@ class Profile extends React.Component {
             </div>
           </div>
         </div>
-        <div className="uk-section uk-padding-remove uk-section-default footer">
-          <div className="footer-bottom">
-            <p className="uk-text-center uk-text-middle uk-text-small uk-padding-small uk-padding-remove-vertical uk-margin-remove-bottom">
-              Made by Phoenix
-            </p>
-          </div>
-        </div>
       </section>
     );
   }

@@ -37,16 +37,16 @@ nav.uk-navbar-container {
   padding-bottom: 0px;
 }
 
-.secnav {
-  max-height: 30px;
-}
-
 hr {
   margin-top: 6px;
 }
 
 dd {
   margin-top: 5px;
+}
+
+.secnav {
+  max-height: 30px;
 }
 
 .uk-navbar-nav > li > a {
@@ -114,6 +114,7 @@ dd {
 
 .pcard {
   border-radius: 5px;
+  max-width: 1000px;
 }
 
 .mform:before {

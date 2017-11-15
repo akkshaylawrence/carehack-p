@@ -69,15 +69,6 @@ class Book extends React.Component {
               />
             </div>
           </div>
-          <div className="uk-margin-small">
-            <label className="uk-form-label" htmlFor="form-stacked-text">
-              Time
-            </label>
-            <div className="uk-inline uk-width-1-1">
-              <span className="uk-form-icon" uk-icon="icon: clock" />
-              <input className="uk-input" id="timepicker" placeholder="HH:mm" />
-            </div>
-          </div>
           <hr />
           <div className="uk-margin-small">
             <button
