@@ -1,0 +1,10 @@
+.\application\config\config.php
+	Change $base_url
+	
+.\.htaccess	
+	RewriteBase \foldername
+	
+\application\controllers\mainctrl.php
+	saveContinueCtrl(){
+		$from = 'set_from';
+	}	

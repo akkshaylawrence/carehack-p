@@ -1,0 +1,5 @@
+[27-Aug-2017 05:57:20 UTC] PHP Notice:  Undefined index: log_path in /home/cyphotec/public_html/projects/daybreak/system/core/Log.php on line 127
+[27-Aug-2017 05:57:20 UTC] PHP Notice:  Undefined index: log_path in /home/cyphotec/public_html/projects/daybreak/system/core/Log.php on line 127
+[27-Aug-2017 05:57:20 UTC] PHP Warning:  mkdir(): Invalid path in /home/cyphotec/public_html/projects/daybreak/system/core/Log.php on line 131
+[27-Aug-2017 05:57:20 UTC] PHP Notice:  Undefined index: log_threshold in /home/cyphotec/public_html/projects/daybreak/system/core/Log.php on line 138
+[27-Aug-2017 05:57:20 UTC] PHP Notice:  Undefined index: log_threshold in /home/cyphotec/public_html/projects/daybreak/system/core/Log.php on line 142
