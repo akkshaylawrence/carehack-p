@@ -30,6 +30,12 @@ class Login extends React.Component {
             <button className="uk-button reg uk-button-primary uk-width-1-1">
               Login and Book
             </button>
+            <button
+              className="uk-button-link nreg uk-button-primary"
+              uk-switcher-item="0"
+            >
+              Back
+            </button>
           </div>
         </form>
       </li>

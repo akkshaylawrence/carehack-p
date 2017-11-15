@@ -1,6 +1,10 @@
 import React from "react";
 import logo from "./logo.png";
+import Navbar from "./Profile/Navbar";
+import New from "./Profile/New";
+import List from "./Profile/List";
 import Icons from "uikit/dist/js/uikit-icons";
+
 class Profile extends React.Component {
   constructor(props) {
     super(props);
@@ -8,91 +12,15 @@ class Profile extends React.Component {
   render() {
     return (
       <section>
-        <nav className="uk-navbar-container" data-uk-navbar>
-          <div className="uk-navbar-left">
-            <a
-              className="uk-navbar-item uk-logo uk-margin-remove-bottom"
-              href="index.html"
-            >
-              <img className="brand-logo" src={logo} alt="FindCare" />
-            </a>
-          </div>
-          <div className="uk-navbar-right uk-visible@s">
-            <div className="uk-container uk-visible">
-              <ul className="uk-navbar-nav">
-                <li className="uk-button uk-padding-remove-horizontal">
-                  <a className="uk-margin-remove" href="#">
-                    Book Appointment
-                  </a>
-                </li>
-                <li className="uk-button uk-padding-remove-horizontal">
-                  <a className="uk-margin-remove" href="#">
-                    Logout
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-        <div
-          className=" uk-hidden@s"
-          uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky"
-        >
-          <nav className="uk-navbar-container secnav" data-uk-navbar>
-            <div className="uk-navbar-center">
-              <div className="uk-container uk-visible">
-                <ul className="uk-navbar-nav">
-                  <li className="uk-button uk-padding-remove-horizontal">
-                    <a className="uk-margin-remove" href="#">
-                      Book Appointment
-                    </a>
-                  </li>
-                  <li className="uk-button uk-padding-remove-horizontal">
-                    <a className="uk-margin-remove" href="#">
-                      Logout
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </div>
+        <Navbar />
         <div className="uk-section uk-padding-remove">
           <div className="uk-container">
             <div className="uk-grid uk-grid-small uk-padding-small">
               <div className="uk-width-1-3@m">
-                <div className="uk- pcard uk-card-default uk-card-body">
-                  <p className="uk-text-meta">Welcome</p>
-                  <h2 className="uk-card-title uk-margin-remove-top">
-                    Akkshay Lawrence
-                  </h2>
-                  <p>Your Appointments</p>
-                  <hr />
-                  <dl className="uk-description-list">
-                    <dt>
-                      <span uk-icon="icon: calendar" /> 5th, November 2017
-                    </dt>
-                    <dd>
-                      <span uk-icon="icon: user" /> Dr. Unnikrishnan
-                    </dd>
-                    <dt>
-                      <span uk-icon="icon: calendar" /> 7th, December 2017
-                    </dt>
-                    <dd>
-                      <span uk-icon="icon: user" /> Dr. Unnikrishnan
-                    </dd>
-                  </dl>
-                </div>
+                <New />
               </div>
               <div className="uk-width-2-3@m">
-                <div className="uk-card pcard uk-card-default uk-card-body">
-                  <h3 className="uk-card-title">Your Appointments</h3>
-                  <p>
-                    Lorem ipsum <a href="#">dolor</a> sit amet, consectetur
-                    adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.
-                  </p>
-                </div>
+                <List />
               </div>
             </div>
           </div>
