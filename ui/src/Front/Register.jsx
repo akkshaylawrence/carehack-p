@@ -15,6 +15,11 @@ class Register extends React.Component {
     this.getCodeFromUserInput = this.getCodeFromUserInput.bind(this);
   }
   componentDidMount() {
+    const bookOptions = JSON.parse(sessionStorage.getItem("booked"));
+    const phone = bookOptions ? "" : bookOptions.phone;
+    this.setState({
+      phone
+    });
     window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
       "sign-up-button",
       {
@@ -61,9 +66,15 @@ class Register extends React.Component {
     confirmationResult
       .confirm(code)
       .then(result => {
-        const user = result.user;
-        console.log(user);
-        // ...
+        const bookOptions = JSON.parse(sessionStorage.getItem("booked"));
+        if (bookOptions) {
+          const formData = new FormData();
+          formData.append("pname", this.state.name);
+          formData.append("pcontact", this.state.phone);
+          formData.append("doctor", bookOptions.doctor);
+
+          axios.post("book/RegandBookslot", formData);
+        }
       })
       .catch(error => {
         // User couldn't sign in (bad verification code?)
@@ -112,12 +123,6 @@ class Register extends React.Component {
                 onChange={this.handleInputChange}
               />
             </div>
-            {/* <label
-              className="uk-form-label uk-text-right"
-              htmlFor="form-stacked-text"
-            >
-              Enter OTP Below
-            </label> */}
           </div>
           {this.state.smsSent ? (
             <div id="otp" className="uk-margin-small uk-margin-remove-top">

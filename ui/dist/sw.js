@@ -19,20 +19,20 @@ importScripts("workbox-sw.prod.v2.1.1.js");
  */
 const fileManifest = [
   {
-    url: "a1044aaefb7964d74b7d.bundle.js",
-    revision: "be32aa75682ef801392763c0861c3490"
+    url: "35472b00e6a37cb7aa31.bundle.js",
+    revision: "e4dad4fa26ad86cfd30c85f1be4e68dc"
   },
   {
     url: "index.html",
-    revision: "507a63ae8f103f80fcca4898669c2911"
+    revision: "622f7447feb1e5a78bd2faadc6b24725"
   },
   {
     url: "styles.css",
-    revision: "e4d0cfc688565abc0d1256764f830ec8"
+    revision: "609d8eae55973712cab48a4db59da393"
   },
   {
     url: "vendor.js",
-    revision: "81d4b7c4ef481905cc33e1a24241aa6c"
+    revision: "5723bfee833755c295dd4ca16cc65297"
   }
 ];
 

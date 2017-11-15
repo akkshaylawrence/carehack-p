@@ -15,9 +15,11 @@ class Book extends React.Component {
       speciality: "",
       doctors: [],
       selDoctor: "",
-      phone: ""
+      phone: "",
+      busyDates: []
     };
     this.onContinue = this.onContinue.bind(this);
+    this.handleDoctor = this.handleDoctor.bind(this);
     this.handleSpeciality = this.handleSpeciality.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
   }
@@ -57,10 +59,10 @@ class Book extends React.Component {
     const formData = new FormData();
     formData.append("doctorid", event.target.value);
     axios
-      .post("book/checkforslot", formData)
+      .post("book/getslot", formData)
       .then(res => {
         this.setState({
-          doctors: res.data.data
+          busyDates: res.data.data === 0 ? [] : res.data.data
         });
       })
       .catch(error => {
@@ -76,7 +78,20 @@ class Book extends React.Component {
       date: this.state.date
     };
     sessionStorage.setItem("booked", JSON.stringify(bookOptions));
-    this.props.history.push("/register");
+    const formData = new FormData();
+    formData.append("pcontact", this.state.phone);
+    axios
+      .post("book/checkuser", formData)
+      .then(res => {
+        if (res.data.data == "0") {
+          this.props.history.push("/register");
+        } else {
+          this.props.history.push("/login");
+        }
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
   handleInputChange(event) {
     const target = event.target;
@@ -144,8 +159,12 @@ class Book extends React.Component {
               id="doctorSel"
               className="uk-select"
               name="doctor"
+              defaultValue=""
               onChange={this.handleDoctor}
             >
+              <option value="" disabled className="placeholder-select">
+                Select Doctor
+              </option>
               {this.state.doctors.map((doc, index) => {
                 return (
                   <option value={doc.did} key={index}>
@@ -166,8 +185,8 @@ class Book extends React.Component {
                 options={{
                   enableTime: false,
                   minDate: "today",
-                  dateFormat: "d/m/Y",
-                  maxDate: new Date().fp_incr(60)
+                  maxDate: new Date().fp_incr(30),
+                  disable: this.state.busyDates
                 }}
                 value={date}
                 onChange={date => {
