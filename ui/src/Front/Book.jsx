@@ -1,28 +1,19 @@
 import React from "react";
 import flatpickr from "flatpickr";
-import "flatpickr/dist/flatpickr.css";
+import Flatpickr from "react-flatpickr";
 import uikit from "uikit";
 import app from "../js/app";
+import "flatpickr/dist/themes/material_green.css";
 
 class Book extends React.Component {
-  componentDidMount() {
-    flatpickr("#datepicker", {
-      enableTime: false,
-      minDate: "today",
-      dateFormat: "d/m/Y",
-      maxDate: new Date().fp_incr(60)
-    });
-    flatpickr("#timepicker", {
-      enableTime: true,
-      noCalendar: true,
-      enableSeconds: false,
-      time_24hr: false,
-      dateFormat: "H:i",
-      defaultHour: 12,
-      defaultMinute: 0
-    });
+  constructor() {
+    super();
+    this.state = {
+      date: new Date()
+    };
   }
   render() {
+    const { date } = this.state;
     return (
       <div>
         <h2 className="uk-padding-small uk-padding-remove-bottom uk-padding-remove-left">
@@ -65,10 +56,18 @@ class Book extends React.Component {
             </label>
             <div className="uk-inline uk-width-1-1">
               <span className="uk-form-icon" uk-icon="icon: calendar" />
-              <input
+              <Flatpickr
                 className="uk-input"
-                id="datepicker"
-                placeholder="dd-mm-yyyy"
+                options={{
+                  enableTime: false,
+                  minDate: "today",
+                  dateFormat: "d/m/Y",
+                  maxDate: new Date().fp_incr(60)
+                }}
+                value={date}
+                onChange={date => {
+                  this.setState({ date });
+                }}
               />
             </div>
           </div>

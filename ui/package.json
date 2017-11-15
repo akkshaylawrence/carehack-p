@@ -56,6 +56,7 @@
     "flatpickr": "^4.1.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
+    "react-flatpickr": "^3.6.2",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "uikit": "^3.0.0-beta.34",
