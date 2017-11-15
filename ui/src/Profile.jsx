@@ -71,7 +71,7 @@ class Profile extends React.Component {
                   </h2>
                   <p>Your Appointments</p>
                   <hr />
-                  <dl class="uk-description-list">
+                  <dl className="uk-description-list">
                     <dt>
                       <span uk-icon="icon: calendar" /> 5th, November 2017
                     </dt>
