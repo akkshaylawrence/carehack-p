@@ -7,21 +7,21 @@ webpackJsonp(
         for (var n in t) e.hasOwnProperty(n) || (e[n] = t[n]);
       }
       Object.defineProperty(e, "__esModule", { value: !0 }),
-        r(n(101)),
-        r(n(102)),
-        r(n(63)),
-        r(n(216)),
-        r(n(217)),
-        r(n(218)),
-        r(n(219)),
-        r(n(103)),
-        r(n(220)),
-        r(n(104)),
-        r(n(221)),
-        r(n(222)),
-        r(n(224)),
-        r(n(225)),
-        r(n(226));
+        r(n(108)),
+        r(n(109)),
+        r(n(65)),
+        r(n(236)),
+        r(n(237)),
+        r(n(238)),
+        r(n(239)),
+        r(n(110)),
+        r(n(240)),
+        r(n(111)),
+        r(n(241)),
+        r(n(242)),
+        r(n(244)),
+        r(n(245)),
+        r(n(246));
     },
     function(t, e, n) {
       "use strict";
@@ -32,7 +32,7 @@ webpackJsonp(
         a = n(0),
         s = n(0),
         u = n(0),
-        c = n(42),
+        c = n(43),
         l = n(0);
       (e.LUIDGenerator = (function() {
         var t = 1;
@@ -538,10 +538,10 @@ webpackJsonp(
       Object.defineProperty(e, "__esModule", { value: !0 });
       var a,
         s,
-        u = n(44),
+        u = n(45),
         c = n(1),
-        l = n(8),
-        h = n(45);
+        l = n(9),
+        h = n(46);
       (e.setNodeFromJSON = r), (e.setMaxNode = i);
       var f = (function(t) {
         function e() {
@@ -612,14 +612,14 @@ webpackJsonp(
       var i,
         o = n(0),
         a = n(1),
-        s = n(46),
-        u = n(8),
-        c = n(110),
+        s = n(47),
+        u = n(9),
+        c = n(117),
         l = n(5),
         h = n(31),
-        f = n(112),
-        d = n(45),
-        p = n(114),
+        f = n(119),
+        d = n(46),
+        p = n(121),
         g = (function() {
           function t(t, e, n) {
             (this.children_ = t),
@@ -924,65 +924,6 @@ webpackJsonp(
     },
     function(t, e, n) {
       "use strict";
-      Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = (function() {
-        function t(t, e) {
-          (this.name = t), (this.node = e);
-        }
-        return (
-          (t.Wrap = function(e, n) {
-            return new t(e, n);
-          }),
-          t
-        );
-      })();
-      e.NamedNode = r;
-    },
-    function(t, e, n) {
-      "use strict";
-      function r(t) {
-        return null != t;
-      }
-      function i(t) {
-        return void 0 !== t;
-      }
-      function o(t) {
-        return "function" == typeof t;
-      }
-      function a(t) {
-        return "object" == typeof t;
-      }
-      function s(t) {
-        return a(t) && null !== t;
-      }
-      function u(t) {
-        return a(t) && !Array.isArray(t);
-      }
-      function c(t) {
-        return "string" == typeof t || t instanceof String;
-      }
-      function l(t) {
-        return "number" == typeof t || t instanceof Number;
-      }
-      function h(t) {
-        return f() && t instanceof Blob;
-      }
-      function f() {
-        return "undefined" != typeof Blob;
-      }
-      (e.a = r),
-        (e.c = i),
-        (e.b = o),
-        (e.i = a),
-        (e.g = s),
-        (e.f = u),
-        (e.j = c),
-        (e.h = l),
-        (e.d = h),
-        (e.e = f);
-    },
-    function(t, e, n) {
-      "use strict";
       function r(t) {
         return "[object Array]" === k.call(t);
       }
@@ -1066,8 +1007,8 @@ webpackJsonp(
           t
         );
       }
-      var C = n(140),
-        E = n(293),
+      var C = n(102),
+        E = n(211),
         k = Object.prototype.toString;
       t.exports = {
         isArray: r,
@@ -1092,10 +1033,69 @@ webpackJsonp(
         trim: m
       };
     },
+    function(t, e, n) {
+      "use strict";
+      Object.defineProperty(e, "__esModule", { value: !0 });
+      var r = (function() {
+        function t(t, e) {
+          (this.name = t), (this.node = e);
+        }
+        return (
+          (t.Wrap = function(e, n) {
+            return new t(e, n);
+          }),
+          t
+        );
+      })();
+      e.NamedNode = r;
+    },
+    function(t, e, n) {
+      "use strict";
+      function r(t) {
+        return null != t;
+      }
+      function i(t) {
+        return void 0 !== t;
+      }
+      function o(t) {
+        return "function" == typeof t;
+      }
+      function a(t) {
+        return "object" == typeof t;
+      }
+      function s(t) {
+        return a(t) && null !== t;
+      }
+      function u(t) {
+        return a(t) && !Array.isArray(t);
+      }
+      function c(t) {
+        return "string" == typeof t || t instanceof String;
+      }
+      function l(t) {
+        return "number" == typeof t || t instanceof Number;
+      }
+      function h(t) {
+        return f() && t instanceof Blob;
+      }
+      function f() {
+        return "undefined" != typeof Blob;
+      }
+      (e.a = r),
+        (e.c = i),
+        (e.b = o),
+        (e.i = a),
+        (e.g = s),
+        (e.f = u),
+        (e.j = c),
+        (e.h = l),
+        (e.d = h),
+        (e.e = f);
+    },
     ,
     function(t, e, n) {
-      var r = n(148)("wks"),
-        i = n(52),
+      var r = n(150)("wks"),
+        i = n(53),
         o = n(14).Symbol,
         a = "function" == typeof o;
       (t.exports = function(t) {
@@ -1239,7 +1239,7 @@ webpackJsonp(
         (e.j = _),
         (e.i = w),
         (e.e = b);
-      var C = (n(50),
+      var C = (n(51),
         (function() {
           function t(t, e) {
             (this.code_ = r(t)),
@@ -1326,13 +1326,14 @@ webpackJsonp(
             : Function("return this")());
       "number" == typeof __g && (__g = n);
     },
+    ,
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 }),
         n.d(e, "firebase", function() {
           return i;
         });
-      var r = n(215),
+      var r = n(235),
         i = Object(r.a)();
       e.default = i;
     },
@@ -1341,7 +1342,6 @@ webpackJsonp(
         return "object" == typeof t ? null !== t : "function" == typeof t;
       };
     },
-    ,
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
@@ -1672,7 +1672,7 @@ webpackJsonp(
       (e.a = r), (e.c = i), (e.b = o);
     },
     function(t, e, n) {
-      t.exports = !n(53)(function() {
+      t.exports = !n(54)(function() {
         return (
           7 !=
           Object.defineProperty({}, "a", {
@@ -1750,7 +1750,7 @@ webpackJsonp(
       var r = n(14),
         i = n(26),
         o = n(22),
-        a = n(52)("src"),
+        a = n(53)("src"),
         s = Function.toString,
         u = ("" + s).split("toString");
       (n(35).inspectSource = function(t) {
@@ -1772,7 +1772,7 @@ webpackJsonp(
     },
     function(t, e, n) {
       var r = n(27),
-        i = n(75);
+        i = n(76);
       t.exports = n(21)
         ? function(t, e, n) {
             return r.f(t, e, i(1, n));
@@ -1783,8 +1783,8 @@ webpackJsonp(
     },
     function(t, e, n) {
       var r = n(28),
-        i = n(149),
-        o = n(151),
+        i = n(151),
+        o = n(153),
         a = Object.defineProperty;
       e.f = n(21)
         ? Object.defineProperty
@@ -1799,7 +1799,7 @@ webpackJsonp(
           };
     },
     function(t, e, n) {
-      var r = n(16);
+      var r = n(17);
       t.exports = function(t) {
         if (!r(t)) throw TypeError(t + " is not an object!");
         return t;
@@ -1834,8 +1834,8 @@ webpackJsonp(
         })();
       Object.defineProperty(e, "__esModule", { value: !0 });
       var i,
-        o = n(44),
-        a = n(8),
+        o = n(45),
+        a = n(9),
         s = n(1),
         u = n(0),
         c = (function(t) {
@@ -1963,13 +1963,13 @@ webpackJsonp(
       }
       Object.defineProperty(e, "__esModule", { value: !0 });
       var i = n(7),
-        o = n(45),
-        a = n(8),
+        o = n(46),
+        a = n(9),
         s = n(0),
         u = n(0),
-        c = n(113),
-        l = n(114),
-        h = n(112),
+        c = n(120),
+        l = n(121),
+        h = n(119),
         f = n(5),
         d = !0;
       (e.nodeFromJSON = r), f.setNodeFromJSON(r);
@@ -2190,8 +2190,20 @@ webpackJsonp(
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(231),
-        i = n(232),
+      var r = n(101),
+        i = (function(t) {
+          return t && t.__esModule ? t : { default: t };
+        })(r);
+      e.default = i.default.create({
+        baseURL: "http://findcare.000webhostapp.com/",
+        headers: { "Content-Type": "multipart/form-data" }
+      });
+    },
+    function(t, e, n) {
+      "use strict";
+      Object.defineProperty(e, "__esModule", { value: !0 });
+      var r = n(251),
+        i = n(252),
         o = function(t) {
           try {
             if ("undefined" != typeof window && void 0 !== window[t]) {
@@ -2224,7 +2236,7 @@ webpackJsonp(
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(8),
+      var r = n(9),
         i = n(1),
         o = (function() {
           function t() {}
@@ -2251,7 +2263,7 @@ webpackJsonp(
       var r,
         i = n(0),
         o = n(1),
-        a = n(110),
+        a = n(117),
         s = (function() {
           function t(e, n) {
             void 0 === n && (n = t.__childrenNodeConstructor.EMPTY_NODE),
@@ -2758,23 +2770,23 @@ webpackJsonp(
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(116),
+      var r = n(123),
         i = n(32),
         o = n(3),
-        a = n(117),
-        s = n(237),
-        u = n(248),
+        a = n(124),
+        s = n(257),
+        u = n(268),
         c = n(0),
         l = n(1),
         h = n(0),
-        f = n(249),
-        d = n(68),
-        p = n(251),
-        g = n(122),
-        v = n(252),
-        m = n(123),
-        y = n(257),
-        _ = n(105),
+        f = n(269),
+        d = n(70),
+        p = n(271),
+        g = n(129),
+        v = n(272),
+        m = n(130),
+        y = n(277),
+        _ = n(112),
         w = (function() {
           function t(t, e, n) {
             var r = this;
@@ -3427,7 +3439,7 @@ webpackJsonp(
     },
     function(t, e, n) {
       var r = n(322),
-        i = n(77);
+        i = n(78);
       t.exports = function(t) {
         return r(i(t));
       };
@@ -3565,6 +3577,82 @@ webpackJsonp(
     ,
     function(t, e, n) {
       "use strict";
+      (function(e) {
+        function r(t, e) {
+          !i.isUndefined(t) &&
+            i.isUndefined(t["Content-Type"]) &&
+            (t["Content-Type"] = e);
+        }
+        var i = n(8),
+          o = n(213),
+          a = { "Content-Type": "application/x-www-form-urlencoded" },
+          s = {
+            adapter: (function() {
+              var t;
+              return (
+                "undefined" != typeof XMLHttpRequest
+                  ? (t = n(103))
+                  : void 0 !== e && (t = n(103)),
+                t
+              );
+            })(),
+            transformRequest: [
+              function(t, e) {
+                return (
+                  o(e, "Content-Type"),
+                  i.isFormData(t) ||
+                  i.isArrayBuffer(t) ||
+                  i.isBuffer(t) ||
+                  i.isStream(t) ||
+                  i.isFile(t) ||
+                  i.isBlob(t)
+                    ? t
+                    : i.isArrayBufferView(t)
+                      ? t.buffer
+                      : i.isURLSearchParams(t)
+                        ? (r(
+                            e,
+                            "application/x-www-form-urlencoded;charset=utf-8"
+                          ),
+                          t.toString())
+                        : i.isObject(t)
+                          ? (r(e, "application/json;charset=utf-8"),
+                            JSON.stringify(t))
+                          : t
+                );
+              }
+            ],
+            transformResponse: [
+              function(t) {
+                if ("string" == typeof t)
+                  try {
+                    t = JSON.parse(t);
+                  } catch (t) {}
+                return t;
+              }
+            ],
+            timeout: 0,
+            xsrfCookieName: "XSRF-TOKEN",
+            xsrfHeaderName: "X-XSRF-TOKEN",
+            maxContentLength: -1,
+            validateStatus: function(t) {
+              return t >= 200 && t < 300;
+            }
+          };
+        (s.headers = {
+          common: { Accept: "application/json, text/plain, */*" }
+        }),
+          i.forEach(["delete", "get", "head"], function(t) {
+            s.headers[t] = {};
+          }),
+          i.forEach(["post", "put", "patch"], function(t) {
+            s.headers[t] = i.merge(a);
+          }),
+          (t.exports = s);
+      }.call(e, n(58)));
+    },
+    function(t, e, n) {
+      "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 }),
         (e.CONSTANTS = {
           NODE_CLIENT: !1,
@@ -3598,18 +3686,18 @@ webpackJsonp(
           };
         })();
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var i = n(108),
-        o = n(233),
+      var i = n(115),
+        o = n(253),
         a = n(1),
-        s = n(234),
-        u = n(109),
-        c = n(47),
+        s = n(254),
+        u = n(116),
+        c = n(48),
         l = n(3),
-        h = n(258),
+        h = n(278),
         f = n(18),
         d = n(0),
         p = n(0),
-        g = n(120),
+        g = n(127),
         v = (function(t) {
           function e(e, n) {
             if (!(e instanceof c.Repo))
@@ -3994,7 +4082,7 @@ webpackJsonp(
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
       var r,
-        i = n(46),
+        i = n(47),
         o = n(3),
         a = n(1),
         s = n(0),
@@ -4228,7 +4316,7 @@ webpackJsonp(
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(250),
+      var r = n(270),
         i = (function() {
           function t() {}
           return (
@@ -4258,11 +4346,11 @@ webpackJsonp(
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
       var r = n(0),
-        i = n(47),
+        i = n(48),
         o = n(1),
-        a = n(106),
+        a = n(113),
         s = n(18);
-      n(260);
+      n(280);
       var u,
         c = (function() {
           function t() {
@@ -4404,8 +4492,8 @@ webpackJsonp(
         (e.a = c),
         (e.d = l);
       var h = n(13),
-        f = n(71),
-        d = n(9),
+        f = n(73),
+        d = n(10),
         p = (function() {
           function t(t, e) {
             var n = this;
@@ -4507,11 +4595,11 @@ webpackJsonp(
         }
       }
       (e.b = o), (e.a = u), (e.d = c), (e.c = l);
-      var h = n(275),
-        f = n(51),
-        d = n(136),
-        p = n(9),
-        g = n(72),
+      var h = n(295),
+        f = n(52),
+        d = n(143),
+        p = n(10),
+        g = n(74),
         v = (function() {
           function t(t, e, n, i) {
             (this.server = t),
@@ -4546,7 +4634,7 @@ webpackJsonp(
         );
       }
       (e.b = r), (e.a = i), (e.d = o), (e.c = a);
-      var s = n(50),
+      var s = n(51),
         u = n(24);
     },
     function(t, e, n) {
@@ -4562,82 +4650,6 @@ webpackJsonp(
         -1 !== n && t.splice(n, 1);
       }
       (e.b = r), (e.a = i), (e.c = o);
-    },
-    function(t, e, n) {
-      "use strict";
-      (function(e) {
-        function r(t, e) {
-          !i.isUndefined(t) &&
-            i.isUndefined(t["Content-Type"]) &&
-            (t["Content-Type"] = e);
-        }
-        var i = n(10),
-          o = n(295),
-          a = { "Content-Type": "application/x-www-form-urlencoded" },
-          s = {
-            adapter: (function() {
-              var t;
-              return (
-                "undefined" != typeof XMLHttpRequest
-                  ? (t = n(141))
-                  : void 0 !== e && (t = n(141)),
-                t
-              );
-            })(),
-            transformRequest: [
-              function(t, e) {
-                return (
-                  o(e, "Content-Type"),
-                  i.isFormData(t) ||
-                  i.isArrayBuffer(t) ||
-                  i.isBuffer(t) ||
-                  i.isStream(t) ||
-                  i.isFile(t) ||
-                  i.isBlob(t)
-                    ? t
-                    : i.isArrayBufferView(t)
-                      ? t.buffer
-                      : i.isURLSearchParams(t)
-                        ? (r(
-                            e,
-                            "application/x-www-form-urlencoded;charset=utf-8"
-                          ),
-                          t.toString())
-                        : i.isObject(t)
-                          ? (r(e, "application/json;charset=utf-8"),
-                            JSON.stringify(t))
-                          : t
-                );
-              }
-            ],
-            transformResponse: [
-              function(t) {
-                if ("string" == typeof t)
-                  try {
-                    t = JSON.parse(t);
-                  } catch (t) {}
-                return t;
-              }
-            ],
-            timeout: 0,
-            xsrfCookieName: "XSRF-TOKEN",
-            xsrfHeaderName: "X-XSRF-TOKEN",
-            maxContentLength: -1,
-            validateStatus: function(t) {
-              return t >= 200 && t < 300;
-            }
-          };
-        (s.headers = {
-          common: { Accept: "application/json, text/plain, */*" }
-        }),
-          i.forEach(["delete", "get", "head"], function(t) {
-            s.headers[t] = {};
-          }),
-          i.forEach(["post", "put", "patch"], function(t) {
-            s.headers[t] = i.merge(a);
-          }),
-          (t.exports = s);
-      }.call(e, n(57)));
     },
     function(t, e) {
       t.exports = function(t, e) {
@@ -4665,13 +4677,13 @@ webpackJsonp(
     function(t, e, n) {
       "use strict";
       var r = n(317),
-        i = n(153),
+        i = n(155),
         o = n(25),
         a = n(26),
         s = n(22),
         u = n(36),
         c = n(319),
-        l = n(80),
+        l = n(81),
         h = n(326),
         f = n(12)("iterator"),
         d = !([].keys && "next" in [].keys()),
@@ -4735,8 +4747,8 @@ webpackJsonp(
       };
     },
     function(t, e, n) {
-      var r = n(148)("keys"),
-        i = n(52);
+      var r = n(150)("keys"),
+        i = n(53);
       t.exports = function(t) {
         return r[t] || (r[t] = i(t));
       };
@@ -4752,7 +4764,7 @@ webpackJsonp(
       };
     },
     function(t, e, n) {
-      var r = n(16);
+      var r = n(17);
       t.exports = function(t, e) {
         if (!r(t) || t._t !== e)
           throw TypeError("Incompatible receiver, " + e + " required!");
@@ -12325,7 +12337,7 @@ webpackJsonp(
             dr
           );
         });
-      }.call(e, n(86).setImmediate));
+      }.call(e, n(87).setImmediate));
     },
     function(t, e, n) {
       function r(t, e) {
@@ -12359,7 +12371,7 @@ webpackJsonp(
               t._onTimeout && t._onTimeout();
             }, e));
         }),
-        n(177),
+        n(179),
         (e.setImmediate = setImmediate),
         (e.clearImmediate = clearImmediate);
     },
@@ -12658,13 +12670,173 @@ webpackJsonp(
     ,
     ,
     function(t, e, n) {
-      var r = n(209);
-      n(227), n(229), n(264), n(271), (t.exports = r);
+      t.exports = n(210);
+    },
+    function(t, e, n) {
+      "use strict";
+      t.exports = function(t, e) {
+        return function() {
+          for (var n = new Array(arguments.length), r = 0; r < n.length; r++)
+            n[r] = arguments[r];
+          return t.apply(e, n);
+        };
+      };
+    },
+    function(t, e, n) {
+      "use strict";
+      var r = n(8),
+        i = n(214),
+        o = n(216),
+        a = n(217),
+        s = n(218),
+        u = n(104),
+        c =
+          ("undefined" != typeof window &&
+            window.btoa &&
+            window.btoa.bind(window)) ||
+          n(219);
+      t.exports = function(t) {
+        return new Promise(function(e, l) {
+          var h = t.data,
+            f = t.headers;
+          r.isFormData(h) && delete f["Content-Type"];
+          var d = new XMLHttpRequest(),
+            p = "onreadystatechange",
+            g = !1;
+          if (
+            ("undefined" == typeof window ||
+              !window.XDomainRequest ||
+              "withCredentials" in d ||
+              s(t.url) ||
+              ((d = new window.XDomainRequest()),
+              (p = "onload"),
+              (g = !0),
+              (d.onprogress = function() {}),
+              (d.ontimeout = function() {})),
+            t.auth)
+          ) {
+            var v = t.auth.username || "",
+              m = t.auth.password || "";
+            f.Authorization = "Basic " + c(v + ":" + m);
+          }
+          if (
+            (d.open(
+              t.method.toUpperCase(),
+              o(t.url, t.params, t.paramsSerializer),
+              !0
+            ),
+            (d.timeout = t.timeout),
+            (d[p] = function() {
+              if (
+                d &&
+                (4 === d.readyState || g) &&
+                (0 !== d.status ||
+                  (d.responseURL && 0 === d.responseURL.indexOf("file:")))
+              ) {
+                var n =
+                    "getAllResponseHeaders" in d
+                      ? a(d.getAllResponseHeaders())
+                      : null,
+                  r =
+                    t.responseType && "text" !== t.responseType
+                      ? d.response
+                      : d.responseText,
+                  o = {
+                    data: r,
+                    status: 1223 === d.status ? 204 : d.status,
+                    statusText: 1223 === d.status ? "No Content" : d.statusText,
+                    headers: n,
+                    config: t,
+                    request: d
+                  };
+                i(e, l, o), (d = null);
+              }
+            }),
+            (d.onerror = function() {
+              l(u("Network Error", t, null, d)), (d = null);
+            }),
+            (d.ontimeout = function() {
+              l(
+                u(
+                  "timeout of " + t.timeout + "ms exceeded",
+                  t,
+                  "ECONNABORTED",
+                  d
+                )
+              ),
+                (d = null);
+            }),
+            r.isStandardBrowserEnv())
+          ) {
+            var y = n(220),
+              _ =
+                (t.withCredentials || s(t.url)) && t.xsrfCookieName
+                  ? y.read(t.xsrfCookieName)
+                  : void 0;
+            _ && (f[t.xsrfHeaderName] = _);
+          }
+          if (
+            ("setRequestHeader" in d &&
+              r.forEach(f, function(t, e) {
+                void 0 === h && "content-type" === e.toLowerCase()
+                  ? delete f[e]
+                  : d.setRequestHeader(e, t);
+              }),
+            t.withCredentials && (d.withCredentials = !0),
+            t.responseType)
+          )
+            try {
+              d.responseType = t.responseType;
+            } catch (e) {
+              if ("json" !== t.responseType) throw e;
+            }
+          "function" == typeof t.onDownloadProgress &&
+            d.addEventListener("progress", t.onDownloadProgress),
+            "function" == typeof t.onUploadProgress &&
+              d.upload &&
+              d.upload.addEventListener("progress", t.onUploadProgress),
+            t.cancelToken &&
+              t.cancelToken.promise.then(function(t) {
+                d && (d.abort(), l(t), (d = null));
+              }),
+            void 0 === h && (h = null),
+            d.send(h);
+        });
+      };
+    },
+    function(t, e, n) {
+      "use strict";
+      var r = n(215);
+      t.exports = function(t, e, n, i, o) {
+        var a = new Error(t);
+        return r(a, e, n, i, o);
+      };
+    },
+    function(t, e, n) {
+      "use strict";
+      t.exports = function(t) {
+        return !(!t || !t.__CANCEL__);
+      };
+    },
+    function(t, e, n) {
+      "use strict";
+      function r(t) {
+        this.message = t;
+      }
+      (r.prototype.toString = function() {
+        return "Cancel" + (this.message ? ": " + this.message : "");
+      }),
+        (r.prototype.__CANCEL__ = !0),
+        (t.exports = r);
+    },
+    function(t, e, n) {
+      var r = n(229);
+      n(247), n(249), n(284), n(291), (t.exports = r);
     },
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(63);
+      var r = n(65);
       (e.assert = function(t, n) {
         if (!t) throw e.assertionError(n);
       }),
@@ -12889,11 +13061,11 @@ webpackJsonp(
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
       var r = n(1),
-        i = n(106),
+        i = n(113),
         o = n(3),
-        a = n(64),
-        s = n(47),
-        u = n(69),
+        a = n(66),
+        s = n(48),
+        u = n(71),
         c = n(0),
         l = n(18),
         h = (function() {
@@ -12996,7 +13168,7 @@ webpackJsonp(
       }
       Object.defineProperty(e, "__esModule", { value: !0 });
       var i = n(3),
-        o = n(107),
+        o = n(114),
         a = n(1);
       (e.parseRepoInfo = function(t) {
         var n = e.parseURL(t),
@@ -13057,8 +13229,8 @@ webpackJsonp(
       Object.defineProperty(e, "__esModule", { value: !0 });
       var r = n(0),
         i = n(0),
-        o = n(42),
-        a = n(43),
+        o = n(43),
+        a = n(44),
         s = (function() {
           function t(t, e, n, r, i) {
             void 0 === i && (i = ""),
@@ -13258,13 +13430,13 @@ webpackJsonp(
         i = n(0),
         o = n(31),
         a = n(5),
-        s = n(111),
-        u = n(115),
+        s = n(118),
+        u = n(122),
         c = n(1),
         l = n(3),
         h = n(18),
         f = n(0),
-        d = n(235),
+        d = n(255),
         p = n(0),
         g = (function() {
           function t(t, e, n, r) {
@@ -13698,8 +13870,8 @@ webpackJsonp(
           };
         })();
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var i = n(44),
-        o = n(8),
+      var i = n(45),
+        o = n(9),
         a = n(1),
         s = n(32),
         u = (function(t) {
@@ -13741,9 +13913,9 @@ webpackJsonp(
       Object.defineProperty(e, "__esModule", { value: !0 });
       var r,
         i = n(0),
-        o = n(113),
+        o = n(120),
         a = n(0),
-        s = n(8),
+        s = n(9),
         u = n(5),
         c = n(31),
         l = {},
@@ -13850,8 +14022,8 @@ webpackJsonp(
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(46),
-        i = n(46),
+      var r = n(47),
+        i = n(47),
         o = Math.log(2),
         a = (function() {
           function t(t) {
@@ -13967,9 +14139,9 @@ webpackJsonp(
       Object.defineProperty(e, "__esModule", { value: !0 });
       var i = n(0),
         o = n(1),
-        a = n(44),
+        a = n(45),
         s = n(7),
-        u = n(8),
+        u = n(9),
         c = n(32),
         l = (function(t) {
           function e(e) {
@@ -14022,8 +14194,8 @@ webpackJsonp(
       Object.defineProperty(e, "__esModule", { value: !0 });
       var r = n(0),
         i = n(3),
-        o = n(117),
-        a = n(45),
+        o = n(124),
+        a = n(46),
         s = n(32),
         u = n(5);
       (e.generateWithValues = function(t) {
@@ -14078,7 +14250,7 @@ webpackJsonp(
       Object.defineProperty(e, "__esModule", { value: !0 });
       var r = n(3),
         i = n(5),
-        o = n(118),
+        o = n(125),
         a = (function() {
           function t() {
             (this.value_ = null), (this.children_ = null);
@@ -14230,12 +14402,12 @@ webpackJsonp(
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
       var r,
-        i = n(48),
+        i = n(49),
         o = n(7),
         a = n(0),
         s = n(0),
-        u = n(121),
-        c = n(241),
+        u = n(128),
+        c = n(261),
         l = (function() {
           function t() {
             this.views_ = {};
@@ -14381,7 +14553,7 @@ webpackJsonp(
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
       var r = n(7),
-        i = n(48),
+        i = n(49),
         o = (function() {
           function t(t, e) {
             (this.eventCache_ = t), (this.serverCache_ = e);
@@ -14470,19 +14642,19 @@ webpackJsonp(
           };
         })();
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var i = n(15),
+      var i = n(16),
         o = n(0),
         a = n(0),
         s = n(0),
         u = n(1),
         c = n(3),
-        l = n(253),
-        h = n(254),
+        l = n(273),
+        h = n(274),
         f = n(0),
-        d = n(125),
+        d = n(132),
         p = n(0),
         g = n(0),
-        v = n(128),
+        v = n(135),
         m = 1e3,
         y = 3e5,
         _ = (function(t) {
@@ -15070,9 +15242,9 @@ webpackJsonp(
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
       var r = n(1),
-        i = n(42),
-        o = n(43),
-        a = n(255),
+        i = n(43),
+        o = n(44),
+        a = n(275),
         s = (function() {
           function t(t, e, n, i, o, s, u) {
             (this.id = t),
@@ -15378,10 +15550,10 @@ webpackJsonp(
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
       var r = n(1),
-        i = n(118),
-        o = n(68),
-        a = n(256),
-        s = n(43),
+        i = n(125),
+        o = n(70),
+        a = n(276),
+        s = n(44),
         u = n(0),
         c = n(0);
       (e.FIREBASE_LONGPOLL_START_PARAM = "start"),
@@ -15772,13 +15944,13 @@ webpackJsonp(
           d = t;
         }
         Object.defineProperty(e, "__esModule", { value: !0 });
-        var i = n(15),
+        var i = n(16),
           o = n(0),
           a = n(1),
-          s = n(68),
-          u = n(43),
+          s = n(70),
+          u = n(44),
           c = n(0),
-          l = n(42),
+          l = n(43),
           h = n(0),
           f = n(0),
           d = null;
@@ -15983,7 +16155,7 @@ webpackJsonp(
           );
         })();
         e.WebSocketConnection = p;
-      }.call(e, n(57)));
+      }.call(e, n(58)));
     },
     function(t, e, n) {
       "use strict";
@@ -16006,9 +16178,9 @@ webpackJsonp(
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(67),
+      var r = n(69),
         i = n(5),
-        o = n(8),
+        o = n(9),
         a = n(7),
         s = (function() {
           function t(e) {
@@ -16084,9 +16256,9 @@ webpackJsonp(
     function(t, e, n) {
       "use strict";
       var r = n(0),
-        i = (n.n(r), n(49)),
-        o = n(267),
-        a = n(132),
+        i = (n.n(r), n(50)),
+        o = n(287),
+        a = n(139),
         s = "messagingSenderId",
         u = (function() {
           function t(t) {
@@ -16287,17 +16459,17 @@ webpackJsonp(
       n.d(e, "a", function() {
         return p;
       });
-      var r = n(70),
-        i = n(137),
+      var r = n(72),
+        i = n(144),
         o = n(13),
-        a = n(51),
-        s = n(71),
+        a = n(52),
+        s = n(73),
         u = n(24),
-        c = n(136),
-        l = n(138),
+        c = n(143),
+        l = n(145),
         h = n(33),
-        f = n(9),
-        d = n(278),
+        f = n(10),
+        d = n(298),
         p = (function() {
           function t(t, e) {
             (this.authWrapper = t),
@@ -16476,9 +16648,9 @@ webpackJsonp(
       n.d(e, "a", function() {
         return a;
       });
-      var r = n(276),
+      var r = n(296),
         i = n(33),
-        o = n(9),
+        o = n(10),
         a = (function() {
           function t(t, e) {
             var n = 0,
@@ -16774,14 +16946,14 @@ webpackJsonp(
           return S;
         }),
         (e.b = v);
-      var m = n(73),
-        y = n(137),
+      var m = n(75),
+        y = n(144),
         _ = n(13),
-        w = n(71),
+        w = n(73),
         b = n(24),
-        C = n(277),
-        E = n(9),
-        k = n(72),
+        C = n(297),
+        E = n(10),
+        k = n(74),
         T = (function() {
           function t(t, e, n, r) {
             (this.current = t),
@@ -19011,164 +19183,7 @@ and limitations under the License.
     },
     function(t, e, n) {
       "use strict";
-      t.exports = function(t, e) {
-        return function() {
-          for (var n = new Array(arguments.length), r = 0; r < n.length; r++)
-            n[r] = arguments[r];
-          return t.apply(e, n);
-        };
-      };
-    },
-    function(t, e, n) {
-      "use strict";
-      var r = n(10),
-        i = n(296),
-        o = n(298),
-        a = n(299),
-        s = n(300),
-        u = n(142),
-        c =
-          ("undefined" != typeof window &&
-            window.btoa &&
-            window.btoa.bind(window)) ||
-          n(301);
-      t.exports = function(t) {
-        return new Promise(function(e, l) {
-          var h = t.data,
-            f = t.headers;
-          r.isFormData(h) && delete f["Content-Type"];
-          var d = new XMLHttpRequest(),
-            p = "onreadystatechange",
-            g = !1;
-          if (
-            ("undefined" == typeof window ||
-              !window.XDomainRequest ||
-              "withCredentials" in d ||
-              s(t.url) ||
-              ((d = new window.XDomainRequest()),
-              (p = "onload"),
-              (g = !0),
-              (d.onprogress = function() {}),
-              (d.ontimeout = function() {})),
-            t.auth)
-          ) {
-            var v = t.auth.username || "",
-              m = t.auth.password || "";
-            f.Authorization = "Basic " + c(v + ":" + m);
-          }
-          if (
-            (d.open(
-              t.method.toUpperCase(),
-              o(t.url, t.params, t.paramsSerializer),
-              !0
-            ),
-            (d.timeout = t.timeout),
-            (d[p] = function() {
-              if (
-                d &&
-                (4 === d.readyState || g) &&
-                (0 !== d.status ||
-                  (d.responseURL && 0 === d.responseURL.indexOf("file:")))
-              ) {
-                var n =
-                    "getAllResponseHeaders" in d
-                      ? a(d.getAllResponseHeaders())
-                      : null,
-                  r =
-                    t.responseType && "text" !== t.responseType
-                      ? d.response
-                      : d.responseText,
-                  o = {
-                    data: r,
-                    status: 1223 === d.status ? 204 : d.status,
-                    statusText: 1223 === d.status ? "No Content" : d.statusText,
-                    headers: n,
-                    config: t,
-                    request: d
-                  };
-                i(e, l, o), (d = null);
-              }
-            }),
-            (d.onerror = function() {
-              l(u("Network Error", t, null, d)), (d = null);
-            }),
-            (d.ontimeout = function() {
-              l(
-                u(
-                  "timeout of " + t.timeout + "ms exceeded",
-                  t,
-                  "ECONNABORTED",
-                  d
-                )
-              ),
-                (d = null);
-            }),
-            r.isStandardBrowserEnv())
-          ) {
-            var y = n(302),
-              _ =
-                (t.withCredentials || s(t.url)) && t.xsrfCookieName
-                  ? y.read(t.xsrfCookieName)
-                  : void 0;
-            _ && (f[t.xsrfHeaderName] = _);
-          }
-          if (
-            ("setRequestHeader" in d &&
-              r.forEach(f, function(t, e) {
-                void 0 === h && "content-type" === e.toLowerCase()
-                  ? delete f[e]
-                  : d.setRequestHeader(e, t);
-              }),
-            t.withCredentials && (d.withCredentials = !0),
-            t.responseType)
-          )
-            try {
-              d.responseType = t.responseType;
-            } catch (e) {
-              if ("json" !== t.responseType) throw e;
-            }
-          "function" == typeof t.onDownloadProgress &&
-            d.addEventListener("progress", t.onDownloadProgress),
-            "function" == typeof t.onUploadProgress &&
-              d.upload &&
-              d.upload.addEventListener("progress", t.onUploadProgress),
-            t.cancelToken &&
-              t.cancelToken.promise.then(function(t) {
-                d && (d.abort(), l(t), (d = null));
-              }),
-            void 0 === h && (h = null),
-            d.send(h);
-        });
-      };
-    },
-    function(t, e, n) {
-      "use strict";
-      var r = n(297);
-      t.exports = function(t, e, n, i, o) {
-        var a = new Error(t);
-        return r(a, e, n, i, o);
-      };
-    },
-    function(t, e, n) {
-      "use strict";
-      t.exports = function(t) {
-        return !(!t || !t.__CANCEL__);
-      };
-    },
-    function(t, e, n) {
-      "use strict";
-      function r(t) {
-        this.message = t;
-      }
-      (r.prototype.toString = function() {
-        return "Cancel" + (this.message ? ": " + this.message : "");
-      }),
-        (r.prototype.__CANCEL__ = !0),
-        (t.exports = r);
-    },
-    function(t, e, n) {
-      "use strict";
-      var r = n(146),
+      var r = n(148),
         i = {};
       (i[n(12)("toStringTag")] = "z"),
         i + "" != "[object z]" &&
@@ -19182,7 +19197,7 @@ and limitations under the License.
           );
     },
     function(t, e, n) {
-      var r = n(147),
+      var r = n(149),
         i = n(12)("toStringTag"),
         o =
           "Arguments" ==
@@ -19227,10 +19242,10 @@ and limitations under the License.
     function(t, e, n) {
       t.exports =
         !n(21) &&
-        !n(53)(function() {
+        !n(54)(function() {
           return (
             7 !=
-            Object.defineProperty(n(150)("div"), "a", {
+            Object.defineProperty(n(152)("div"), "a", {
               get: function() {
                 return 7;
               }
@@ -19239,7 +19254,7 @@ and limitations under the License.
         });
     },
     function(t, e, n) {
-      var r = n(16),
+      var r = n(17),
         i = n(14).document,
         o = r(i) && r(i.createElement);
       t.exports = function(t) {
@@ -19247,7 +19262,7 @@ and limitations under the License.
       };
     },
     function(t, e, n) {
-      var r = n(16);
+      var r = n(17);
       t.exports = function(t, e) {
         if (!r(t)) return t;
         var n, i;
@@ -19263,7 +19278,7 @@ and limitations under the License.
     function(t, e, n) {
       "use strict";
       var r = n(316)(!0);
-      n(78)(
+      n(79)(
         String,
         "String",
         function(t) {
@@ -19284,7 +19299,7 @@ and limitations under the License.
         i = n(35),
         o = n(26),
         a = n(25),
-        s = n(54),
+        s = n(55),
         u = function(t, e, n) {
           var c,
             l,
@@ -19324,12 +19339,12 @@ and limitations under the License.
     function(t, e, n) {
       var r = n(28),
         i = n(320),
-        o = n(157),
-        a = n(79)("IE_PROTO"),
+        o = n(159),
+        a = n(80)("IE_PROTO"),
         s = function() {},
         u = function() {
           var t,
-            e = n(150)("iframe"),
+            e = n(152)("iframe"),
             r = o.length;
           for (
             e.style.display = "none",
@@ -19363,7 +19378,7 @@ and limitations under the License.
     },
     function(t, e, n) {
       var r = n(321),
-        i = n(157);
+        i = n(159);
       t.exports =
         Object.keys ||
         function(t) {
@@ -19371,7 +19386,7 @@ and limitations under the License.
         };
     },
     function(t, e, n) {
-      var r = n(76),
+      var r = n(77),
         i = Math.min;
       t.exports = function(t) {
         return t > 0 ? i(r(t), 9007199254740991) : 0;
@@ -19385,7 +19400,7 @@ and limitations under the License.
     function(t, e, n) {
       for (
         var r = n(328),
-          i = n(155),
+          i = n(157),
           o = n(25),
           a = n(14),
           s = n(26),
@@ -19449,17 +19464,17 @@ and limitations under the License.
     function(t, e, n) {
       "use strict";
       var r = n(27).f,
-        i = n(154),
-        o = n(161),
-        a = n(54),
-        s = n(162),
-        u = n(163),
-        c = n(78),
-        l = n(159),
+        i = n(156),
+        o = n(163),
+        a = n(55),
+        s = n(164),
+        u = n(165),
+        c = n(79),
+        l = n(161),
         h = n(334),
         f = n(21),
-        d = n(164).fastKey,
-        p = n(81),
+        d = n(166).fastKey,
+        p = n(82),
         g = f ? "_s" : "size",
         v = function(t, e) {
           var n,
@@ -19585,11 +19600,11 @@ and limitations under the License.
       };
     },
     function(t, e, n) {
-      var r = n(54),
+      var r = n(55),
         i = n(331),
         o = n(332),
         a = n(28),
-        s = n(156),
+        s = n(158),
         u = n(333),
         c = {},
         l = {},
@@ -19620,8 +19635,8 @@ and limitations under the License.
       (e.BREAK = c), (e.RETURN = l);
     },
     function(t, e, n) {
-      var r = n(52)("meta"),
-        i = n(16),
+      var r = n(53)("meta"),
+        i = n(17),
         o = n(22),
         a = n(27).f,
         s = 0,
@@ -19630,7 +19645,7 @@ and limitations under the License.
           function() {
             return !0;
           },
-        c = !n(53)(function() {
+        c = !n(54)(function() {
           return u(Object.preventExtensions({}));
         }),
         l = function(t) {
@@ -19670,16 +19685,16 @@ and limitations under the License.
     function(t, e, n) {
       "use strict";
       var r = n(14),
-        i = n(153),
+        i = n(155),
         o = n(25),
-        a = n(161),
-        s = n(164),
-        u = n(163),
-        c = n(162),
-        l = n(16),
-        h = n(53),
+        a = n(163),
+        s = n(166),
+        u = n(165),
+        c = n(164),
+        l = n(17),
+        h = n(54),
         f = n(335),
-        d = n(80),
+        d = n(81),
         p = n(336);
       t.exports = function(t, e, n, g, v, m) {
         var y = r[t],
@@ -19766,14 +19781,14 @@ and limitations under the License.
       }
       var i = n(2),
         o = r(i),
-        a = n(84),
+        a = n(85),
         s = r(a),
-        u = n(85),
+        u = n(86),
         c = r(u),
-        l = n(87),
+        l = n(88),
         h = r(l);
-      n(178), n(179);
-      var f = n(180),
+      n(180), n(181);
+      var f = n(182),
         d = r(f);
       n(315),
         n(340),
@@ -19929,7 +19944,7 @@ and limitations under the License.
               (f.clearImmediate = i);
           }
         })("undefined" == typeof self ? (void 0 === t ? this : t) : self);
-      }.call(e, n(56), n(57)));
+      }.call(e, n(57), n(58)));
     },
     function(t, e) {},
     function(t, e) {},
@@ -19985,12 +20000,12 @@ and limitations under the License.
         })(),
         u = n(2),
         c = r(u),
-        l = n(17),
-        h = n(204),
+        l = n(15),
+        h = n(206),
         f = r(h),
         d = n(311),
         p = r(d),
-        g = n(100),
+        g = n(107),
         v = r(g),
         m = (function(t) {
           function e(t) {
@@ -20126,9 +20141,9 @@ and limitations under the License.
         u = n(2),
         c = r(u),
         l = n(41),
-        h = (r(l), n(205)),
+        h = (r(l), n(207)),
         f = r(h),
-        d = (n(17), n(206)),
+        d = (n(15), n(208)),
         p = r(d),
         g = (function(t) {
           function e(t) {
@@ -20247,175 +20262,14 @@ and limitations under the License.
       Object.defineProperty(e, "__esModule", { value: !0 });
       var o = n(2),
         a = r(o),
-        s = n(17),
-        u = n(207),
+        s = n(15),
+        u = n(209),
         c = r(u),
-        l = n(208),
+        l = n(228),
         h = r(l),
-        f = n(288),
+        f = n(308),
         d = r(f);
       e.default = i;
-    },
-    function(t, e, n) {
-      "use strict";
-      function r(t, e) {
-        if (!(t instanceof e))
-          throw new TypeError("Cannot call a class as a function");
-      }
-      function i(t, e) {
-        if (!t)
-          throw new ReferenceError(
-            "this hasn't been initialised - super() hasn't been called"
-          );
-        return !e || ("object" != typeof e && "function" != typeof e) ? t : e;
-      }
-      function o(t, e) {
-        if ("function" != typeof e && null !== e)
-          throw new TypeError(
-            "Super expression must either be null or a function, not " +
-              typeof e
-          );
-        (t.prototype = Object.create(e && e.prototype, {
-          constructor: {
-            value: t,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0
-          }
-        })),
-          e &&
-            (Object.setPrototypeOf
-              ? Object.setPrototypeOf(t, e)
-              : (t.__proto__ = e));
-      }
-      Object.defineProperty(e, "__esModule", { value: !0 });
-      var a = (function() {
-          function t(t, e) {
-            for (var n = 0; n < e.length; n++) {
-              var r = e[n];
-              (r.enumerable = r.enumerable || !1),
-                (r.configurable = !0),
-                "value" in r && (r.writable = !0),
-                Object.defineProperty(t, r.key, r);
-            }
-          }
-          return function(e, n, r) {
-            return n && t(e.prototype, n), r && t(e, r), e;
-          };
-        })(),
-        s = n(2),
-        u = (function(t) {
-          return t && t.__esModule ? t : { default: t };
-        })(s),
-        c = n(17),
-        l = (function(t) {
-          function e(t) {
-            return (
-              r(this, e),
-              i(this, (e.__proto__ || Object.getPrototypeOf(e)).call(this, t))
-            );
-          }
-          return (
-            o(e, t),
-            a(e, [
-              {
-                key: "render",
-                value: function() {
-                  return u.default.createElement(
-                    "div",
-                    null,
-                    u.default.createElement("h2", null, "Login"),
-                    u.default.createElement(
-                      "p",
-                      { className: "uk-text-meta" },
-                      "Login to book and view your profile."
-                    ),
-                    u.default.createElement("hr", {
-                      className: "uk-margin-small"
-                    }),
-                    u.default.createElement(
-                      "form",
-                      { className: "uk-form-stacked" },
-                      u.default.createElement(
-                        "div",
-                        { id: "phone", className: "uk-margin-small" },
-                        u.default.createElement(
-                          "label",
-                          {
-                            className: "uk-form-label",
-                            htmlFor: "form-stacked-text"
-                          },
-                          "Phone Number"
-                        ),
-                        u.default.createElement(
-                          "div",
-                          { className: "uk-inline uk-width-1-1" },
-                          u.default.createElement("span", {
-                            className: "uk-form-icon",
-                            "uk-icon": "icon: phone"
-                          }),
-                          u.default.createElement("input", {
-                            id: "phone",
-                            className: "uk-input",
-                            type: "text"
-                          })
-                        )
-                      ),
-                      u.default.createElement(
-                        "div",
-                        {
-                          id: "otp",
-                          className: "uk-margin-small uk-margin-remove-top"
-                        },
-                        u.default.createElement(
-                          "label",
-                          {
-                            className: "uk-form-label",
-                            htmlFor: "form-stacked-text"
-                          },
-                          "Password"
-                        ),
-                        u.default.createElement(
-                          "div",
-                          { className: "uk-inline uk-width-1-1" },
-                          u.default.createElement("span", {
-                            className: "uk-form-icon",
-                            "uk-icon": "icon: hashtag"
-                          }),
-                          u.default.createElement("input", {
-                            className: "uk-input",
-                            type: "text"
-                          })
-                        )
-                      ),
-                      u.default.createElement(
-                        "div",
-                        { className: "uk-margin-small" },
-                        u.default.createElement(
-                          "button",
-                          {
-                            className:
-                              "uk-button reg uk-button-primary uk-width-1-1"
-                          },
-                          "Login and Book"
-                        ),
-                        u.default.createElement(
-                          "button",
-                          {
-                            className: "uk-button-link nreg uk-button-primary"
-                          },
-                          u.default.createElement(c.Link, { to: "/" }, "Back")
-                        )
-                      )
-                    )
-                  );
-                }
-              }
-            ]),
-            e
-          );
-        })(u.default.Component);
-      e.default = l;
     },
     function(t, e, n) {
       "use strict";
@@ -20482,9 +20336,10 @@ and limitations under the License.
         })(),
         c = n(2),
         l = r(c),
-        h = n(100),
-        f = r(h),
-        d = (function(t) {
+        h = n(15),
+        f = n(42),
+        d = r(f),
+        p = (function(t) {
           function e(t) {
             o(this, e);
             var n = a(
@@ -20492,7 +20347,696 @@ and limitations under the License.
               (e.__proto__ || Object.getPrototypeOf(e)).call(this, t)
             );
             return (
-              (n.state = { name: "", phone: "", otp: "", smsSent: !1 }),
+              (n.state = { fromBook: !1 }),
+              (n.loginClick = n.loginClick.bind(n)),
+              (n.handleInputChange = n.handleInputChange.bind(n)),
+              n
+            );
+          }
+          return (
+            s(e, t),
+            u(e, [
+              {
+                key: "componentDidMount",
+                value: function() {
+                  (this.bookOptions = JSON.parse(
+                    sessionStorage.getItem("booked")
+                  )),
+                    this.bookOptions && this.setState({ fromBook: !0 });
+                }
+              },
+              {
+                key: "handleInputChange",
+                value: function(t) {
+                  var e = t.target,
+                    n = "checkbox" === e.type ? e.checked : e.value,
+                    r = e.name;
+                  this.setState(i({}, r, n));
+                }
+              },
+              {
+                key: "loginClick",
+                value: function(t) {
+                  var e = this;
+                  if ((t.preventDefault(), this.state.fromBook)) {
+                    var n = JSON.parse(sessionStorage.getItem("booked"));
+                    if (n) {
+                      var r = new FormData();
+                      r.append("pcontact", this.state.phone),
+                        r.append("password", this.state.password),
+                        r.append("bdate", n.date),
+                        r.append("doctor", n.doctor),
+                        d.default.post("/book/Bookslot", r).then(function(t) {
+                          sessionStorage.setItem("user", e.state.phone);
+                        });
+                    }
+                  }
+                }
+              },
+              {
+                key: "render",
+                value: function() {
+                  return l.default.createElement(
+                    "div",
+                    null,
+                    l.default.createElement("h2", null, "Login"),
+                    l.default.createElement(
+                      "p",
+                      { className: "uk-text-meta" },
+                      "Login to book and view your profile."
+                    ),
+                    l.default.createElement("hr", {
+                      className: "uk-margin-small"
+                    }),
+                    l.default.createElement(
+                      "form",
+                      { className: "uk-form-stacked" },
+                      l.default.createElement(
+                        "div",
+                        { id: "phone", className: "uk-margin-small" },
+                        l.default.createElement(
+                          "label",
+                          { className: "uk-form-label", htmlFor: "phone" },
+                          "Phone Number"
+                        ),
+                        l.default.createElement(
+                          "div",
+                          { className: "uk-inline uk-width-1-1" },
+                          l.default.createElement("span", {
+                            className: "uk-form-icon",
+                            "uk-icon": "icon: phone"
+                          }),
+                          l.default.createElement("input", {
+                            id: "phone",
+                            name: "phone",
+                            value: this.state.phone,
+                            onChange: this.handleInputChange,
+                            className: "uk-input",
+                            type: "number"
+                          })
+                        )
+                      ),
+                      l.default.createElement(
+                        "div",
+                        {
+                          id: "password",
+                          className: "uk-margin-small uk-margin-remove-top"
+                        },
+                        l.default.createElement(
+                          "label",
+                          { className: "uk-form-label", htmlFor: "password" },
+                          "Password"
+                        ),
+                        l.default.createElement(
+                          "div",
+                          { className: "uk-inline uk-width-1-1" },
+                          l.default.createElement("span", {
+                            className: "uk-form-icon",
+                            "uk-icon": "icon: hashtag"
+                          }),
+                          l.default.createElement("input", {
+                            className: "uk-input",
+                            type: "password",
+                            name: "password",
+                            id: "password",
+                            value: this.state.password,
+                            onChange: this.handleInputChange
+                          })
+                        )
+                      ),
+                      l.default.createElement(
+                        "div",
+                        { className: "uk-margin-small" },
+                        l.default.createElement(
+                          "button",
+                          {
+                            className:
+                              "uk-button reg uk-button-primary uk-width-1-1",
+                            onClick: this.loginClick
+                          },
+                          "Login ",
+                          this.state.fromBook && "and Book"
+                        ),
+                        l.default.createElement(
+                          "button",
+                          {
+                            className: "uk-button-link nreg uk-button-primary"
+                          },
+                          l.default.createElement(h.Link, { to: "/" }, "Back")
+                        )
+                      )
+                    )
+                  );
+                }
+              }
+            ]),
+            e
+          );
+        })(l.default.Component);
+      e.default = (0, h.withRouter)(p);
+    },
+    function(t, e, n) {
+      "use strict";
+      function r(t) {
+        var e = new a(t),
+          n = o(a.prototype.request, e);
+        return i.extend(n, a.prototype, e), i.extend(n, e), n;
+      }
+      var i = n(8),
+        o = n(102),
+        a = n(212),
+        s = n(64),
+        u = r(s);
+      (u.Axios = a),
+        (u.create = function(t) {
+          return r(i.merge(s, t));
+        }),
+        (u.Cancel = n(106)),
+        (u.CancelToken = n(226)),
+        (u.isCancel = n(105)),
+        (u.all = function(t) {
+          return Promise.all(t);
+        }),
+        (u.spread = n(227)),
+        (t.exports = u),
+        (t.exports.default = u);
+    },
+    function(t, e) {
+      function n(t) {
+        return (
+          !!t.constructor &&
+          "function" == typeof t.constructor.isBuffer &&
+          t.constructor.isBuffer(t)
+        );
+      }
+      function r(t) {
+        return (
+          "function" == typeof t.readFloatLE &&
+          "function" == typeof t.slice &&
+          n(t.slice(0, 0))
+        );
+      } /*!
+ * Determine if an object is a Buffer
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+      t.exports = function(t) {
+        return null != t && (n(t) || r(t) || !!t._isBuffer);
+      };
+    },
+    function(t, e, n) {
+      "use strict";
+      function r(t) {
+        (this.defaults = t),
+          (this.interceptors = { request: new a(), response: new a() });
+      }
+      var i = n(64),
+        o = n(8),
+        a = n(221),
+        s = n(222);
+      (r.prototype.request = function(t) {
+        "string" == typeof t &&
+          (t = o.merge({ url: arguments[0] }, arguments[1])),
+          (t = o.merge(i, this.defaults, { method: "get" }, t)),
+          (t.method = t.method.toLowerCase());
+        var e = [s, void 0],
+          n = Promise.resolve(t);
+        for (
+          this.interceptors.request.forEach(function(t) {
+            e.unshift(t.fulfilled, t.rejected);
+          }),
+            this.interceptors.response.forEach(function(t) {
+              e.push(t.fulfilled, t.rejected);
+            });
+          e.length;
+
+        )
+          n = n.then(e.shift(), e.shift());
+        return n;
+      }),
+        o.forEach(["delete", "get", "head", "options"], function(t) {
+          r.prototype[t] = function(e, n) {
+            return this.request(o.merge(n || {}, { method: t, url: e }));
+          };
+        }),
+        o.forEach(["post", "put", "patch"], function(t) {
+          r.prototype[t] = function(e, n, r) {
+            return this.request(
+              o.merge(r || {}, { method: t, url: e, data: n })
+            );
+          };
+        }),
+        (t.exports = r);
+    },
+    function(t, e, n) {
+      "use strict";
+      var r = n(8);
+      t.exports = function(t, e) {
+        r.forEach(t, function(n, r) {
+          r !== e &&
+            r.toUpperCase() === e.toUpperCase() &&
+            ((t[e] = n), delete t[r]);
+        });
+      };
+    },
+    function(t, e, n) {
+      "use strict";
+      var r = n(104);
+      t.exports = function(t, e, n) {
+        var i = n.config.validateStatus;
+        n.status && i && !i(n.status)
+          ? e(
+              r(
+                "Request failed with status code " + n.status,
+                n.config,
+                null,
+                n.request,
+                n
+              )
+            )
+          : t(n);
+      };
+    },
+    function(t, e, n) {
+      "use strict";
+      t.exports = function(t, e, n, r, i) {
+        return (
+          (t.config = e),
+          n && (t.code = n),
+          (t.request = r),
+          (t.response = i),
+          t
+        );
+      };
+    },
+    function(t, e, n) {
+      "use strict";
+      function r(t) {
+        return encodeURIComponent(t)
+          .replace(/%40/gi, "@")
+          .replace(/%3A/gi, ":")
+          .replace(/%24/g, "$")
+          .replace(/%2C/gi, ",")
+          .replace(/%20/g, "+")
+          .replace(/%5B/gi, "[")
+          .replace(/%5D/gi, "]");
+      }
+      var i = n(8);
+      t.exports = function(t, e, n) {
+        if (!e) return t;
+        var o;
+        if (n) o = n(e);
+        else if (i.isURLSearchParams(e)) o = e.toString();
+        else {
+          var a = [];
+          i.forEach(e, function(t, e) {
+            null !== t &&
+              void 0 !== t &&
+              (i.isArray(t) && (e += "[]"),
+              i.isArray(t) || (t = [t]),
+              i.forEach(t, function(t) {
+                i.isDate(t)
+                  ? (t = t.toISOString())
+                  : i.isObject(t) && (t = JSON.stringify(t)),
+                  a.push(r(e) + "=" + r(t));
+              }));
+          }),
+            (o = a.join("&"));
+        }
+        return o && (t += (-1 === t.indexOf("?") ? "?" : "&") + o), t;
+      };
+    },
+    function(t, e, n) {
+      "use strict";
+      var r = n(8),
+        i = [
+          "age",
+          "authorization",
+          "content-length",
+          "content-type",
+          "etag",
+          "expires",
+          "from",
+          "host",
+          "if-modified-since",
+          "if-unmodified-since",
+          "last-modified",
+          "location",
+          "max-forwards",
+          "proxy-authorization",
+          "referer",
+          "retry-after",
+          "user-agent"
+        ];
+      t.exports = function(t) {
+        var e,
+          n,
+          o,
+          a = {};
+        return t
+          ? (r.forEach(t.split("\n"), function(t) {
+              if (
+                ((o = t.indexOf(":")),
+                (e = r.trim(t.substr(0, o)).toLowerCase()),
+                (n = r.trim(t.substr(o + 1))),
+                e)
+              ) {
+                if (a[e] && i.indexOf(e) >= 0) return;
+                a[e] =
+                  "set-cookie" === e
+                    ? (a[e] ? a[e] : []).concat([n])
+                    : a[e] ? a[e] + ", " + n : n;
+              }
+            }),
+            a)
+          : a;
+      };
+    },
+    function(t, e, n) {
+      "use strict";
+      var r = n(8);
+      t.exports = r.isStandardBrowserEnv()
+        ? (function() {
+            function t(t) {
+              var e = t;
+              return (
+                n && (i.setAttribute("href", e), (e = i.href)),
+                i.setAttribute("href", e),
+                {
+                  href: i.href,
+                  protocol: i.protocol ? i.protocol.replace(/:$/, "") : "",
+                  host: i.host,
+                  search: i.search ? i.search.replace(/^\?/, "") : "",
+                  hash: i.hash ? i.hash.replace(/^#/, "") : "",
+                  hostname: i.hostname,
+                  port: i.port,
+                  pathname:
+                    "/" === i.pathname.charAt(0) ? i.pathname : "/" + i.pathname
+                }
+              );
+            }
+            var e,
+              n = /(msie|trident)/i.test(navigator.userAgent),
+              i = document.createElement("a");
+            return (
+              (e = t(window.location.href)),
+              function(n) {
+                var i = r.isString(n) ? t(n) : n;
+                return i.protocol === e.protocol && i.host === e.host;
+              }
+            );
+          })()
+        : (function() {
+            return function() {
+              return !0;
+            };
+          })();
+    },
+    function(t, e, n) {
+      "use strict";
+      function r() {
+        this.message = "String contains an invalid character";
+      }
+      function i(t) {
+        for (
+          var e, n, i = String(t), a = "", s = 0, u = o;
+          i.charAt(0 | s) || ((u = "="), s % 1);
+          a += u.charAt(63 & (e >> (8 - (s % 1) * 8)))
+        ) {
+          if ((n = i.charCodeAt((s += 0.75))) > 255) throw new r();
+          e = (e << 8) | n;
+        }
+        return a;
+      }
+      var o =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+      (r.prototype = new Error()),
+        (r.prototype.code = 5),
+        (r.prototype.name = "InvalidCharacterError"),
+        (t.exports = i);
+    },
+    function(t, e, n) {
+      "use strict";
+      var r = n(8);
+      t.exports = r.isStandardBrowserEnv()
+        ? (function() {
+            return {
+              write: function(t, e, n, i, o, a) {
+                var s = [];
+                s.push(t + "=" + encodeURIComponent(e)),
+                  r.isNumber(n) &&
+                    s.push("expires=" + new Date(n).toGMTString()),
+                  r.isString(i) && s.push("path=" + i),
+                  r.isString(o) && s.push("domain=" + o),
+                  !0 === a && s.push("secure"),
+                  (document.cookie = s.join("; "));
+              },
+              read: function(t) {
+                var e = document.cookie.match(
+                  new RegExp("(^|;\\s*)(" + t + ")=([^;]*)")
+                );
+                return e ? decodeURIComponent(e[3]) : null;
+              },
+              remove: function(t) {
+                this.write(t, "", Date.now() - 864e5);
+              }
+            };
+          })()
+        : (function() {
+            return {
+              write: function() {},
+              read: function() {
+                return null;
+              },
+              remove: function() {}
+            };
+          })();
+    },
+    function(t, e, n) {
+      "use strict";
+      function r() {
+        this.handlers = [];
+      }
+      var i = n(8);
+      (r.prototype.use = function(t, e) {
+        return (
+          this.handlers.push({ fulfilled: t, rejected: e }),
+          this.handlers.length - 1
+        );
+      }),
+        (r.prototype.eject = function(t) {
+          this.handlers[t] && (this.handlers[t] = null);
+        }),
+        (r.prototype.forEach = function(t) {
+          i.forEach(this.handlers, function(e) {
+            null !== e && t(e);
+          });
+        }),
+        (t.exports = r);
+    },
+    function(t, e, n) {
+      "use strict";
+      function r(t) {
+        t.cancelToken && t.cancelToken.throwIfRequested();
+      }
+      var i = n(8),
+        o = n(223),
+        a = n(105),
+        s = n(64),
+        u = n(224),
+        c = n(225);
+      t.exports = function(t) {
+        return (
+          r(t),
+          t.baseURL && !u(t.url) && (t.url = c(t.baseURL, t.url)),
+          (t.headers = t.headers || {}),
+          (t.data = o(t.data, t.headers, t.transformRequest)),
+          (t.headers = i.merge(
+            t.headers.common || {},
+            t.headers[t.method] || {},
+            t.headers || {}
+          )),
+          i.forEach(
+            ["delete", "get", "head", "post", "put", "patch", "common"],
+            function(e) {
+              delete t.headers[e];
+            }
+          ),
+          (t.adapter || s.adapter)(t).then(
+            function(e) {
+              return (
+                r(t), (e.data = o(e.data, e.headers, t.transformResponse)), e
+              );
+            },
+            function(e) {
+              return (
+                a(e) ||
+                  (r(t),
+                  e &&
+                    e.response &&
+                    (e.response.data = o(
+                      e.response.data,
+                      e.response.headers,
+                      t.transformResponse
+                    ))),
+                Promise.reject(e)
+              );
+            }
+          )
+        );
+      };
+    },
+    function(t, e, n) {
+      "use strict";
+      var r = n(8);
+      t.exports = function(t, e, n) {
+        return (
+          r.forEach(n, function(n) {
+            t = n(t, e);
+          }),
+          t
+        );
+      };
+    },
+    function(t, e, n) {
+      "use strict";
+      t.exports = function(t) {
+        return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(t);
+      };
+    },
+    function(t, e, n) {
+      "use strict";
+      t.exports = function(t, e) {
+        return e ? t.replace(/\/+$/, "") + "/" + e.replace(/^\/+/, "") : t;
+      };
+    },
+    function(t, e, n) {
+      "use strict";
+      function r(t) {
+        if ("function" != typeof t)
+          throw new TypeError("executor must be a function.");
+        var e;
+        this.promise = new Promise(function(t) {
+          e = t;
+        });
+        var n = this;
+        t(function(t) {
+          n.reason || ((n.reason = new i(t)), e(n.reason));
+        });
+      }
+      var i = n(106);
+      (r.prototype.throwIfRequested = function() {
+        if (this.reason) throw this.reason;
+      }),
+        (r.source = function() {
+          var t;
+          return {
+            token: new r(function(e) {
+              t = e;
+            }),
+            cancel: t
+          };
+        }),
+        (t.exports = r);
+    },
+    function(t, e, n) {
+      "use strict";
+      t.exports = function(t) {
+        return function(e) {
+          return t.apply(null, e);
+        };
+      };
+    },
+    function(t, e, n) {
+      "use strict";
+      function r(t) {
+        return t && t.__esModule ? t : { default: t };
+      }
+      function i(t, e, n) {
+        return (
+          e in t
+            ? Object.defineProperty(t, e, {
+                value: n,
+                enumerable: !0,
+                configurable: !0,
+                writable: !0
+              })
+            : (t[e] = n),
+          t
+        );
+      }
+      function o(t, e) {
+        if (!(t instanceof e))
+          throw new TypeError("Cannot call a class as a function");
+      }
+      function a(t, e) {
+        if (!t)
+          throw new ReferenceError(
+            "this hasn't been initialised - super() hasn't been called"
+          );
+        return !e || ("object" != typeof e && "function" != typeof e) ? t : e;
+      }
+      function s(t, e) {
+        if ("function" != typeof e && null !== e)
+          throw new TypeError(
+            "Super expression must either be null or a function, not " +
+              typeof e
+          );
+        (t.prototype = Object.create(e && e.prototype, {
+          constructor: {
+            value: t,
+            enumerable: !1,
+            writable: !0,
+            configurable: !0
+          }
+        })),
+          e &&
+            (Object.setPrototypeOf
+              ? Object.setPrototypeOf(t, e)
+              : (t.__proto__ = e));
+      }
+      Object.defineProperty(e, "__esModule", { value: !0 });
+      var u = (function() {
+          function t(t, e) {
+            for (var n = 0; n < e.length; n++) {
+              var r = e[n];
+              (r.enumerable = r.enumerable || !1),
+                (r.configurable = !0),
+                "value" in r && (r.writable = !0),
+                Object.defineProperty(t, r.key, r);
+            }
+          }
+          return function(e, n, r) {
+            return n && t(e.prototype, n), r && t(e, r), e;
+          };
+        })(),
+        c = n(2),
+        l = r(c),
+        h = n(107),
+        f = r(h),
+        d = n(42),
+        p = r(d),
+        g = n(101),
+        v = r(g),
+        m = n(15),
+        y = (function(t) {
+          function e(t) {
+            o(this, e);
+            var n = a(
+              this,
+              (e.__proto__ || Object.getPrototypeOf(e)).call(this, t)
+            );
+            return (
+              (n.state = {
+                name: "",
+                phone: "",
+                otp: "",
+                password: "",
+                smsSent: !1,
+                email: "",
+                bookOptions: !1
+              }),
               (n.handleInputChange = n.handleInputChange.bind(n)),
               (n.onSignUpSubmit = n.onSignUpSubmit.bind(n)),
               (n.getCodeFromUserInput = n.getCodeFromUserInput.bind(n)),
@@ -20506,8 +21050,9 @@ and limitations under the License.
                 key: "componentDidMount",
                 value: function() {
                   var t = this,
-                    e = JSON.parse(sessionStorage.getItem("booked")),
-                    n = e ? e.phone : "";
+                    e = JSON.parse(sessionStorage.getItem("booked"));
+                  this.setState({ bookOptions: !!e });
+                  var n = e ? e.phone : "";
                   this.setState({ phone: n }),
                     (window.recaptchaVerifier = new f.default.auth.RecaptchaVerifier(
                       "sign-up-button",
@@ -20548,6 +21093,15 @@ and limitations under the License.
                 }
               },
               {
+                key: "sendEmail",
+                value: function(t, e, n, r) {
+                  v.default.post(
+                    "https://849h7ad3u1.execute-api.us-west-2.amazonaws.com/beta",
+                    { hospital: t, doctor: e, start: n, email: r }
+                  );
+                }
+              },
+              {
                 key: "getCodeFromUserInput",
                 value: function(t) {
                   var e = this;
@@ -20563,8 +21117,26 @@ and limitations under the License.
                           r.append("pcontact", e.state.phone),
                           r.append("doctor", n.doctor),
                           r.append("bdate", n.date.slice(0, 10)),
-                          axios.post("book/RegandBookslot", r);
+                          r.append("password", e.state.password),
+                          p.default
+                            .post("book/RegandBookslot", r)
+                            .then(function(t) {
+                              e.sendEmail(
+                                "Find Care Hospital",
+                                doctor,
+                                n.date.slice(0, 10),
+                                e.state.email
+                              );
+                            })
+                            .catch(function(t) {});
                       }
+                      e.sendEmail(
+                        "Find Care Hospital",
+                        doctor,
+                        n.date.slice(0, 10),
+                        e.state.email
+                      ),
+                        e.props.history.push("/profile");
                     })
                     .catch(function(t) {});
                 }
@@ -20613,9 +21185,36 @@ and limitations under the License.
                           })
                         )
                       ),
+                      this.state.bookOptions &&
+                        l.default.createElement(
+                          "div",
+                          { className: "uk-margin-small" },
+                          l.default.createElement(
+                            "label",
+                            { className: "uk-form-label", htmlFor: "email" },
+                            "Email"
+                          ),
+                          l.default.createElement(
+                            "div",
+                            { className: "uk-inline uk-width-1-1" },
+                            l.default.createElement("span", {
+                              className: "uk-form-icon",
+                              "uk-icon": "icon: mail"
+                            }),
+                            l.default.createElement("input", {
+                              id: "email",
+                              name: "email",
+                              className: "uk-input",
+                              type: "email",
+                              required: !0,
+                              value: this.state.email,
+                              onChange: this.handleInputChange
+                            })
+                          )
+                        ),
                       l.default.createElement(
                         "div",
-                        { id: "phone", className: "uk-margin-small" },
+                        { className: "uk-margin-small" },
                         l.default.createElement(
                           "label",
                           { className: "uk-form-label", htmlFor: "phone" },
@@ -20635,6 +21234,33 @@ and limitations under the License.
                             type: "text",
                             required: !0,
                             value: this.state.phone,
+                            onChange: this.handleInputChange
+                          })
+                        )
+                      ),
+                      l.default.createElement(
+                        "div",
+                        {
+                          id: "password",
+                          className: "uk-margin-small uk-margin-remove-top"
+                        },
+                        l.default.createElement(
+                          "label",
+                          { className: "uk-form-label", htmlFor: "password" },
+                          "Create New Password"
+                        ),
+                        l.default.createElement(
+                          "div",
+                          { className: "uk-inline uk-width-1-1" },
+                          l.default.createElement("span", {
+                            className: "uk-form-icon",
+                            "uk-icon": "icon: hashtag"
+                          }),
+                          l.default.createElement("input", {
+                            className: "uk-input",
+                            type: "password",
+                            name: "password",
+                            id: "password",
                             onChange: this.handleInputChange
                           })
                         )
@@ -20728,17 +21354,17 @@ and limitations under the License.
             e
           );
         })(l.default.Component);
-      e.default = d;
+      e.default = (0, m.withRouter)(y);
     },
     function(t, e, n) {
-      n(210), (t.exports = n(15).default);
+      n(230), (t.exports = n(16).default);
     },
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(211),
-        i = (n.n(r), n(213)),
-        o = (n.n(i), n(214));
+      var r = n(231),
+        i = (n.n(r), n(233)),
+        o = (n.n(i), n(234));
       n.n(o);
     },
     function(t, e, n) {
@@ -20749,8 +21375,8 @@ and limitations under the License.
           if ("undefined" != typeof self) return self;
           throw new Error("unable to locate global object");
         })();
-        "undefined" == typeof Promise && (e.Promise = Promise = n(212));
-      }.call(e, n(56)));
+        "undefined" == typeof Promise && (e.Promise = Promise = n(232));
+      }.call(e, n(57)));
     },
     function(t, e, n) {
       (function(e) {
@@ -20910,7 +21536,7 @@ and limitations under the License.
               ? (t.exports = o)
               : n.Promise || (n.Promise = o);
         })(this);
-      }.call(e, n(86).setImmediate));
+      }.call(e, n(87).setImmediate));
     },
     function(t, e) {
       Array.prototype.find ||
@@ -21230,7 +21856,7 @@ and limitations under the License.
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(63);
+      var r = n(65);
       (e.getUA = function() {
         return "undefined" != typeof navigator &&
           "string" == typeof navigator.userAgent
@@ -21319,8 +21945,8 @@ and limitations under the License.
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(102),
-        i = n(103);
+      var r = n(109),
+        i = n(110);
       (e.decode = function(t) {
         var e = {},
           n = {},
@@ -21372,7 +21998,7 @@ and limitations under the License.
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(104);
+      var r = n(111);
       (e.querystring = function(t) {
         var e = [];
         return (
@@ -21428,7 +22054,7 @@ and limitations under the License.
           };
         })();
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var i = n(223),
+      var i = n(243),
         o = (function(t) {
           function e() {
             var e = t.call(this) || this;
@@ -21767,7 +22393,7 @@ and limitations under the License.
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(101);
+      var r = n(108);
       (e.stringToByteArray = function(t) {
         for (var e = [], n = 0, i = 0; i < t.length; i++) {
           var o = t.charCodeAt(i);
@@ -21805,7 +22431,7 @@ and limitations under the License.
         });
     },
     function(t, e, n) {
-      n(228);
+      n(248);
     },
     function(t, e, n) {
       (function(t) {
@@ -26908,7 +27534,7 @@ and limitations under the License.
             return (t = t.split(".")), t[t.length - 1];
           }
           var ou,
-            au = n(15).default,
+            au = n(16).default,
             su = su || {},
             uu = this,
             cu = "closure_uid_" + ((1e9 * Math.random()) >>> 0),
@@ -30205,10 +30831,10 @@ and limitations under the License.
               ? self
               : "undefined" != typeof window ? window : {}
         ));
-      }.call(e, n(56)));
+      }.call(e, n(57)));
     },
     function(t, e, n) {
-      t.exports = n(230);
+      t.exports = n(250);
     },
     function(t, e, n) {
       "use strict";
@@ -30233,24 +30859,24 @@ and limitations under the License.
         f.isNodeSdk() && (t.exports = n);
       }
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var i = n(15),
-        o = n(105);
+      var i = n(16),
+        o = n(112);
       e.Database = o.Database;
-      var a = n(109);
+      var a = n(116);
       e.Query = a.Query;
-      var s = n(64);
+      var s = n(66);
       e.Reference = s.Reference;
       var u = n(1);
       e.enableLogging = u.enableLogging;
-      var c = n(69),
-        l = n(262),
-        h = n(263),
+      var c = n(71),
+        l = n(282),
+        h = n(283),
         f = n(0),
         d = o.Database.ServerValue;
       (e.ServerValue = d), (e.registerDatabase = r), r(i.default);
-      var p = n(65);
+      var p = n(67);
       e.DataSnapshot = p.DataSnapshot;
-      var g = n(108);
+      var g = n(115);
       e.OnDisconnect = g.OnDisconnect;
     },
     function(t, e, n) {
@@ -30368,8 +30994,8 @@ and limitations under the License.
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(65),
-        i = n(236),
+      var r = n(67),
+        i = n(256),
         o = n(0),
         a = n(0),
         s = (function() {
@@ -30570,17 +31196,17 @@ and limitations under the License.
       Object.defineProperty(e, "__esModule", { value: !0 });
       var r = n(0),
         i = n(1),
-        o = n(238),
+        o = n(258),
         a = n(7),
         s = n(0),
-        u = n(66),
-        c = n(239),
-        l = n(240),
+        u = n(68),
+        c = n(259),
+        l = n(260),
         h = n(19),
-        f = n(119),
+        f = n(126),
         d = n(3),
-        p = n(120),
-        g = n(246),
+        p = n(127),
+        g = n(266),
         v = (function() {
           function t(t) {
             (this.listenProvider_ = t),
@@ -31053,7 +31679,7 @@ and limitations under the License.
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
       var r = n(19),
-        i = n(119),
+        i = n(126),
         o = n(3),
         a = n(0),
         s = (function() {
@@ -31100,12 +31726,12 @@ and limitations under the License.
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(67),
-        i = n(242),
+      var r = n(69),
+        i = n(262),
         o = n(7),
-        a = n(48),
-        s = n(121),
-        u = n(245),
+        a = n(49),
+        s = n(128),
+        u = n(265),
         c = n(0),
         l = n(19),
         h = n(23),
@@ -31244,13 +31870,13 @@ and limitations under the License.
       Object.defineProperty(e, "__esModule", { value: !0 });
       var r = n(19),
         i = n(0),
-        o = n(243),
+        o = n(263),
         a = n(23),
         s = n(7),
         u = n(31),
-        c = n(66),
+        c = n(68),
         l = n(3),
-        h = n(244),
+        h = n(264),
         f = (function() {
           function t(t, e) {
             (this.viewCache = t), (this.changes = e);
@@ -31770,7 +32396,7 @@ and limitations under the License.
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(48),
+      var r = n(49),
         i = (function() {
           function t() {}
           return (
@@ -31818,7 +32444,7 @@ and limitations under the License.
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(8),
+      var r = n(9),
         i = n(23),
         o = n(0),
         a = (function() {
@@ -31888,7 +32514,7 @@ and limitations under the License.
       var r = n(0),
         i = n(0),
         o = n(3),
-        a = n(247),
+        a = n(267),
         s = n(5),
         u = n(7),
         c = (function() {
@@ -32204,10 +32830,10 @@ and limitations under the License.
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(66),
+      var r = n(68),
         i = n(3),
         o = n(0),
-        a = n(8),
+        a = n(9),
         s = n(5),
         u = n(0),
         c = (function() {
@@ -32400,7 +33026,7 @@ and limitations under the License.
       Object.defineProperty(e, "__esModule", { value: !0 });
       var r = n(0),
         i = n(1),
-        o = n(122),
+        o = n(129),
         a = 1e4,
         s = 3e4,
         u = (function() {
@@ -32542,7 +33168,7 @@ and limitations under the License.
           };
         })();
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var i = n(124),
+      var i = n(131),
         o = n(0),
         a = (function(t) {
           function e() {
@@ -32617,7 +33243,7 @@ and limitations under the License.
         })();
       Object.defineProperty(e, "__esModule", { value: !0 });
       var i = n(0),
-        o = n(124),
+        o = n(131),
         a = n(0),
         s = (function(t) {
           function e() {
@@ -32666,8 +33292,8 @@ and limitations under the License.
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(126),
-        i = n(127),
+      var r = n(133),
+        i = n(134),
         o = n(1),
         a = (function() {
           function t(t) {
@@ -32799,7 +33425,7 @@ and limitations under the License.
         a = n(0),
         s = n(0),
         u = n(0),
-        c = n(128),
+        c = n(135),
         l = (function(t) {
           function e(e, n, r) {
             var i = t.call(this) || this;
@@ -32919,11 +33545,11 @@ and limitations under the License.
         i = n(1),
         o = n(31),
         a = n(5),
-        s = n(111),
-        u = n(115),
-        c = n(67),
-        l = n(259),
-        h = n(129),
+        s = n(118),
+        u = n(122),
+        c = n(69),
+        l = n(279),
+        h = n(136),
         f = n(0),
         d = (function() {
           function t() {
@@ -33163,9 +33789,9 @@ and limitations under the License.
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(129),
+      var r = n(136),
         i = n(7),
-        o = n(8),
+        o = n(9),
         a = n(0),
         s = n(23),
         u = (function() {
@@ -33337,18 +33963,18 @@ and limitations under the License.
       Object.defineProperty(e, "__esModule", { value: !0 });
       var r,
         i = n(0),
-        o = n(64),
-        a = n(65),
+        o = n(66),
+        a = n(67),
         s = n(3),
-        u = n(261),
+        u = n(281),
         c = n(5),
         l = n(1),
-        h = n(116),
+        h = n(123),
         f = n(18),
         d = n(0),
         p = n(32),
         g = n(7),
-        v = n(47);
+        v = n(48);
       !(function(t) {
         (t[(t.RUN = 0)] = "RUN"),
           (t[(t.SENT = 1)] = "SENT"),
@@ -33856,8 +34482,8 @@ and limitations under the License.
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(127),
-        i = n(126);
+      var r = n(134),
+        i = n(133);
       (e.forceLongPolling = function() {
         r.WebSocketConnection.forceDisallow(),
           i.BrowserPollConnection.forceAllow();
@@ -33887,10 +34513,10 @@ and limitations under the License.
     function(t, e, n) {
       "use strict";
       Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(107),
-        i = n(123),
-        o = n(69),
-        a = n(125);
+      var r = n(114),
+        i = n(130),
+        o = n(71),
+        a = n(132);
       (e.DataConnection = i.PersistentConnection),
         (i.PersistentConnection.prototype.simpleListen = function(t, e) {
           this.sendRequest("q", { p: t }, e);
@@ -33922,7 +34548,7 @@ and limitations under the License.
         });
     },
     function(t, e, n) {
-      n(265);
+      n(285);
     },
     function(t, e, n) {
       "use strict";
@@ -33937,17 +34563,17 @@ and limitations under the License.
       }
       Object.defineProperty(e, "__esModule", { value: !0 }),
         (e.registerMessaging = r);
-      var i = n(266),
-        o = n(270);
-      r(n(15).default);
+      var i = n(286),
+        o = n(290);
+      r(n(16).default);
     },
     function(t, e, n) {
       "use strict";
-      var r = n(130),
-        i = n(49),
-        o = n(133),
-        a = n(269),
-        s = n(132),
+      var r = n(137),
+        i = n(50),
+        o = n(140),
+        a = n(289),
+        s = n(139),
         u = n(0),
         c = (n.n(u),
         (this && this.__extends) ||
@@ -34152,9 +34778,9 @@ and limitations under the License.
     function(t, e, n) {
       "use strict";
       var r = n(0),
-        i = (n.n(r), n(49)),
-        o = n(268),
-        a = n(131),
+        i = (n.n(r), n(50)),
+        o = n(288),
+        a = n(138),
         s = "fcm_token_object_Store",
         u = (function() {
           function t() {
@@ -34442,10 +35068,10 @@ and limitations under the License.
     },
     function(t, e, n) {
       "use strict";
-      var r = n(130),
-        i = n(49),
-        o = n(133),
-        a = n(131),
+      var r = n(137),
+        i = n(50),
+        o = n(140),
+        a = n(138),
         s =
           (this && this.__extends) ||
           (function() {
@@ -34659,7 +35285,7 @@ and limitations under the License.
       e.a = u;
     },
     function(t, e, n) {
-      n(272);
+      n(292);
     },
     function(t, e, n) {
       "use strict";
@@ -34678,12 +35304,12 @@ and limitations under the License.
       }
       Object.defineProperty(e, "__esModule", { value: !0 }),
         (e.registerStorage = i);
-      var o = n(15),
+      var o = n(16),
         a = n(33),
         s = n(34),
-        u = n(273),
-        c = n(135),
-        l = n(282),
+        u = n(293),
+        c = n(142),
+        l = n(302),
         h = "storage";
       i(o.default);
     },
@@ -34692,7 +35318,7 @@ and limitations under the License.
       n.d(e, "a", function() {
         return i;
       });
-      var r = n(274),
+      var r = n(294),
         i = (function() {
           function t() {}
           return (
@@ -34711,8 +35337,8 @@ and limitations under the License.
       var r = n(13),
         i = n(24),
         o = n(20),
-        a = n(9),
-        s = n(134),
+        a = n(10),
+        s = n(141),
         u = (function() {
           function t() {
             var t = this;
@@ -34793,7 +35419,7 @@ and limitations under the License.
         return i.f(e) ? e : null;
       }
       e.a = r;
-      var i = n(9);
+      var i = n(10);
     },
     function(t, e, n) {
       "use strict";
@@ -34820,7 +35446,7 @@ and limitations under the License.
           : t.mozSlice ? t.mozSlice(e, n) : t.slice ? t.slice(e, n) : null;
       }
       (e.a = i), (e.b = o);
-      var a = n(9);
+      var a = n(10);
     },
     function(t, e, n) {
       "use strict";
@@ -34850,15 +35476,15 @@ and limitations under the License.
         return d;
       });
       var r = n(34),
-        i = n(279),
-        o = n(280),
-        a = n(70),
-        s = n(73),
-        u = n(281),
+        i = n(299),
+        o = n(300),
+        a = n(72),
+        s = n(75),
+        u = n(301),
         c = n(13),
         l = n(20),
-        h = n(138),
-        f = n(9),
+        h = n(145),
+        f = n(10),
         d = (function() {
           function t(t, e, n, i, o, a) {
             void 0 === a && (a = null);
@@ -35236,7 +35862,7 @@ and limitations under the License.
       n.d(e, "a", function() {
         return i;
       });
-      var r = n(9),
+      var r = n(10),
         i = (function() {
           function t(t, e, n) {
             if (r.b(t) || r.a(e) || r.a(n))
@@ -35302,12 +35928,12 @@ and limitations under the License.
       n.d(e, "a", function() {
         return c;
       });
-      var r = n(70),
-        i = n(283),
-        o = n(51),
+      var r = n(72),
+        i = n(303),
+        o = n(52),
         a = n(20),
-        s = n(286),
-        u = n(135),
+        s = n(306),
+        u = n(142),
         c = (function() {
           function t(t, e, n) {
             function r(t, e) {
@@ -35410,13 +36036,13 @@ and limitations under the License.
       n.d(e, "a", function() {
         return l;
       });
-      var r = n(50),
+      var r = n(51),
         i = n(13),
-        o = n(284),
-        a = n(51),
+        o = n(304),
+        a = n(52),
         s = n(20),
-        u = n(285),
-        c = n(9),
+        u = n(305),
+        c = n(10),
         l = (function() {
           function t(e, n, i, o, a) {
             if (
@@ -35518,7 +36144,7 @@ and limitations under the License.
         return o;
       });
       var r = n(24),
-        i = n(50),
+        i = n(51),
         o = (function() {
           function t() {
             (this.map_ = {}), (this.id_ = i.h);
@@ -35575,15 +36201,15 @@ and limitations under the License.
         );
       }
       e.a = o;
-      var a = n(15),
-        s = n(73),
-        u = n(287),
+      var a = n(16),
+        s = n(75),
+        u = n(307),
         c = n(13),
         l = n(24),
         h = n(20),
-        f = n(9),
-        d = n(72),
-        p = n(134),
+        f = n(10),
+        d = n(74),
+        p = n(141),
         g = (function() {
           function t(t, e, n, r, i, o, a, s, u, c, l) {
             (this.pendingXhr_ = null),
@@ -35810,12 +36436,12 @@ and limitations under the License.
         })(),
         c = n(2),
         l = r(c),
-        h = n(139),
-        f = (r(h), n(289)),
+        h = n(146),
+        f = (r(h), n(309)),
         d = r(f),
-        p = n(85),
-        g = (r(p), n(17)),
-        v = n(290),
+        p = n(86),
+        g = (r(p), n(15)),
+        v = n(42),
         m = r(v);
       n(310);
       var y = (function(t) {
@@ -35878,12 +36504,12 @@ and limitations under the License.
                 var e = this;
                 this.setState({ selDoctor: t.target.value });
                 var n = new FormData();
-                n.append("doctorid", t.target.value),
+                n.append("doctor", t.target.value),
                   m.default
                     .post("book/getslot", n)
                     .then(function(t) {
                       e.setState({
-                        busyDates: 0 === t.data.data ? [] : t.data.data
+                        busyDates: 0 === t.data.dates ? [] : t.data.data
                       });
                     })
                     .catch(function(t) {});
@@ -36211,7 +36837,7 @@ and limitations under the License.
         h = r(l),
         f = n(6),
         d = r(f),
-        p = n(139),
+        p = n(146),
         g = r(p),
         v = [
           "onChange",
@@ -36399,474 +37025,6 @@ and limitations under the License.
         (m.defaultProps = { options: {} }),
         (e.default = m);
     },
-    function(t, e, n) {
-      "use strict";
-      Object.defineProperty(e, "__esModule", { value: !0 });
-      var r = n(291),
-        i = (function(t) {
-          return t && t.__esModule ? t : { default: t };
-        })(r);
-      e.default = i.default.create({
-        baseURL: "http://findcare.000webhostapp.com/",
-        headers: { "Content-Type": "multipart/form-data" }
-      });
-    },
-    function(t, e, n) {
-      t.exports = n(292);
-    },
-    function(t, e, n) {
-      "use strict";
-      function r(t) {
-        var e = new a(t),
-          n = o(a.prototype.request, e);
-        return i.extend(n, a.prototype, e), i.extend(n, e), n;
-      }
-      var i = n(10),
-        o = n(140),
-        a = n(294),
-        s = n(74),
-        u = r(s);
-      (u.Axios = a),
-        (u.create = function(t) {
-          return r(i.merge(s, t));
-        }),
-        (u.Cancel = n(144)),
-        (u.CancelToken = n(308)),
-        (u.isCancel = n(143)),
-        (u.all = function(t) {
-          return Promise.all(t);
-        }),
-        (u.spread = n(309)),
-        (t.exports = u),
-        (t.exports.default = u);
-    },
-    function(t, e) {
-      function n(t) {
-        return (
-          !!t.constructor &&
-          "function" == typeof t.constructor.isBuffer &&
-          t.constructor.isBuffer(t)
-        );
-      }
-      function r(t) {
-        return (
-          "function" == typeof t.readFloatLE &&
-          "function" == typeof t.slice &&
-          n(t.slice(0, 0))
-        );
-      } /*!
- * Determine if an object is a Buffer
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
- */
-      t.exports = function(t) {
-        return null != t && (n(t) || r(t) || !!t._isBuffer);
-      };
-    },
-    function(t, e, n) {
-      "use strict";
-      function r(t) {
-        (this.defaults = t),
-          (this.interceptors = { request: new a(), response: new a() });
-      }
-      var i = n(74),
-        o = n(10),
-        a = n(303),
-        s = n(304);
-      (r.prototype.request = function(t) {
-        "string" == typeof t &&
-          (t = o.merge({ url: arguments[0] }, arguments[1])),
-          (t = o.merge(i, this.defaults, { method: "get" }, t)),
-          (t.method = t.method.toLowerCase());
-        var e = [s, void 0],
-          n = Promise.resolve(t);
-        for (
-          this.interceptors.request.forEach(function(t) {
-            e.unshift(t.fulfilled, t.rejected);
-          }),
-            this.interceptors.response.forEach(function(t) {
-              e.push(t.fulfilled, t.rejected);
-            });
-          e.length;
-
-        )
-          n = n.then(e.shift(), e.shift());
-        return n;
-      }),
-        o.forEach(["delete", "get", "head", "options"], function(t) {
-          r.prototype[t] = function(e, n) {
-            return this.request(o.merge(n || {}, { method: t, url: e }));
-          };
-        }),
-        o.forEach(["post", "put", "patch"], function(t) {
-          r.prototype[t] = function(e, n, r) {
-            return this.request(
-              o.merge(r || {}, { method: t, url: e, data: n })
-            );
-          };
-        }),
-        (t.exports = r);
-    },
-    function(t, e, n) {
-      "use strict";
-      var r = n(10);
-      t.exports = function(t, e) {
-        r.forEach(t, function(n, r) {
-          r !== e &&
-            r.toUpperCase() === e.toUpperCase() &&
-            ((t[e] = n), delete t[r]);
-        });
-      };
-    },
-    function(t, e, n) {
-      "use strict";
-      var r = n(142);
-      t.exports = function(t, e, n) {
-        var i = n.config.validateStatus;
-        n.status && i && !i(n.status)
-          ? e(
-              r(
-                "Request failed with status code " + n.status,
-                n.config,
-                null,
-                n.request,
-                n
-              )
-            )
-          : t(n);
-      };
-    },
-    function(t, e, n) {
-      "use strict";
-      t.exports = function(t, e, n, r, i) {
-        return (
-          (t.config = e),
-          n && (t.code = n),
-          (t.request = r),
-          (t.response = i),
-          t
-        );
-      };
-    },
-    function(t, e, n) {
-      "use strict";
-      function r(t) {
-        return encodeURIComponent(t)
-          .replace(/%40/gi, "@")
-          .replace(/%3A/gi, ":")
-          .replace(/%24/g, "$")
-          .replace(/%2C/gi, ",")
-          .replace(/%20/g, "+")
-          .replace(/%5B/gi, "[")
-          .replace(/%5D/gi, "]");
-      }
-      var i = n(10);
-      t.exports = function(t, e, n) {
-        if (!e) return t;
-        var o;
-        if (n) o = n(e);
-        else if (i.isURLSearchParams(e)) o = e.toString();
-        else {
-          var a = [];
-          i.forEach(e, function(t, e) {
-            null !== t &&
-              void 0 !== t &&
-              (i.isArray(t) && (e += "[]"),
-              i.isArray(t) || (t = [t]),
-              i.forEach(t, function(t) {
-                i.isDate(t)
-                  ? (t = t.toISOString())
-                  : i.isObject(t) && (t = JSON.stringify(t)),
-                  a.push(r(e) + "=" + r(t));
-              }));
-          }),
-            (o = a.join("&"));
-        }
-        return o && (t += (-1 === t.indexOf("?") ? "?" : "&") + o), t;
-      };
-    },
-    function(t, e, n) {
-      "use strict";
-      var r = n(10),
-        i = [
-          "age",
-          "authorization",
-          "content-length",
-          "content-type",
-          "etag",
-          "expires",
-          "from",
-          "host",
-          "if-modified-since",
-          "if-unmodified-since",
-          "last-modified",
-          "location",
-          "max-forwards",
-          "proxy-authorization",
-          "referer",
-          "retry-after",
-          "user-agent"
-        ];
-      t.exports = function(t) {
-        var e,
-          n,
-          o,
-          a = {};
-        return t
-          ? (r.forEach(t.split("\n"), function(t) {
-              if (
-                ((o = t.indexOf(":")),
-                (e = r.trim(t.substr(0, o)).toLowerCase()),
-                (n = r.trim(t.substr(o + 1))),
-                e)
-              ) {
-                if (a[e] && i.indexOf(e) >= 0) return;
-                a[e] =
-                  "set-cookie" === e
-                    ? (a[e] ? a[e] : []).concat([n])
-                    : a[e] ? a[e] + ", " + n : n;
-              }
-            }),
-            a)
-          : a;
-      };
-    },
-    function(t, e, n) {
-      "use strict";
-      var r = n(10);
-      t.exports = r.isStandardBrowserEnv()
-        ? (function() {
-            function t(t) {
-              var e = t;
-              return (
-                n && (i.setAttribute("href", e), (e = i.href)),
-                i.setAttribute("href", e),
-                {
-                  href: i.href,
-                  protocol: i.protocol ? i.protocol.replace(/:$/, "") : "",
-                  host: i.host,
-                  search: i.search ? i.search.replace(/^\?/, "") : "",
-                  hash: i.hash ? i.hash.replace(/^#/, "") : "",
-                  hostname: i.hostname,
-                  port: i.port,
-                  pathname:
-                    "/" === i.pathname.charAt(0) ? i.pathname : "/" + i.pathname
-                }
-              );
-            }
-            var e,
-              n = /(msie|trident)/i.test(navigator.userAgent),
-              i = document.createElement("a");
-            return (
-              (e = t(window.location.href)),
-              function(n) {
-                var i = r.isString(n) ? t(n) : n;
-                return i.protocol === e.protocol && i.host === e.host;
-              }
-            );
-          })()
-        : (function() {
-            return function() {
-              return !0;
-            };
-          })();
-    },
-    function(t, e, n) {
-      "use strict";
-      function r() {
-        this.message = "String contains an invalid character";
-      }
-      function i(t) {
-        for (
-          var e, n, i = String(t), a = "", s = 0, u = o;
-          i.charAt(0 | s) || ((u = "="), s % 1);
-          a += u.charAt(63 & (e >> (8 - (s % 1) * 8)))
-        ) {
-          if ((n = i.charCodeAt((s += 0.75))) > 255) throw new r();
-          e = (e << 8) | n;
-        }
-        return a;
-      }
-      var o =
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-      (r.prototype = new Error()),
-        (r.prototype.code = 5),
-        (r.prototype.name = "InvalidCharacterError"),
-        (t.exports = i);
-    },
-    function(t, e, n) {
-      "use strict";
-      var r = n(10);
-      t.exports = r.isStandardBrowserEnv()
-        ? (function() {
-            return {
-              write: function(t, e, n, i, o, a) {
-                var s = [];
-                s.push(t + "=" + encodeURIComponent(e)),
-                  r.isNumber(n) &&
-                    s.push("expires=" + new Date(n).toGMTString()),
-                  r.isString(i) && s.push("path=" + i),
-                  r.isString(o) && s.push("domain=" + o),
-                  !0 === a && s.push("secure"),
-                  (document.cookie = s.join("; "));
-              },
-              read: function(t) {
-                var e = document.cookie.match(
-                  new RegExp("(^|;\\s*)(" + t + ")=([^;]*)")
-                );
-                return e ? decodeURIComponent(e[3]) : null;
-              },
-              remove: function(t) {
-                this.write(t, "", Date.now() - 864e5);
-              }
-            };
-          })()
-        : (function() {
-            return {
-              write: function() {},
-              read: function() {
-                return null;
-              },
-              remove: function() {}
-            };
-          })();
-    },
-    function(t, e, n) {
-      "use strict";
-      function r() {
-        this.handlers = [];
-      }
-      var i = n(10);
-      (r.prototype.use = function(t, e) {
-        return (
-          this.handlers.push({ fulfilled: t, rejected: e }),
-          this.handlers.length - 1
-        );
-      }),
-        (r.prototype.eject = function(t) {
-          this.handlers[t] && (this.handlers[t] = null);
-        }),
-        (r.prototype.forEach = function(t) {
-          i.forEach(this.handlers, function(e) {
-            null !== e && t(e);
-          });
-        }),
-        (t.exports = r);
-    },
-    function(t, e, n) {
-      "use strict";
-      function r(t) {
-        t.cancelToken && t.cancelToken.throwIfRequested();
-      }
-      var i = n(10),
-        o = n(305),
-        a = n(143),
-        s = n(74),
-        u = n(306),
-        c = n(307);
-      t.exports = function(t) {
-        return (
-          r(t),
-          t.baseURL && !u(t.url) && (t.url = c(t.baseURL, t.url)),
-          (t.headers = t.headers || {}),
-          (t.data = o(t.data, t.headers, t.transformRequest)),
-          (t.headers = i.merge(
-            t.headers.common || {},
-            t.headers[t.method] || {},
-            t.headers || {}
-          )),
-          i.forEach(
-            ["delete", "get", "head", "post", "put", "patch", "common"],
-            function(e) {
-              delete t.headers[e];
-            }
-          ),
-          (t.adapter || s.adapter)(t).then(
-            function(e) {
-              return (
-                r(t), (e.data = o(e.data, e.headers, t.transformResponse)), e
-              );
-            },
-            function(e) {
-              return (
-                a(e) ||
-                  (r(t),
-                  e &&
-                    e.response &&
-                    (e.response.data = o(
-                      e.response.data,
-                      e.response.headers,
-                      t.transformResponse
-                    ))),
-                Promise.reject(e)
-              );
-            }
-          )
-        );
-      };
-    },
-    function(t, e, n) {
-      "use strict";
-      var r = n(10);
-      t.exports = function(t, e, n) {
-        return (
-          r.forEach(n, function(n) {
-            t = n(t, e);
-          }),
-          t
-        );
-      };
-    },
-    function(t, e, n) {
-      "use strict";
-      t.exports = function(t) {
-        return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(t);
-      };
-    },
-    function(t, e, n) {
-      "use strict";
-      t.exports = function(t, e) {
-        return e ? t.replace(/\/+$/, "") + "/" + e.replace(/^\/+/, "") : t;
-      };
-    },
-    function(t, e, n) {
-      "use strict";
-      function r(t) {
-        if ("function" != typeof t)
-          throw new TypeError("executor must be a function.");
-        var e;
-        this.promise = new Promise(function(t) {
-          e = t;
-        });
-        var n = this;
-        t(function(t) {
-          n.reason || ((n.reason = new i(t)), e(n.reason));
-        });
-      }
-      var i = n(144);
-      (r.prototype.throwIfRequested = function() {
-        if (this.reason) throw this.reason;
-      }),
-        (r.source = function() {
-          var t;
-          return {
-            token: new r(function(e) {
-              t = e;
-            }),
-            cancel: t
-          };
-        }),
-        (t.exports = r);
-    },
-    function(t, e, n) {
-      "use strict";
-      t.exports = function(t) {
-        return function(e) {
-          return t.apply(null, e);
-        };
-      };
-    },
     function(t, e) {},
     function(t, e, n) {
       "use strict";
@@ -36927,8 +37085,9 @@ and limitations under the License.
         p = r(d),
         g = n(314),
         v = r(g),
-        m = n(87),
-        y = (r(m),
+        m = n(42),
+        y = (r(m), n(88)),
+        _ = (r(y),
         (function(t) {
           function e(t) {
             return (
@@ -36939,6 +37098,7 @@ and limitations under the License.
           return (
             a(e, t),
             s(e, [
+              { key: "componentDidMount", value: function() {} },
               {
                 key: "render",
                 value: function() {
@@ -36977,7 +37137,7 @@ and limitations under the License.
             e
           );
         })(c.default.Component));
-      e.default = y;
+      e.default = _;
     },
     function(t, e, n) {
       "use strict";
@@ -37033,7 +37193,7 @@ and limitations under the License.
         c = r(u),
         l = n(41),
         h = r(l),
-        f = n(17),
+        f = n(15),
         d = (function(t) {
           function e() {
             return (
@@ -37582,11 +37742,11 @@ and limitations under the License.
       e.default = c;
     },
     function(t, e, n) {
-      n(145), n(152), n(158), n(330), (t.exports = n(35).Map);
+      n(147), n(154), n(160), n(330), (t.exports = n(35).Map);
     },
     function(t, e, n) {
-      var r = n(76),
-        i = n(77);
+      var r = n(77),
+        i = n(78);
       t.exports = function(t) {
         return function(e, n) {
           var o,
@@ -37620,9 +37780,9 @@ and limitations under the License.
     },
     function(t, e, n) {
       "use strict";
-      var r = n(154),
-        i = n(75),
-        o = n(80),
+      var r = n(156),
+        i = n(76),
+        o = n(81),
         a = {};
       n(26)(a, n(12)("iterator"), function() {
         return this;
@@ -37634,7 +37794,7 @@ and limitations under the License.
     function(t, e, n) {
       var r = n(27),
         i = n(28),
-        o = n(155);
+        o = n(157);
       t.exports = n(21)
         ? Object.defineProperties
         : function(t, e) {
@@ -37646,9 +37806,9 @@ and limitations under the License.
     },
     function(t, e, n) {
       var r = n(22),
-        i = n(55),
+        i = n(56),
         o = n(323)(!1),
-        a = n(79)("IE_PROTO");
+        a = n(80)("IE_PROTO");
       t.exports = function(t, e) {
         var n,
           s = i(t),
@@ -37660,7 +37820,7 @@ and limitations under the License.
       };
     },
     function(t, e, n) {
-      var r = n(147);
+      var r = n(149);
       t.exports = Object("z").propertyIsEnumerable(0)
         ? Object
         : function(t) {
@@ -37668,8 +37828,8 @@ and limitations under the License.
           };
     },
     function(t, e, n) {
-      var r = n(55),
-        i = n(156),
+      var r = n(56),
+        i = n(158),
         o = n(324);
       t.exports = function(t) {
         return function(e, n, a) {
@@ -37687,7 +37847,7 @@ and limitations under the License.
       };
     },
     function(t, e, n) {
-      var r = n(76),
+      var r = n(77),
         i = Math.max,
         o = Math.min;
       t.exports = function(t, e) {
@@ -37701,7 +37861,7 @@ and limitations under the License.
     function(t, e, n) {
       var r = n(22),
         i = n(327),
-        o = n(79)("IE_PROTO"),
+        o = n(80)("IE_PROTO"),
         a = Object.prototype;
       t.exports =
         Object.getPrototypeOf ||
@@ -37717,7 +37877,7 @@ and limitations under the License.
         };
     },
     function(t, e, n) {
-      var r = n(77);
+      var r = n(78);
       t.exports = function(t) {
         return Object(r(t));
       };
@@ -37725,10 +37885,10 @@ and limitations under the License.
     function(t, e, n) {
       "use strict";
       var r = n(329),
-        i = n(159),
+        i = n(161),
         o = n(36),
-        a = n(55);
-      (t.exports = n(78)(
+        a = n(56);
+      (t.exports = n(79)(
         Array,
         "Array",
         function(t, e) {
@@ -37761,9 +37921,9 @@ and limitations under the License.
     },
     function(t, e, n) {
       "use strict";
-      var r = n(160),
-        i = n(81);
-      t.exports = n(165)(
+      var r = n(162),
+        i = n(82);
+      t.exports = n(167)(
         "Map",
         function(t) {
           return function() {
@@ -37803,7 +37963,7 @@ and limitations under the License.
       };
     },
     function(t, e, n) {
-      var r = n(146),
+      var r = n(148),
         i = n(12)("iterator"),
         o = n(36);
       t.exports = n(35).getIteratorMethod = function(t) {
@@ -37859,7 +38019,7 @@ and limitations under the License.
       };
     },
     function(t, e, n) {
-      var r = n(16),
+      var r = n(17),
         i = n(337).set;
       t.exports = function(t, e, n) {
         var o,
@@ -37876,7 +38036,7 @@ and limitations under the License.
       };
     },
     function(t, e, n) {
-      var r = n(16),
+      var r = n(17),
         i = n(28),
         o = function(t, e) {
           if ((i(t), !r(e) && null !== e))
@@ -37888,7 +38048,7 @@ and limitations under the License.
           ("__proto__" in {}
             ? (function(t, e, r) {
                 try {
-                  (r = n(54)(
+                  (r = n(55)(
                     Function.call,
                     n(338).f(Object.prototype, "__proto__").set,
                     2
@@ -37908,11 +38068,11 @@ and limitations under the License.
     },
     function(t, e, n) {
       var r = n(339),
-        i = n(75),
-        o = n(55),
-        a = n(151),
+        i = n(76),
+        o = n(56),
+        a = n(153),
         s = n(22),
-        u = n(149),
+        u = n(151),
         c = Object.getOwnPropertyDescriptor;
       e.f = n(21)
         ? c
@@ -37928,13 +38088,13 @@ and limitations under the License.
       e.f = {}.propertyIsEnumerable;
     },
     function(t, e, n) {
-      n(145), n(152), n(158), n(341), (t.exports = n(35).Set);
+      n(147), n(154), n(160), n(341), (t.exports = n(35).Set);
     },
     function(t, e, n) {
       "use strict";
-      var r = n(160),
-        i = n(81);
-      t.exports = n(165)(
+      var r = n(162),
+        i = n(82);
+      t.exports = n(167)(
         "Set",
         function(t) {
           return function() {
@@ -37950,5 +38110,5 @@ and limitations under the License.
       );
     }
   ],
-  [166]
+  [168]
 );

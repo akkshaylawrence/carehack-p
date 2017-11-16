@@ -90,7 +90,7 @@ class Register extends React.Component {
           formData.append("pcontact", this.state.phone);
           formData.append("doctor", bookOptions.doctor);
           formData.append("bdate", bookOptions.date.slice(0, 10));
-          formData.append("password", this.state.password);
+          formData.append("pwd", this.state.password);
           axios
             .post("book/RegandBookslot", formData)
             .then(res => {
