@@ -8,6 +8,7 @@ class Register extends React.Component {
       name: "",
       phone: "",
       otp: "",
+      password: "",
       smsSent: false
     };
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -16,7 +17,7 @@ class Register extends React.Component {
   }
   componentDidMount() {
     const bookOptions = JSON.parse(sessionStorage.getItem("booked"));
-    const phone = bookOptions ? "" : bookOptions.phone;
+    const phone = bookOptions ? bookOptions.phone : "";
     this.setState({
       phone
     });
@@ -72,8 +73,16 @@ class Register extends React.Component {
           formData.append("pname", this.state.name);
           formData.append("pcontact", this.state.phone);
           formData.append("doctor", bookOptions.doctor);
-
-          axios.post("book/RegandBookslot", formData);
+          formData.append("bdate", bookOptions.date.slice(0, 10));
+          formData.append("password", this.state.password);
+          axios
+            .post("book/RegandBookslot", formData)
+            .then(res => {
+              console.log(res);
+            })
+            .catch(err => {
+              console.error(err);
+            });
         }
       })
       .catch(error => {
@@ -120,6 +129,21 @@ class Register extends React.Component {
                 type="text"
                 required
                 value={this.state.phone}
+                onChange={this.handleInputChange}
+              />
+            </div>
+          </div>
+          <div id="password" className="uk-margin-small uk-margin-remove-top">
+            <label className="uk-form-label" htmlFor="password">
+              Create New Password
+            </label>
+            <div className="uk-inline uk-width-1-1">
+              <span className="uk-form-icon" uk-icon="icon: hashtag" />
+              <input
+                className="uk-input"
+                type="password"
+                name="password"
+                id="password"
                 onChange={this.handleInputChange}
               />
             </div>
