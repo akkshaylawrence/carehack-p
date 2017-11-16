@@ -3,6 +3,7 @@ import flatpickr from "flatpickr";
 import Flatpickr from "react-flatpickr";
 import uikit from "uikit";
 import { Link, withRouter } from "react-router-dom";
+import Select from "react-select";
 import axios from "../Shared/axios";
 import "flatpickr/dist/themes/material_green.css";
 
@@ -11,53 +12,71 @@ class Book extends React.Component {
     super(props);
     this.state = {
       date: new Date(),
-      specialities: [],
       speciality: "",
+      loadingDoctors: false,
       doctors: [],
       selDoctor: "",
       phone: "",
       busyDates: []
     };
     this.onContinue = this.onContinue.bind(this);
+    this.getDoctors = this.getDoctors.bind(this);
     this.handleDoctor = this.handleDoctor.bind(this);
     this.handleSpeciality = this.handleSpeciality.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
   }
-  componentWillMount() {
-    axios
+  getSpecialities() {
+    return axios
       .get("book/getSpec", {})
       .then(res => {
-        this.setState({
-          specialities: res.data.data
+        return res.data.data;
+      })
+      .then(res => {
+        return res.map(sp => {
+          return { value: sp.toLowerCase(), label: sp };
         });
+      })
+      .then(formattedRes => {
+        return { options: formattedRes };
       })
       .catch(err => {
         console.log(err);
       });
   }
-  handleSpeciality(event) {
-    this.setState({
-      speciality: event.target.value
-    });
+  getDoctors() {
     const formData = new FormData();
-    formData.append("spec", event.target.value);
-    axios
+    formData.append("spec", this.state.speciality);
+    return axios
       .post("book/getdoctor", formData)
       .then(res => {
+        return res.data.data;
+      })
+      .then(docs => {
+        const formattedDocs = docs.map(doc => {
+          return { value: doc.did, label: doc.dname };
+        });
         this.setState({
-          doctors: res.data.data
+          doctors: formattedDocs
         });
       })
       .catch(error => {
         console.log(error);
       });
   }
-  handleDoctor(event) {
+  handleSpeciality(selOption) {
+    this.setState(
+      {
+        speciality: selOption.value
+      },
+      () => this.getDoctors()
+    );
+  }
+  handleDoctor(selectedDoctor) {
     this.setState({
-      selDoctor: event.target.value
+      selDoctor: selectedDoctor.value
     });
     const formData = new FormData();
-    formData.append("doctor", event.target.value);
+    formData.append("doctor", selectedDoctor.value);
     axios
       .post("book/getslot", formData)
       .then(res => {
@@ -132,47 +151,24 @@ class Book extends React.Component {
             <label className="uk-form-label" htmlFor="sectionSel">
               Select Department
             </label>
-            <select
+            <Select.Async
               id="sectionSel"
-              className="uk-select"
-              defaultValue=""
+              value={this.state.speciality}
               onChange={this.handleSpeciality}
-              name="speciality"
-            >
-              <option value="" disabled className="placeholder-select">
-                Select Department
-              </option>
-              {this.state.specialities.map((sp, index) => {
-                return (
-                  <option value={sp.toLowerCase()} key={index}>
-                    {sp}
-                  </option>
-                );
-              })}
-            </select>
+              loadOptions={this.getSpecialities}
+            />
           </div>
           <div className="uk-margin">
             <label className="uk-form-label" htmlFor="doctor">
               Select Doctor
             </label>
-            <select
-              id="doctorSel"
-              className="uk-select"
-              name="doctor"
-              defaultValue=""
+            <Select
+              id="doctor"
+              disabled={!this.state.speciality}
+              options={this.state.doctors}
+              value={this.state.selDoctor}
               onChange={this.handleDoctor}
-            >
-              <option value="" disabled className="placeholder-select">
-                Select Doctor
-              </option>
-              {this.state.doctors.map((doc, index) => {
-                return (
-                  <option value={doc.did} key={index}>
-                    {doc.dname}
-                  </option>
-                );
-              })}
-            </select>
+            />
           </div>
           <div className="uk-margin-small">
             <label className="uk-form-label" htmlFor="form-stacked-text">

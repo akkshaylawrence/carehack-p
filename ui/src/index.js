@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import UIkit from "uikit";
 import Icons from "uikit/dist/js/uikit-icons";
 import "uikit/dist/css/uikit.min.css";
+import "react-select/dist/react-select.css";
 import "./index.css";
 import App from "./App";
 

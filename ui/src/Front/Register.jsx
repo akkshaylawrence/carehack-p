@@ -100,18 +100,12 @@ class Register extends React.Component {
                 bookOptions.date.slice(0, 10),
                 this.state.email
               );
+              this.props.history.push("/profile");
             })
             .catch(err => {
               console.error(err);
             });
         }
-        this.sendEmail(
-          "Find Care Hospital",
-          doctor,
-          bookOptions.date.slice(0, 10),
-          this.state.email
-        );
-        this.props.history.push("/profile");
       })
       .catch(error => {
         // User couldn't sign in (bad verification code?)
