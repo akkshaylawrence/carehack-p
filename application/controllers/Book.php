@@ -3,33 +3,60 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Book extends CI_Controller {
 
-	function __construct () {
+    function __construct () {
             parent::__construct ();
             $this->load->model('data');        
-	}
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
+    }
+    /**
+     * Index Page for this controller.
+     *
+     * Maps to the following URL
+     *      http://example.com/index.php/welcome
+     *  - or -
+     *      http://example.com/index.php/welcome/index
+     *  - or -
+     * Since this controller is set as the default controller in
+     * config/routes.php, it's displayed at http://example.com/
+     *
+     * So any other public methods not prefixed with an underscore will
+     * map to /index.php/welcome/<method_name>
+     * @see https://codeigniter.com/user_guide/general/urls.html
+     */
 
-	public function index() {
-		$data = $this->init->initPath ('/article');
-		// log_message('info','sayan ');
-        // log_message('info',print_r($data,TRUE));
-        // log_message('info',print_r($data,TRUE));
+    public function index() {
+        $data = $this->init->initPath ('/article');
         $this->load->view('pages/test',$data);
     }
+        public function login() {
+        $data = $this->init->initPath ('/book');
+        $pcontact = $this->input->post('pcontact');
+        $pwd = $this->input->post('pwd');
+
+        $loginresult = $this->data->CheckLogin($pcontact, $pwd);
+
+        
+        if ($loginresult){
+            log_message("info",'login success');
+            $response['status'] = TRUE;
+            $response['msg'] =  "Data Fetched";
+            $response['login'] = 1;
+            $response['data'] = $loginresult;
+            echo json_encode ($response);
+            return 1;
+        }else{
+            log_message("info",'Login Failed');
+            $response['status'] = TRUE;
+            $response['msg'] =  "Data Fetched";
+            $response['login'] = 0;
+            $response['data'] = $loginresult;
+            echo json_encode ($response);
+            // echo json_encode ($response);
+            return 0;
+        }
+        // $response['sata'] = "blaaaa";
+        // echo json_encode ($response);
+        // return 1;
+    } 
 
     public function getdoctor() {
         $data = $this->init->initPath ('/book');
@@ -39,16 +66,15 @@ class Book extends CI_Controller {
 
         
         if ($doctors){
-            log_message("info",'masa here');
             $response['status'] = TRUE;
             $response['msg'] =  "Data Fetched";
             $response['statusID'] = 1;
             $response['data'] = $doctors;
             echo json_encode ($response);
-			return 1;
+            return 1;
         }else{
             // echo json_encode ($response);
-			return 0;
+            return 0;
         }
         // $response['sata'] = "blaaaa";
         // echo json_encode ($response);
@@ -81,8 +107,6 @@ class Book extends CI_Controller {
         $bdate = $this->input->post('bdate');
         $doctor = $this->input->post('doctor');
         $slots = $this->data->fetchSlot($bdate,$doctor);
-        log_message('info','kaya');
-        log_message('info',$slots);
             $response['status'] = TRUE;
             $response['msg'] =  "Data Fetched";
             $response['statusID'] = 1;
@@ -108,11 +132,16 @@ class Book extends CI_Controller {
         $patient['pname'] = $this->input->post('pname');
         $patient['pcontact'] = $this->input->post('pcontact');
         $patient['astatus'] = "1";
-        $patient['slot'] = $this->input->post('slot');
+        // $patient['slot'] = $this->input->post('slot');
         $patient['bdate'] = $this->input->post('bdate');
         $patient['doctor'] = $this->input->post('doctor');
+        $patient['pwd'] = $this->input->post('pwd');
         $present = $this->data->datacheckuser($patient['pcontact']);
         if($present==0){
+            $slot = $this->data->fetchSlot($patient['bdate'],$patient['doctor']);
+            $patient['slot'] = $slot;
+            log_message('info','booking test');
+            log_message('info',print_r($patient,TRUE));
             $addArticle = $this->data->dataRegandBookSlot($patient);
             return 1;
         }else{
@@ -148,7 +177,6 @@ class Book extends CI_Controller {
         $data = $this->init->initPath ('/book');
         $doctor = $this->input->post('doctor');
         $doctors = $this->data->cslot($doctor);
-        log_message('info','kaaaa');
 
         if ($doctors){
             $response['status'] = TRUE;
@@ -158,7 +186,6 @@ class Book extends CI_Controller {
             echo json_encode ($response);
             return 1;
         }else{
-            log_message('info','it is zero1');
             $response['status'] = TRUE;
             $response['msg'] =  "Data Fetched";
             $response['dates'] = 0;

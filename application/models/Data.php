@@ -30,6 +30,40 @@ class Data extends CI_Model {
       return $doctorListArray;
       }
 
+
+    function CheckLogin ($pcontact, $pwd) {
+    $doctorListArray = array();
+    $doctorList = array();
+    $this->db->where('pcontact', $pcontact);
+    $this->db->where('pwd', $pwd);
+    $login = $this->db->count_all_results('patient');
+    if($login==0){
+        return 0;
+    }else{
+    $this->db->select('*');
+    $this->db->from ('patient');
+     $this->db->where('pcontact', $pcontact);
+    $query = $this->db->get ();
+    if ($query->num_rows() < 0){
+        foreach ($query->result () as $art){
+            $doctorList['pid'] = "No Data";
+            $doctorList['pname'] = "No Data";
+            $doctorList['pcontact'] = "No Data";
+            array_push ($doctorListArray, $doctorList);
+        }
+    }else{
+        foreach ($query->result () as $art){
+           $doctorList['pid'] =  $art->pid;
+           $doctorList['pname'] =  $art->pname;
+           $doctorList['pcontact'] =  $art->pcontact;
+           array_push ($doctorListArray, $doctorList);
+        }
+    }
+      //log_message('info',print_r($doctorListArray,TRUE));
+      return $doctorListArray;
+    }
+      } 
+
     function fetchDoctorBySpec ($spec) {
     $categoryList = array();
     $categoryListArray = array();
@@ -168,9 +202,6 @@ function fetchSlot ($bdate,$doctor) {
     if($cuser>=1){
       $cuser=1;
     }
-    log_message("info",'user present :');
-    log_message('info',$cuser);
-
     return $cuser;
   }
   //   function datacheckactiveuser ($pcontact) {
@@ -182,15 +213,13 @@ function fetchSlot ($bdate,$doctor) {
   // }
     function cslot ($doctor){
       $flag=0;
-      log_message('info','dubai3');
-        log_message('info',$doctor);
+
       $dateListArray = array();
       $this->db->select('dslots');
       $this->db->from('doctor');
       $this->db->where('did',$doctor);
       $reault_array = $this->db->get()->result_array();
       if($reault_array){
-        log_message('info','entered');
       $tslot = $reault_array[0]['dslots'];
 
       $start = date("Y/m/d");
@@ -202,8 +231,6 @@ function fetchSlot ($bdate,$doctor) {
         $this->db->where('adate', $checkdate);
         $this->db->where('adid', $doctor);
         $slots = $this->db->count_all_results('appointment');
-        log_message('info','dubai4');
-        log_message('info',$checkdate);
         if($slots>=$tslot){
             $flag=1;
             array_push ($dateListArray, $checkdate);
@@ -213,7 +240,7 @@ function fetchSlot ($bdate,$doctor) {
       }
     }
       if($flag==0){
-        log_message('info','dq');
+       
         return 0;
       }else{
       return $dateListArray;
@@ -260,7 +287,7 @@ function fetchSlot ($bdate,$doctor) {
 
        array_push ($categoryListArray, $categoryList);
         }
-       log_message('info',"ddddd");
+    
        // log_message('info','articleDataList '.$this->db->last_query());
      //log_message('info',print_r($cat,TRUE));
       return $categoryListArray;

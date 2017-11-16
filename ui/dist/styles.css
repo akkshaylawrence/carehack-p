@@ -13,9 +13,6 @@ html {
 body {
   margin: 0;
 }
-ul{
-  padding-left:0px !important;
-}
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
