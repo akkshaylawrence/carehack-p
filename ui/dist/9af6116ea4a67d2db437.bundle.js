@@ -21117,7 +21117,7 @@ and limitations under the License.
                           r.append("pcontact", e.state.phone),
                           r.append("doctor", n.doctor),
                           r.append("bdate", n.date.slice(0, 10)),
-                          r.append("password", e.state.password),
+                          r.append("pwd", e.state.password),
                           p.default
                             .post("book/RegandBookslot", r)
                             .then(function(t) {
