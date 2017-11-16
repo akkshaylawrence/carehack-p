@@ -1,5 +1,8 @@
 import React from "react";
 import firebase from "firebase";
+import axios from "../Shared/axios";
+import ax from "axios";
+import { withRouter } from "react-router-dom";
 
 class Register extends React.Component {
   constructor(props) {
@@ -9,7 +12,9 @@ class Register extends React.Component {
       phone: "",
       otp: "",
       password: "",
-      smsSent: false
+      smsSent: false,
+      email: "",
+      bookOptions: false
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.onSignUpSubmit = this.onSignUpSubmit.bind(this);
@@ -17,6 +22,9 @@ class Register extends React.Component {
   }
   componentDidMount() {
     const bookOptions = JSON.parse(sessionStorage.getItem("booked"));
+    this.setState({
+      bookOptions: bookOptions ? true : false
+    });
     const phone = bookOptions ? bookOptions.phone : "";
     this.setState({
       phone
@@ -61,6 +69,14 @@ class Register extends React.Component {
         console.log(error);
       });
   }
+  sendEmail(hospital, doctor, start, email) {
+    ax.post("https://849h7ad3u1.execute-api.us-west-2.amazonaws.com/beta", {
+      hospital,
+      doctor,
+      start,
+      email
+    });
+  }
   getCodeFromUserInput(event) {
     event.preventDefault();
     const code = this.state.otp;
@@ -78,12 +94,24 @@ class Register extends React.Component {
           axios
             .post("book/RegandBookslot", formData)
             .then(res => {
-              console.log(res);
+              this.sendEmail(
+                "Find Care Hospital",
+                doctor,
+                bookOptions.date.slice(0, 10),
+                this.state.email
+              );
             })
             .catch(err => {
               console.error(err);
             });
         }
+        this.sendEmail(
+          "Find Care Hospital",
+          doctor,
+          bookOptions.date.slice(0, 10),
+          this.state.email
+        );
+        this.props.history.push("/profile");
       })
       .catch(error => {
         // User couldn't sign in (bad verification code?)
@@ -116,7 +144,26 @@ class Register extends React.Component {
               />
             </div>
           </div>
-          <div id="phone" className="uk-margin-small">
+          {this.state.bookOptions && (
+            <div className="uk-margin-small">
+              <label className="uk-form-label" htmlFor="email">
+                Email
+              </label>
+              <div className="uk-inline uk-width-1-1">
+                <span className="uk-form-icon" uk-icon="icon: mail" />
+                <input
+                  id="email"
+                  name="email"
+                  className="uk-input"
+                  type="email"
+                  required
+                  value={this.state.email}
+                  onChange={this.handleInputChange}
+                />
+              </div>
+            </div>
+          )}
+          <div className="uk-margin-small">
             <label className="uk-form-label" htmlFor="phone">
               Phone Number
             </label>
@@ -204,4 +251,4 @@ class Register extends React.Component {
   }
 }
 
-export default Register;
+export default withRouter(Register);

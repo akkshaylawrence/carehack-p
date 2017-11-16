@@ -40,6 +40,7 @@ class Login extends React.Component {
         formData.append("doctor", bookOptions.doctor);
         axios.post("/book/Bookslot", formData).then(res => {
           console.log(res);
+          sessionStorage.setItem("user", this.state.phone);
         });
       }
     }

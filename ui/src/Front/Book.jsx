@@ -57,12 +57,12 @@ class Book extends React.Component {
       selDoctor: event.target.value
     });
     const formData = new FormData();
-    formData.append("doctorid", event.target.value);
+    formData.append("doctor", event.target.value);
     axios
       .post("book/getslot", formData)
       .then(res => {
         this.setState({
-          busyDates: res.data.data === 0 ? [] : res.data.data
+          busyDates: res.data.dates === 0 ? [] : res.data.data
         });
       })
       .catch(error => {

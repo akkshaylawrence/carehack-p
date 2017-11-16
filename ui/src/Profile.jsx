@@ -3,12 +3,14 @@ import logo from "./logo.png";
 import Navbar from "./Profile/Navbar";
 import Sidebar from "./Profile/Sidebar";
 import List from "./Profile/List";
+import axios from "./Shared/axios";
 import Icons from "uikit/dist/js/uikit-icons";
 
 class Profile extends React.Component {
   constructor(props) {
     super(props);
   }
+  componentDidMount() {}
   render() {
     return (
       <section>
