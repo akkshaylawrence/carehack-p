@@ -44,6 +44,9 @@ class Book extends React.Component {
       });
   }
   getDoctors() {
+    this.setState({
+      loadingDoctors: true
+    });
     const formData = new FormData();
     formData.append("spec", this.state.speciality);
     return axios
@@ -56,7 +59,8 @@ class Book extends React.Component {
           return { value: doc.did, label: doc.dname };
         });
         this.setState({
-          doctors: formattedDocs
+          doctors: formattedDocs,
+          loadingDoctors: true
         });
       })
       .catch(error => {
@@ -66,7 +70,8 @@ class Book extends React.Component {
   handleSpeciality(selOption) {
     this.setState(
       {
-        speciality: selOption.value
+        speciality: selOption.value,
+        selDoctor: ""
       },
       () => this.getDoctors()
     );
@@ -177,6 +182,7 @@ class Book extends React.Component {
             <div className="uk-inline uk-width-1-1">
               <span className="uk-form-icon" uk-icon="icon: calendar" />
               <Flatpickr
+                disabled={!this.state.selDoctor}
                 className="uk-input"
                 options={{
                   enableTime: false,
