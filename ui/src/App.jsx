@@ -7,7 +7,15 @@ import firebase from "firebase";
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      hasError: false
+    };
     this.initializeFirebase();
+  }
+  componentDidCatch(error, info) {
+    this.setState({
+      hasError: true
+    });
   }
   initializeFirebase() {
     const config = {
