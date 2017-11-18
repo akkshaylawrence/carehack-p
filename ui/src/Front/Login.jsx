@@ -45,19 +45,19 @@ class Login extends React.Component {
         axios
           .post("/book/Bookslot", formData)
           .then(res => {
-            if (res.data.login === 1) {
+            if (res.data.data.authStatus) {
               //  Login Success
               storage.set("user", {
                 phone: this.state.phone,
-                name: res.data.data[0].pname
+                name: res.data.data.pname
               });
               this.props.history.push("/profile");
             } else {
               this.setState({
-                password: ''
+                password: ""
               });
               UIkit.notification({
-                message: "Something went Wrong!",
+                message: "Something Wrong!",
                 status: "danger",
                 pos: "bottom-left",
                 timeout: 5000
@@ -65,6 +65,7 @@ class Login extends React.Component {
             }
           })
           .catch(err => {
+            console.error(err);
             UIkit.notification({
               message: "Something went Wrong!",
               status: "danger",
