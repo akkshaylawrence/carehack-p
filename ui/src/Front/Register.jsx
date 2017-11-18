@@ -1,7 +1,7 @@
 import React from "react";
 import firebase from "firebase";
 import axios from "../Shared/axios";
-import ax from "axios";
+import UIkit from "uikit";
 import { withRouter } from "react-router-dom";
 
 class Register extends React.Component {
@@ -65,15 +65,13 @@ class Register extends React.Component {
       })
       .catch(error => {
         console.log(error);
+        UIkit.notification({
+          message: "Something Wrong!",
+          status: "danger",
+          pos: "bottom-left",
+          timeout: 5000
+        });
       });
-  }
-  sendEmail(hospital, doctor, start, email) {
-    ax.post("https://849h7ad3u1.execute-api.us-west-2.amazonaws.com/beta", {
-      hospital,
-      doctor,
-      start,
-      email
-    });
   }
   getCodeFromUserInput(event) {
     event.preventDefault();
@@ -92,12 +90,6 @@ class Register extends React.Component {
           axios
             .post("book/RegandBookslot", formData)
             .then(res => {
-              this.sendEmail(
-                "Find Care Hospital",
-                doctor,
-                bookOptions.date.slice(0, 10),
-                this.state.email
-              );
               this.props.history.push("/profile");
             })
             .catch(err => {
