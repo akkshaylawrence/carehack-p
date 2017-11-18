@@ -53,6 +53,9 @@ class Login extends React.Component {
               });
               this.props.history.push("/profile");
             } else {
+              this.setState({
+                password: ''
+              });
               UIkit.notification({
                 message: "Something went Wrong!",
                 status: "danger",
