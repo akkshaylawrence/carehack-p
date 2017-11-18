@@ -1,5 +1,5 @@
 {
-  "name": "ui",
+  "name": "findcare",
   "version": "1.0.0",
   "description": "Help Patients find appointments.",
   "main": "index.js",
@@ -15,7 +15,7 @@
   "lint-staged": {
     "gitDir": "../",
     "linters": {
-      "*.{js,json,css,jsx}": ["prettier --write", "git add"]
+      "src/**/*.{js,json,css,jsx}": ["prettier --write", "git add"]
     }
   },
   "devDependencies": {
