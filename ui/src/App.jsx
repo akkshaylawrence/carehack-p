@@ -36,9 +36,8 @@ class App extends React.Component {
           <h3>Something went wrong</h3>
           <p>
             We are working to correct the error. Please stay patient and try
-            after some time.
+            after some time. Thank You.
           </p>
-          <p>Thank You</p>
         </div>
       );
     }

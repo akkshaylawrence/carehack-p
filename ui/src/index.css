@@ -226,3 +226,53 @@ ul {
   list-style-type: none;
   padding: 0;
 }
+
+.circ,
+.tick {
+  fill: none;
+  stroke: #000;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+.circ {
+  opacity: 0;
+  stroke-dasharray: 130;
+  stroke-dashoffset: 130;
+  transition: all 1s;
+}
+
+.tick {
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  transition: stroke-dashoffset 1s 0.5s ease-out;
+}
+
+.drawn .path {
+  opacity: 1;
+  stroke-dashoffset: 0;
+}
+
+.success-text {
+  opacity: 0;
+  text-align: center;
+  font-weight: 400;
+  margin: 20px 0;
+}
+
+.drawn .success-text {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  opacity: 1;
+}
+
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}

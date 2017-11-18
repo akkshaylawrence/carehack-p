@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import UIkit from "uikit";
+import BookComplete from "../Shared/BookComplete";
 import axios from "../Shared/axios";
 import storage from "../Shared/storage";
 
@@ -10,7 +11,8 @@ class Login extends React.Component {
     this.state = {
       phone: "",
       password: "",
-      fromBook: false
+      fromBook: false,
+      bookComplete: false
     };
     this.loginClick = this.loginClick.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -22,6 +24,14 @@ class Login extends React.Component {
       phone,
       fromBook: this.bookOptions ? true : false
     });
+    if (this.bookOptions) {
+      UIkit.notification({
+        message: "Please Login to continue",
+        status: "primary",
+        pos: "bottom-left",
+        timeout: 2000
+      });
+    }
   }
   handleInputChange(event) {
     const target = event.target;
@@ -53,7 +63,9 @@ class Login extends React.Component {
                 name: res.data.data.pname
               })
             );
-            self.props.history.push("/profile");
+            self.setState({
+              bookComplete: true
+            });
           } else {
             self.setState({
               password: ""
@@ -62,7 +74,7 @@ class Login extends React.Component {
               message: "Something Wrong!",
               status: "danger",
               pos: "bottom-left",
-              timeout: 5000
+              timeout: 2000
             });
           }
         })
@@ -72,7 +84,7 @@ class Login extends React.Component {
             message: "Something went Wrong!",
             status: "danger",
             pos: "bottom-left",
-            timeout: 5000
+            timeout: 2000
           });
         });
     }
@@ -105,18 +117,15 @@ class Login extends React.Component {
     }
 
     if (this.state.fromBook) {
-      UIkit.notification({
-        message: "Please Login to continue",
-        status: "primary",
-        pos: "bottom-left",
-        timeout: 5000
-      });
       userFromBooking(this);
     } else {
       simpleLogin(this);
     }
   }
   render() {
+    if (this.state.bookComplete) {
+      return <BookComplete />;
+    }
     return (
       <div>
         <h2>Login</h2>
