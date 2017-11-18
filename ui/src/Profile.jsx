@@ -4,6 +4,7 @@ import storage from "./Shared/storage";
 import Navbar from "./Profile/Navbar";
 import Sidebar from "./Profile/Sidebar";
 import List from "./Profile/List";
+import Book from "./Shared/Book";
 import axios from "./Shared/axios";
 import Icons from "uikit/dist/js/uikit-icons";
 
@@ -41,6 +42,7 @@ class Profile extends React.Component {
             <div className="uk-grid uk-grid-small uk-padding-small">
               <div className="uk-width-1-3@m">
                 <Sidebar user={this.user} />
+                <Book />
               </div>
               <div className="uk-width-2-3@m">
                 <List data={this.state.data} />

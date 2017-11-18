@@ -28,7 +28,7 @@ class List extends React.Component {
                   return (
                     <tr key={index}>
                       <td>{row.adate}</td>
-                      <td>Data</td>
+                      <td>{row.spec}</td>
                       <td>{row.doctor}</td>
                       <td>
                         <button
