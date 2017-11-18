@@ -1,4 +1,6 @@
 import React from "react";
+import UIkit from "uikit";
+import Icons from "uikit/dist/js/uikit-icons";
 import logo from "./logo.png";
 import storage from "./Shared/storage";
 import Navbar from "./Profile/Navbar";
@@ -6,7 +8,6 @@ import Sidebar from "./Profile/Sidebar";
 import List from "./Profile/List";
 import Book from "./Shared/Book";
 import axios from "./Shared/axios";
-import Icons from "uikit/dist/js/uikit-icons";
 
 class Profile extends React.Component {
   constructor(props) {
@@ -31,6 +32,16 @@ class Profile extends React.Component {
         this.setState({
           data
         });
+      })
+      .catch(err => {
+        UIkit.notification({
+          message: "Please Login to continue",
+          status: "danger",
+          pos: "bottom-left",
+          timeout: 2000
+        });
+        localStorage.clear();
+        this.props.history.push("/login");
       });
   }
   render() {
