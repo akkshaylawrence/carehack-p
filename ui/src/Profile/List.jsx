@@ -23,97 +23,24 @@ class List extends React.Component {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Table Data</td>
-                <td>Table Data</td>
-                <td>Table Data</td>
-                <td>
-                  <button
-                    className="uk-button-link nreg uk-button-primary uk-width-1-1"
-                    uk-switcher-item="next"
-                  >
-                    Rebook
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>Table Data</td>
-                <td>Table Data</td>
-                <td>Table Data</td>
-                <td>
-                  <button
-                    className="uk-button-link nreg uk-button-primary uk-width-1-1"
-                    uk-switcher-item="next"
-                  >
-                    Rebook
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>Table Data</td>
-                <td>Table Data</td>
-                <td>Table Data</td>
-                <td>
-                  <button
-                    className="uk-button-link nreg uk-button-primary uk-width-1-1"
-                    uk-switcher-item="next"
-                  >
-                    Rebook
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>Table Data</td>
-                <td>Table Data</td>
-                <td>Table Data</td>
-                <td>
-                  <button
-                    className="uk-button-link nreg uk-button-primary uk-width-1-1"
-                    uk-switcher-item="next"
-                  >
-                    Rebook
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>Table Data</td>
-                <td>Table Data</td>
-                <td>Table Data</td>
-                <td>
-                  <button
-                    className="uk-button-link nreg uk-button-primary uk-width-1-1"
-                    uk-switcher-item="next"
-                  >
-                    Rebook
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>Table Data</td>
-                <td>Table Data</td>
-                <td>Table Data</td>
-                <td>
-                  <button
-                    className="uk-button-link nreg uk-button-primary uk-width-1-1"
-                    uk-switcher-item="next"
-                  >
-                    Rebook
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>Table Data</td>
-                <td>Table Data</td>
-                <td>Table Data</td>
-                <td>
-                  <button
-                    className="uk-button-link nreg uk-button-primary uk-width-1-1"
-                    uk-switcher-item="next"
-                  >
-                    Rebook
-                  </button>
-                </td>
-              </tr>
+              {this.props.data &&
+                this.props.data.map((row, index) => {
+                  return (
+                    <tr key={index}>
+                      <td>{row.adate}</td>
+                      <td>Data</td>
+                      <td>{row.doctor}</td>
+                      <td>
+                        <button
+                          className="uk-button-link nreg uk-button-primary uk-width-1-1"
+                          uk-switcher-item="next"
+                        >
+                          Rebook
+                        </button>
+                      </td>
+                    </tr>
+                  );
+                })}
             </tbody>
           </table>
         </div>

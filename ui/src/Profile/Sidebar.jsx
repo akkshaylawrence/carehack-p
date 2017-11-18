@@ -2,13 +2,12 @@ import React from "react";
 
 class Sidebar extends React.Component {
   render() {
+    const { user } = this.props;
     return (
       <div>
         <div className="uk-card pcard uk-card-default uk-card-body">
           <p className="uk-text-meta">Welcome</p>
-          <h2 className="uk-card-title uk-margin-remove-top">
-            Akkshay Lawrence
-          </h2>
+          <h2 className="uk-card-title uk-margin-remove-top">{user.name}</h2>
           <p>Your Appointments</p>
           <hr />
           <dl className="uk-description-list">
