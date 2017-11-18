@@ -22,12 +22,10 @@ class Register extends React.Component {
   }
   componentDidMount() {
     const bookOptions = JSON.parse(sessionStorage.getItem("booked"));
-    this.setState({
-      bookOptions: bookOptions ? true : false
-    });
     const phone = bookOptions ? bookOptions.phone : "";
     this.setState({
-      phone
+      phone,
+      bookOptions: bookOptions ? true : false
     });
     window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
       "sign-up-button",

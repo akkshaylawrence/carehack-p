@@ -1,23 +1,27 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
+import UIkit from "uikit";
 import axios from "../Shared/axios";
+import storage from "../Shared/storage";
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      phone: "",
+      password: "",
       fromBook: false
     };
     this.loginClick = this.loginClick.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
   }
   componentDidMount() {
-    this.bookOptions = JSON.parse(sessionStorage.getItem("booked"));
-    if (this.bookOptions) {
-      this.setState({
-        fromBook: true
-      });
-    }
+    const bookOptions = storage.get("booked");
+    const phone = bookOptions ? bookOptions.phone : "";
+    this.setState({
+      phone,
+      fromBook: bookOptions ? true : false
+    });
   }
   handleInputChange(event) {
     const target = event.target;
@@ -31,17 +35,40 @@ class Login extends React.Component {
   loginClick(event) {
     event.preventDefault();
     if (this.state.fromBook) {
-      const bookOptions = JSON.parse(sessionStorage.getItem("booked"));
+      const bookOptions = storage.get("booked");
       if (bookOptions) {
         const formData = new FormData();
         formData.append("pcontact", this.state.phone);
-        formData.append("password", this.state.password);
+        formData.append("pwd", this.state.password);
         formData.append("bdate", bookOptions.date);
         formData.append("doctor", bookOptions.doctor);
-        axios.post("/book/Bookslot", formData).then(res => {
-          console.log(res);
-          sessionStorage.setItem("user", this.state.phone);
-        });
+        axios
+          .post("/book/Bookslot", formData)
+          .then(res => {
+            if (res.data.login === 1) {
+              //  Login Success
+              storage.set("user", {
+                phone: this.state.phone,
+                name: res.data.data[0].pname
+              });
+              this.props.history.push("/profile");
+            } else {
+              UIkit.notification({
+                message: "Something went Wrong!",
+                status: "danger",
+                pos: "bottom-left",
+                timeout: 5000
+              });
+            }
+          })
+          .catch(err => {
+            UIkit.notification({
+              message: "Something went Wrong!",
+              status: "danger",
+              pos: "bottom-left",
+              timeout: 5000
+            });
+          });
       }
     }
   }

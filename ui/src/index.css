@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,300");
 @import-normalize;
 html.bg {
-  background: -moz-linear-gradient(left, #74ebd5 0%, #acb6e5 100%);
-  background: -webkit-linear-gradient(left, #74ebd5 0%, #acb6e5 100%);
   background: linear-gradient(to right, #74ebd5 0%, #acb6e5 100%);
 }
 
@@ -226,4 +224,5 @@ select:focus .placeholder-select {
 
 ul {
   list-style-type: none;
+  padding: 0;
 }
