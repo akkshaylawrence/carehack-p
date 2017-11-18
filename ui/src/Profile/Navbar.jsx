@@ -1,8 +1,18 @@
 import React from "react";
 import logo from "../logo.png";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 class Navbar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.logout = this.logout.bind(this);
+  }
+  logout(event) {
+    event.preventDefault();
+    localStorage.clear();
+    sessionStorage.clear();
+    this.props.history.push("/");
+  }
   render() {
     return (
       <div>
@@ -19,12 +29,7 @@ class Navbar extends React.Component {
             <div className="uk-container uk-visible">
               <ul className="uk-navbar-nav">
                 <li className="uk-button uk-padding-remove-horizontal">
-                  <a className="uk-margin-remove" href="#">
-                    Book Appointment
-                  </a>
-                </li>
-                <li className="uk-button uk-padding-remove-horizontal">
-                  <a className="uk-margin-remove" href="#">
+                  <a className="uk-margin-remove" href="" onClick={this.logout}>
                     Logout
                   </a>
                 </li>
@@ -59,4 +64,4 @@ class Navbar extends React.Component {
     );
   }
 }
-export default Navbar;
+export default withRouter(Navbar);

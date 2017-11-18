@@ -8,6 +8,12 @@ class Front extends React.Component {
   constructor(props) {
     super(props);
   }
+  componentWillMount() {
+    const user = localStorage.getItem("user");
+    if (user) {
+      this.props.history.push("/profile");
+    }
+  }
   render() {
     return (
       <div className="uk-section uk-padding">
