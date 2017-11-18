@@ -1,9 +1,10 @@
 import React from "react";
 import firebase from "firebase";
-import axios from "../Shared/axios";
-import storage from "../Shared/storage";
 import UIkit from "uikit";
 import { withRouter } from "react-router-dom";
+import axios from "../Shared/axios";
+import storage from "../Shared/storage";
+import BookComplete from "../Shared/BookComplete";
 
 class Register extends React.Component {
   constructor(props) {
@@ -15,7 +16,8 @@ class Register extends React.Component {
       password: "",
       smsSent: false,
       email: "",
-      bookOptions: false
+      bookOptions: false,
+      bookingComplete: false
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.onSignUpSubmit = this.onSignUpSubmit.bind(this);
@@ -98,7 +100,9 @@ class Register extends React.Component {
                   phone: this.state.phone
                 })
               );
-              this.props.history.push("/profile");
+              this.setState({
+                bookingComplete: false
+              });
             })
             .catch(err => {
               console.error(err);
@@ -115,6 +119,9 @@ class Register extends React.Component {
       });
   }
   render() {
+    if (this.state.bookingComplete) {
+      return <BookComplete />;
+    }
     return (
       <div>
         <h2>Register</h2>
