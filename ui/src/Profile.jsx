@@ -16,7 +16,7 @@ class Profile extends React.Component {
     };
   }
   componentWillMount() {
-    this.user = storage.get("user");
+    this.user = localStorage.getItem("user");
   }
   componentDidMount() {
     storage.delete("booked");
@@ -41,8 +41,10 @@ class Profile extends React.Component {
           <div className="uk-container">
             <div className="uk-grid uk-grid-small uk-padding-small">
               <div className="uk-width-1-3@m">
-                <Sidebar user={this.user} />
-                <Book />
+                {this.user && <Sidebar user={this.user} />}
+                <div className="mform uk-card uk-card-small centre uk-card-default uk-card-body">
+                  <Book />
+                </div>
               </div>
               <div className="uk-width-2-3@m">
                 <List data={this.state.data} />

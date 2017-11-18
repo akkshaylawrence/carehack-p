@@ -1,6 +1,7 @@
 import React from "react";
 import firebase from "firebase";
 import axios from "../Shared/axios";
+import storage from "../Shared/storage";
 import UIkit from "uikit";
 import { withRouter } from "react-router-dom";
 
@@ -21,7 +22,7 @@ class Register extends React.Component {
     this.getCodeFromUserInput = this.getCodeFromUserInput.bind(this);
   }
   componentDidMount() {
-    const bookOptions = JSON.parse(sessionStorage.getItem("booked"));
+    const bookOptions = storage.get("booked");
     const phone = bookOptions ? bookOptions.phone : "";
     this.setState({
       phone,
@@ -79,7 +80,7 @@ class Register extends React.Component {
     confirmationResult
       .confirm(code)
       .then(result => {
-        const bookOptions = JSON.parse(sessionStorage.getItem("booked"));
+        const bookOptions = storage.get("booked");
         if (bookOptions) {
           const formData = new FormData();
           formData.append("pname", this.state.name);
@@ -90,6 +91,13 @@ class Register extends React.Component {
           axios
             .post("book/RegandBookslot", formData)
             .then(res => {
+              localStorage.setItem(
+                "user",
+                JSON.stringify({
+                  name: res.data.data.name,
+                  phone: this.state.phone
+                })
+              );
               this.props.history.push("/profile");
             })
             .catch(err => {
@@ -98,8 +106,12 @@ class Register extends React.Component {
         }
       })
       .catch(error => {
-        // User couldn't sign in (bad verification code?)
-        // ...
+        UIkit.notification({
+          message: "Invalid Verification Code!",
+          status: "danger",
+          pos: "bottom-left",
+          timeout: 5000
+        });
       });
   }
   render() {
