@@ -8,29 +8,38 @@ import Sidebar from "./Profile/Sidebar";
 import List from "./Profile/List";
 import Book from "./Shared/Book";
 import axios from "./Shared/axios";
+import { isPast, isFuture } from "date-fns";
 
 class Profile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      pastData: [],
+      futureData: []
     };
   }
   componentWillMount() {
-    this.user = localStorage.getItem("user");
+    this.user = JSON.parse(localStorage.getItem("user"));
   }
   componentDidMount() {
     storage.delete("booked");
     const formData = new FormData();
-    formData.append("pcontact", "1234567890");
+    formData.append("pcontact", this.user.phone);
     axios
       .post("book/getpastap", formData)
       .then(res => {
         return res.data.data;
       })
       .then(data => {
+        const pastData = data.filter(obj => {
+          return isPast(new Date(obj.adate));
+        });
+        const futureData = data.filter(obj => {
+          return isFuture(new Date(obj.adate));
+        });
         this.setState({
-          data
+          pastData,
+          futureData
         });
       })
       .catch(err => {
@@ -52,13 +61,15 @@ class Profile extends React.Component {
           <div className="uk-container">
             <div className="uk-grid uk-grid-small uk-padding-small">
               <div className="uk-width-1-3@m">
-                {this.user && <Sidebar user={this.user} />}
+                {this.user && (
+                  <Sidebar user={this.user} data={this.state.futureData} />
+                )}
                 <div className="pform uk-width-1-1 uk-card uk-card-small centre uk-card-default uk-card-body">
                   <Book />
                 </div>
               </div>
               <div className="uk-width-2-3@m">
-                <List data={this.state.data} />
+                <List data={this.state.pastData} />
               </div>
             </div>
           </div>

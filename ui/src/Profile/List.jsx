@@ -23,7 +23,7 @@ class List extends React.Component {
               </tr>
             </thead>
             <tbody>
-              {this.props.data &&
+              {this.props.data ? (
                 this.props.data.map((row, index) => {
                   return (
                     <tr key={index}>
@@ -40,7 +40,12 @@ class List extends React.Component {
                       </td>
                     </tr>
                   );
-                })}
+                })
+              ) : (
+                <tr>
+                  <td>You have no past appointments</td>
+                </tr>
+              )}
             </tbody>
           </table>
         </div>
