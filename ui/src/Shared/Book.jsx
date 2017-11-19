@@ -130,7 +130,7 @@ class Book extends React.Component {
     const { date } = this.state;
     return (
       <div>
-        <h2 className="uk-padding-small uk-padding-remove-bottom uk-padding-remove-left">
+        <h2 className="uk-padding-small fhead uk-padding-remove-bottom uk-padding-remove-left">
           Book Appointment
         </h2>
         <p className="uk-text-meta">Book appointment to any doctor.</p>
