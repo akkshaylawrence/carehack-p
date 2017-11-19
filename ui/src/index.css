@@ -310,3 +310,14 @@ input[type="number"]::-webkit-outer-spin-button {
     opacity: 1;
   }
 }
+
+.uk-accordion-content {
+  margin-top: 0px;
+  font-size: 22px;
+  font-weight: 400;
+  padding-left: 25px !important;
+}
+
+.atext {
+  padding-left: 3px;
+}
