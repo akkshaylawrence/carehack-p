@@ -8,7 +8,7 @@ class List extends React.Component {
           className="uk-card pcard uk-card-default uk-card-body"
           uk-overflow-auto="true"
         >
-          <h3 className="uk-card-title">Your Appointments</h3>
+          <h3 className="uk-card-title">Your Previous Appointments</h3>
           <p>
             Given below are your Previous appointments. Press the "Rebook"
             button to repeat the same appointment.
