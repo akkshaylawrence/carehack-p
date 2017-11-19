@@ -121,25 +121,46 @@ class Book extends React.Component {
       date: this.state.date
     };
     sessionStorage.setItem("booked", JSON.stringify(bookOptions));
-    const formData = new FormData();
-    formData.append("pcontact", this.state.phone);
-    axios
-      .post("book/checkuser", formData)
-      .then(res => {
-        if (res.data.data == "0") {
-          this.props.history.push("/register");
-        } else {
-          this.props.history.push("/login");
-        }
-      })
-      .catch(error => {
-        console.log(error);
-      })
-      .then(() => {
-        this.setState({
-          loadingContinue: false
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user) {
+      const formData = new FormData();
+      formData.append("pcontact", user.phone);
+      formData.append("bdate", this.state.date);
+      formData.append("doctor", this.state.selDoctor);
+      axios
+        .post("/book/booking", formData)
+        .then(res => {
+          console.log(res);
+        })
+        .catch(err => {
+          console.log(err);
+        })
+        .then(() => {
+          this.setState({
+            loadingContinue: false
+          });
         });
-      });
+    } else {
+      const formData = new FormData();
+      formData.append("pcontact", this.state.phone);
+      axios
+        .post("book/checkuser", formData)
+        .then(res => {
+          if (res.data.data == "0") {
+            this.props.history.push("/register");
+          } else {
+            this.props.history.push("/login");
+          }
+        })
+        .catch(error => {
+          console.log(error);
+        })
+        .then(() => {
+          this.setState({
+            loadingContinue: false
+          });
+        });
+    }
   }
   handleInputChange(event) {
     const target = event.target;
