@@ -17,6 +17,9 @@ class BookComplete extends React.Component {
   bookingComplete() {
     setTimeout(() => this.props.history.push("/profile"), 2000);
   }
+  componentWillUnmount() {
+    this.tick.removeEventListener(this.animationEvent, this.bookingComplete);
+  }
   render() {
     return (
       <div ref={t => (this.tick = t)}>
@@ -40,14 +43,14 @@ class BookComplete extends React.Component {
               cy="35"
               r="24"
               stroke="#979797"
-              stroke-width="2"
-              stroke-linecap="round"
+              strokeWidth="2"
+              strokeLinecap="round"
               fill="transparent"
             />
             <polyline
               id="successAnimationCheck"
               stroke="#979797"
-              stroke-width="2"
+              strokeWidth="2"
               points="23 34 34 43 47 27"
               fill="transparent"
             />

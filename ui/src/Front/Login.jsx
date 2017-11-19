@@ -103,6 +103,13 @@ class Login extends React.Component {
             });
             localStorage.setItem("user", user);
             self.props.history.push("/profile");
+          } else {
+            UIkit.notification({
+              message: "Invalid username or password",
+              status: "danger",
+              pos: "bottom-left",
+              timeout: 5000
+            });
           }
         })
         .catch(err => {
@@ -123,7 +130,6 @@ class Login extends React.Component {
     }
   }
   render() {
-    //   return <BookComplete />;
     if (this.state.bookComplete) {
       return <BookComplete />;
     }

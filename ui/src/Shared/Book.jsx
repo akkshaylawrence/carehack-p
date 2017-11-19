@@ -10,13 +10,14 @@ import "flatpickr/dist/themes/material_green.css";
 class Book extends React.Component {
   constructor(props) {
     super(props);
+    this.user = JSON.parse(localStorage.getItem("user"));
     this.state = {
       date: new Date(),
       speciality: "",
       loadingDoctors: false,
       doctors: [],
       selDoctor: "",
-      phone: "",
+      phone: (this.user && this.user.phone) || "",
       busyDates: [],
       loadingContinue: false
     };
@@ -25,6 +26,9 @@ class Book extends React.Component {
     this.handleDoctor = this.handleDoctor.bind(this);
     this.handleSpeciality = this.handleSpeciality.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
+  }
+  componentDidMount() {
+    this.user = JSON.parse(localStorage.getItem("user"));
   }
   getSpecialities() {
     return axios
@@ -156,6 +160,7 @@ class Book extends React.Component {
                 name="phone"
                 className="uk-input"
                 type="text"
+                value={this.state.phone}
                 placeholder="eg: 9961464050"
                 onChange={this.handleInputChange}
               />

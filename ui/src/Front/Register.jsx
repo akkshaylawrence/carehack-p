@@ -87,6 +87,7 @@ class Register extends React.Component {
           const formData = new FormData();
           formData.append("pname", this.state.name);
           formData.append("pcontact", this.state.phone);
+          formData.append("pemail", this.state.email);
           formData.append("doctor", bookOptions.doctor);
           formData.append("bdate", bookOptions.date.slice(0, 10));
           formData.append("pwd", this.state.password);
@@ -147,25 +148,25 @@ class Register extends React.Component {
               />
             </div>
           </div>
-          {this.state.bookOptions && (
-            <div className="uk-margin-small">
-              <label className="uk-form-label" htmlFor="email">
-                Email
-              </label>
-              <div className="uk-inline uk-width-1-1">
-                <span className="uk-form-icon" uk-icon="icon: mail" />
-                <input
-                  id="email"
-                  name="email"
-                  className="uk-input"
-                  type="email"
-                  required
-                  value={this.state.email}
-                  onChange={this.handleInputChange}
-                />
-              </div>
+
+          <div className="uk-margin-small">
+            <label className="uk-form-label" htmlFor="email">
+              Email
+            </label>
+            <div className="uk-inline uk-width-1-1">
+              <span className="uk-form-icon" uk-icon="icon: mail" />
+              <input
+                id="email"
+                name="email"
+                className="uk-input"
+                type="email"
+                required
+                value={this.state.email}
+                onChange={this.handleInputChange}
+              />
             </div>
-          )}
+          </div>
+
           <div className="uk-margin-small">
             <label className="uk-form-label" htmlFor="phone">
               Phone Number
@@ -183,6 +184,7 @@ class Register extends React.Component {
               />
             </div>
           </div>
+
           <div id="password" className="uk-margin-small uk-margin-remove-top">
             <label className="uk-form-label" htmlFor="password">
               Create New Password
@@ -198,6 +200,7 @@ class Register extends React.Component {
               />
             </div>
           </div>
+
           {this.state.smsSent ? (
             <div id="otp" className="uk-margin-small uk-margin-remove-top">
               <label className="uk-form-label" htmlFor="otp">
