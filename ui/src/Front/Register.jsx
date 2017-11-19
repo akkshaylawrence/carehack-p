@@ -46,6 +46,9 @@ class Register extends React.Component {
         }
       }
     );
+    recaptchaVerifier.render().then(function(widgetId) {
+      window.recaptchaWidgetId = widgetId;
+    });
   }
   handleInputChange(event) {
     const target = event.target;
@@ -93,12 +96,12 @@ class Register extends React.Component {
               localStorage.setItem(
                 "user",
                 JSON.stringify({
-                  name: res.data.data.name,
+                  name: res.data.pname,
                   phone: this.state.phone
                 })
               );
               this.setState({
-                bookingComplete: false
+                bookingComplete: true
               });
             })
             .catch(err => {
