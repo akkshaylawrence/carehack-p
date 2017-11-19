@@ -4,7 +4,6 @@ import UIkit from "uikit";
 import Icons from "uikit/dist/js/uikit-icons";
 import "uikit/dist/css/uikit.min.css";
 import "react-select/dist/react-select.css";
-import "./index.css";
 import App from "./App";
 
 //Adding support for <IE11 because React 16 uses Map and Set. These are not natively supported on these browsers.
@@ -15,7 +14,7 @@ UIkit.use(Icons);
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function() {
-    navigator.serviceWorker.register("/sw.js").then(
+    navigator.serviceWorker.register("./sw.js").then(
       function(registration) {
         // Registration was successful
         console.log(

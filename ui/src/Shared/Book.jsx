@@ -17,7 +17,8 @@ class Book extends React.Component {
       doctors: [],
       selDoctor: "",
       phone: "",
-      busyDates: []
+      busyDates: [],
+      loadingContinue: false
     };
     this.onContinue = this.onContinue.bind(this);
     this.getDoctors = this.getDoctors.bind(this);
@@ -95,6 +96,9 @@ class Book extends React.Component {
   }
   onContinue(event) {
     event.preventDefault();
+    this.setState({
+      loadingContinue: true
+    });
     const bookOptions = {
       phone: this.state.phone,
       speciality: this.state.speciality,
@@ -115,6 +119,11 @@ class Book extends React.Component {
       })
       .catch(error => {
         console.log(error);
+      })
+      .then(() => {
+        this.setState({
+          loadingContinue: false
+        });
       });
   }
   handleInputChange(event) {
@@ -203,7 +212,11 @@ class Book extends React.Component {
               className="uk-button reg uk-button-primary uk-width-1-1"
               onClick={this.onContinue}
             >
-              Continue
+              {this.state.loadingContinue ? (
+                <div data-uk-spinner={""} />
+              ) : (
+                <span>Continue</span>
+              )}
             </button>
           </div>
         </form>

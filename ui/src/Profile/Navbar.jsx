@@ -29,7 +29,9 @@ class Navbar extends React.Component {
             <div className="uk-container">
               <ul className="uk-navbar-nav">
                 <li className="uk-button uk-padding-remove-right">
-                  <a href="#">Logout</a>
+                  <a className="uk-margin-remove" href="" onClick={this.logout}>
+                    Logout
+                  </a>
                 </li>
               </ul>
             </div>
