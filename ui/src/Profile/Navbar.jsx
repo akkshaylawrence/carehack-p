@@ -15,46 +15,16 @@ class Navbar extends React.Component {
               <img className="brand-logo" src={logo} alt="FindCare" />
             </Link>
           </div>
-          <div className="uk-navbar-right uk-visible@s">
-            <div className="uk-container uk-visible">
+          <div className="uk-navbar-right">
+            <div className="uk-container">
               <ul className="uk-navbar-nav">
-                <li className="uk-button uk-padding-remove-horizontal">
-                  <a className="uk-margin-remove" href="#">
-                    Book Appointment
-                  </a>
-                </li>
-                <li className="uk-button uk-padding-remove-horizontal">
-                  <a className="uk-margin-remove" href="#">
-                    Logout
-                  </a>
+                <li className="uk-button uk-padding-remove-right">
+                  <a href="#">Logout</a>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
-        <div
-          className=" uk-hidden@s"
-          uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky"
-        >
-          <nav className="uk-navbar-container secnav" data-uk-navbar>
-            <div className="uk-navbar-center">
-              <div className="uk-container uk-visible">
-                <ul className="uk-navbar-nav">
-                  <li className="uk-button uk-padding-remove-horizontal">
-                    <a className="uk-margin-remove" href="#">
-                      Book Appointment
-                    </a>
-                  </li>
-                  <li className="uk-button uk-padding-remove-horizontal">
-                    <a className="uk-margin-remove" href="#">
-                      Logout
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </div>
       </div>
     );
   }

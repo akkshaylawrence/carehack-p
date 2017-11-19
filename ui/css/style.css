@@ -32,6 +32,13 @@ select {
   border-radius: 5px !important;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+}
+
 .ftxt {
   padding: 3px 0px 3px 10px;
   margin-bottom: 0px;
@@ -94,7 +101,7 @@ nav {
 
 .mform {
   border-radius: 5px;
-  max-width: 400px;
+  /* max-width: 400px; */
   margin-bottom: 10px;
 }
 

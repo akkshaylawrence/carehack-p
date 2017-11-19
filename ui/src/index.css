@@ -33,6 +33,7 @@ select {
 
 nav.uk-navbar-container {
   padding-bottom: 0px;
+  background-color: #fff;
 }
 
 hr {
@@ -43,12 +44,32 @@ dd {
   margin-top: 5px;
 }
 
+select:focus .placeholder-select {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+}
+
 .secnav {
   max-height: 30px;
 }
 
 .uk-navbar-nav > li > a {
-  line-height: 20px;
+  height: 30px;
+}
+
+.uk-navbar-left > .uk-navbar-item {
+  height: 33px;
 }
 
 .ftxt {
@@ -104,13 +125,19 @@ dd {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+.pform {
+  margin-top: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
 .mform {
   border-radius: 5px;
-  max-width: 400px;
   margin-bottom: 10px;
 }
 
 .pcard {
+  margin-top: 10px;
   border-radius: 5px;
   max-width: 1000px;
 }
@@ -170,6 +197,10 @@ dd {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+.fhead {
+  font-size: 26px !important;
+}
+
 @media screen and (min-width: 320px) {
   .brand-logo {
     height: 32px;
@@ -182,6 +213,9 @@ dd {
   nav {
     height: 60px;
     padding-bottom: 10px;
+  }
+  .fhead {
+    font-size: 26px !important;
   }
 }
 
@@ -196,7 +230,10 @@ dd {
   }
   nav {
     height: 60px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
+  }
+  .fhead {
+    font-size: 30px !important;
   }
 }
 
@@ -216,13 +253,10 @@ dd {
   .hero {
     padding-top: 100px;
   }
-}
-
-select:focus .placeholder-select {
-  display: none;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
+  .fhead {
+    font-size: 32px !important;
+  }
+  .pcard {
+    margin-top: 0px;
+  }
 }
