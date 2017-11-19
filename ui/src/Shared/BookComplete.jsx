@@ -20,26 +20,40 @@ class BookComplete extends React.Component {
   render() {
     return (
       <div ref={t => (this.tick = t)}>
-        <svg
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          viewBox="0 0 37 37"
-          style={{ enableBackground: "new 0 0 37 37" }}
-          xmlSpace="preserve"
-        >
-          <path
-            className="circ path"
-            d="M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"
-          />
-          <polyline
-            className="tick path"
-            points="11.6,20 15.9,24.2 26.4,13.8 "
-          />
-        </svg>
-        <p className="success-text">Booking Complete</p>
+        <div>
+          <svg
+            id="successAnimation"
+            className=" uk-width-1-1 animated"
+            xmlns="http://www.w3.org/2000/svg"
+            width="247"
+            height="247"
+            viewBox="0 0 70 70"
+          >
+            <path
+              id="successAnimationResult"
+              fill="#D8D8D8"
+              d="M35,60 C21.1928813,60 10,48.8071187 10,35 C10,21.1928813 21.1928813,10 35,10 C48.8071187,10 60,21.1928813 60,35 C60,48.8071187 48.8071187,60 35,60 Z M23.6332378,33.2260427 L22.3667622,34.7739573 L34.1433655,44.40936 L47.776114,27.6305926 L46.223886,26.3694074 L33.8566345,41.59064 L23.6332378,33.2260427 Z"
+            />
+            <circle
+              id="successAnimationCircle"
+              cx="35"
+              cy="35"
+              r="24"
+              stroke="#979797"
+              stroke-width="2"
+              stroke-linecap="round"
+              fill="transparent"
+            />
+            <polyline
+              id="successAnimationCheck"
+              stroke="#979797"
+              stroke-width="2"
+              points="23 34 34 43 47 27"
+              fill="transparent"
+            />
+          </svg>
+          <p className="uk-text-center uk-text-lead">Booking Complete</p>
+        </div>
       </div>
     );
   }
