@@ -15,8 +15,10 @@ class Profile extends React.Component {
     super(props);
     this.state = {
       pastData: [],
-      futureData: []
+      futureData: [],
+      data: {}
     };
+    this.rebook = this.rebook.bind(this);
   }
   componentWillMount() {
     this.user = JSON.parse(localStorage.getItem("user"));
@@ -53,6 +55,11 @@ class Profile extends React.Component {
         this.props.history.push("/login");
       });
   }
+  rebook(row) {
+    this.setState({
+      data: row
+    });
+  }
   render() {
     return (
       <section>
@@ -65,11 +72,11 @@ class Profile extends React.Component {
                   <Sidebar user={this.user} data={this.state.futureData} />
                 )}
                 <div className="pform uk-width-1-1 uk-card uk-card-small centre uk-card-default uk-card-body">
-                  <Book />
+                  <Book data={this.state.data} />
                 </div>
               </div>
               <div className="uk-width-2-3@m">
-                <List data={this.state.pastData} />
+                <List data={this.state.pastData} clickLink={this.rebook} />
               </div>
             </div>
           </div>

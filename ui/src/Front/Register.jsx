@@ -79,45 +79,89 @@ class Register extends React.Component {
   getCodeFromUserInput(event) {
     event.preventDefault();
     const code = this.state.otp;
-    confirmationResult
-      .confirm(code)
-      .then(result => {
-        const bookOptions = storage.get("booked");
-        if (bookOptions) {
-          const formData = new FormData();
-          formData.append("pname", this.state.name);
-          formData.append("pcontact", this.state.phone);
-          formData.append("pemail", this.state.email);
-          formData.append("doctor", bookOptions.doctor);
-          formData.append("bdate", bookOptions.date.slice(0, 10));
-          formData.append("pwd", this.state.password);
-          axios
-            .post("book/RegandBookslot", formData)
-            .then(res => {
+
+    function fromBooking(self) {
+      confirmationResult
+        .confirm(code)
+        .then(result => {
+          const bookOptions = storage.get("booked");
+          if (bookOptions) {
+            const formData = new FormData();
+            formData.append("pname", self.state.name);
+            formData.append("pcontact", self.state.phone);
+            formData.append("pemail", self.state.email);
+            formData.append("doctor", bookOptions.doctor);
+            formData.append("bdate", bookOptions.date.slice(0, 10));
+            formData.append("pwd", self.state.password);
+            axios.post("book/RegandBookslot", formData).then(res => {
               localStorage.setItem(
                 "user",
                 JSON.stringify({
                   name: res.data.pname,
-                  phone: this.state.phone
+                  phone: self.state.phone
                 })
               );
-              this.setState({
+              self.setState({
                 bookingComplete: true
               });
-            })
-            .catch(err => {
-              console.error(err);
             });
-        }
-      })
-      .catch(error => {
-        UIkit.notification({
-          message: "Invalid Verification Code!",
-          status: "danger",
-          pos: "bottom-left",
-          timeout: 5000
+          }
+        })
+        .catch(error => {
+          UIkit.notification({
+            message: "Invalid Verification Code!",
+            status: "danger",
+            pos: "bottom-left",
+            timeout: 5000
+          });
         });
-      });
+    }
+
+    function simpleRegister(self) {
+      confirmationResult
+        .confirm(code)
+        .then(result => {
+          const bookOptions = storage.get("booked");
+          if (bookOptions) {
+            const formData = new FormData();
+            formData.append("pname", self.state.name);
+            formData.append("pcontact", self.state.phone);
+            formData.append("pemail", self.state.email);
+            formData.append("pwd", self.state.password);
+            axios
+              .post("book/regist", formData)
+              .then(res => {
+                localStorage.setItem(
+                  "user",
+                  JSON.stringify({
+                    name: res.data.pname,
+                    phone: self.state.phone
+                  })
+                );
+                self.setState({
+                  bookingComplete: true
+                });
+              })
+              .catch(err => {
+                console.error(err);
+              });
+          }
+        })
+        .catch(error => {
+          UIkit.notification({
+            message: "Invalid Verification Code!",
+            status: "danger",
+            pos: "bottom-left",
+            timeout: 5000
+          });
+        });
+    }
+
+    if (this.state.bookOptions) {
+      fromBooking(this);
+    } else {
+      simpleRegister(this);
+    }
   }
   render() {
     if (this.state.bookingComplete) {

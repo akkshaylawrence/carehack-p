@@ -1,4 +1,5 @@
 import React from "react";
+import ListItem from "./ListItem";
 
 class List extends React.Component {
   render() {
@@ -26,19 +27,11 @@ class List extends React.Component {
               {this.props.data ? (
                 this.props.data.map((row, index) => {
                   return (
-                    <tr key={index}>
-                      <td>{row.adate}</td>
-                      <td>{row.spec}</td>
-                      <td>{row.doctor}</td>
-                      <td>
-                        <button
-                          className="uk-button-link nreg uk-button-primary uk-width-1-1"
-                          uk-switcher-item="next"
-                        >
-                          Rebook
-                        </button>
-                      </td>
-                    </tr>
+                    <ListItem
+                      row={row}
+                      key={index}
+                      clickLink={this.props.clickLink}
+                    />
                   );
                 })
               ) : (

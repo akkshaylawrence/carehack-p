@@ -30,6 +30,17 @@ class Book extends React.Component {
   componentDidMount() {
     this.user = JSON.parse(localStorage.getItem("user"));
   }
+  componentWillReceiveProps(nextProps) {
+    if (JSON.stringify(nextProps.data) !== JSON.stringify(this.props.data)) {
+      this.setState(
+        {
+          speciality: nextProps.data.spec.toLowerCase(),
+          selDoctor: nextProps.data.adid
+        },
+        () => this.getDoctors()
+      );
+    }
+  }
   getSpecialities() {
     return axios
       .get("book/getSpec", {})
