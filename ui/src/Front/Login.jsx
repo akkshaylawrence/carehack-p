@@ -71,7 +71,7 @@ class Login extends React.Component {
               password: ""
             });
             UIkit.notification({
-              message: "Something Wrong!",
+              message: "Something went Wrong!",
               status: "danger",
               pos: "bottom-left",
               timeout: 2000
@@ -171,7 +171,10 @@ class Login extends React.Component {
             >
               Login {this.state.fromBook && "and Book"}
             </button>
-            <button className="uk-button-link nreg uk-button-primary">
+            <button
+              className="uk-button-link nreg uk-button-primary"
+              type="button"
+            >
               <Link to="/">Back</Link>
             </button>
           </div>

@@ -39,6 +39,9 @@ class Register extends React.Component {
         },
         "expired-callback": function() {
           // Response expired. Ask user to solve reCAPTCHA again.
+          window.recaptchaVerifier.render().then(widgetId => {
+            grecaptcha.reset(widgetId);
+          });
           console.log("Expired");
         }
       }
@@ -68,12 +71,6 @@ class Register extends React.Component {
       })
       .catch(error => {
         console.log(error);
-        UIkit.notification({
-          message: "Something Wrong!",
-          status: "danger",
-          pos: "bottom-left",
-          timeout: 5000
-        });
       });
   }
   getCodeFromUserInput(event) {
@@ -129,7 +126,7 @@ class Register extends React.Component {
           Registration allows you to book appointments.
         </p>
         <hr className="uk-margin-small" />
-        <form className="uk-form-stacked">
+        <form className="uk-form-stacked" action="#!">
           <div className="uk-margin-small">
             <label className="uk-form-label" htmlFor="name">
               Name
@@ -241,11 +238,6 @@ class Register extends React.Component {
               onClick={this.getCodeFromUserInput}
             >
               Register
-            </button>
-          </div>
-          <div className="uk-margin-small">
-            <button className="uk-button uk-hidden nreg uk-button-primary uk-width-1-1">
-              Book Appointment
             </button>
           </div>
         </form>
