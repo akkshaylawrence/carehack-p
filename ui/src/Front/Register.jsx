@@ -1,7 +1,8 @@
 import React from "react";
 import firebase from "firebase";
 import axios from "../Shared/axios";
-import ax from "axios";
+import storage from "../Shared/storage";
+import UIkit from "uikit";
 import { withRouter } from "react-router-dom";
 
 class Register extends React.Component {
@@ -21,7 +22,7 @@ class Register extends React.Component {
     this.getCodeFromUserInput = this.getCodeFromUserInput.bind(this);
   }
   componentDidMount() {
-    const bookOptions = JSON.parse(sessionStorage.getItem("booked"));
+    const bookOptions = storage.get("booked");
     const phone = bookOptions ? bookOptions.phone : "";
     this.setState({
       phone,
@@ -65,15 +66,13 @@ class Register extends React.Component {
       })
       .catch(error => {
         console.log(error);
+        UIkit.notification({
+          message: "Something Wrong!",
+          status: "danger",
+          pos: "bottom-left",
+          timeout: 5000
+        });
       });
-  }
-  sendEmail(hospital, doctor, start, email) {
-    ax.post("https://849h7ad3u1.execute-api.us-west-2.amazonaws.com/beta", {
-      hospital,
-      doctor,
-      start,
-      email
-    });
   }
   getCodeFromUserInput(event) {
     event.preventDefault();
@@ -81,7 +80,7 @@ class Register extends React.Component {
     confirmationResult
       .confirm(code)
       .then(result => {
-        const bookOptions = JSON.parse(sessionStorage.getItem("booked"));
+        const bookOptions = storage.get("booked");
         if (bookOptions) {
           const formData = new FormData();
           formData.append("pname", this.state.name);
@@ -92,11 +91,12 @@ class Register extends React.Component {
           axios
             .post("book/RegandBookslot", formData)
             .then(res => {
-              this.sendEmail(
-                "Find Care Hospital",
-                doctor,
-                bookOptions.date.slice(0, 10),
-                this.state.email
+              localStorage.setItem(
+                "user",
+                JSON.stringify({
+                  name: res.data.data.name,
+                  phone: this.state.phone
+                })
               );
               this.props.history.push("/profile");
             })
@@ -106,8 +106,12 @@ class Register extends React.Component {
         }
       })
       .catch(error => {
-        // User couldn't sign in (bad verification code?)
-        // ...
+        UIkit.notification({
+          message: "Invalid Verification Code!",
+          status: "danger",
+          pos: "bottom-left",
+          timeout: 5000
+        });
       });
   }
   render() {

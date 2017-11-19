@@ -16,11 +16,11 @@ class Login extends React.Component {
     this.handleInputChange = this.handleInputChange.bind(this);
   }
   componentDidMount() {
-    const bookOptions = storage.get("booked");
-    const phone = bookOptions ? bookOptions.phone : "";
+    this.bookOptions = storage.get("booked");
+    const phone = this.bookOptions ? this.bookOptions.phone : "";
     this.setState({
       phone,
-      fromBook: bookOptions ? true : false
+      fromBook: this.bookOptions ? true : false
     });
   }
   handleInputChange(event) {
@@ -34,45 +34,86 @@ class Login extends React.Component {
   }
   loginClick(event) {
     event.preventDefault();
-    if (this.state.fromBook) {
-      const bookOptions = storage.get("booked");
-      if (bookOptions) {
-        const formData = new FormData();
-        formData.append("pcontact", this.state.phone);
-        formData.append("pwd", this.state.password);
-        formData.append("bdate", bookOptions.date);
-        formData.append("doctor", bookOptions.doctor);
-        axios
-          .post("/book/Bookslot", formData)
-          .then(res => {
-            if (res.data.login === 1) {
-              //  Login Success
-              storage.set("user", {
-                phone: this.state.phone,
-                name: res.data.data[0].pname
-              });
-              this.props.history.push("/profile");
-            } else {
-              this.setState({
-                password: ''
-              });
-              UIkit.notification({
-                message: "Something went Wrong!",
-                status: "danger",
-                pos: "bottom-left",
-                timeout: 5000
-              });
-            }
-          })
-          .catch(err => {
+
+    function userFromBooking(self) {
+      const formData = new FormData();
+      formData.append("pcontact", self.state.phone);
+      formData.append("pwd", self.state.password);
+      formData.append("bdate", self.bookOptions.date);
+      formData.append("doctor", self.bookOptions.doctor);
+      axios
+        .post("/book/Bookslot", formData)
+        .then(res => {
+          if (res.data.data.authStatus) {
+            //  Login Success
+            localStorage.setItem(
+              "user",
+              JSON.stringify({
+                phone: self.state.phone,
+                name: res.data.data.pname
+              })
+            );
+            self.props.history.push("/profile");
+          } else {
+            self.setState({
+              password: ""
+            });
             UIkit.notification({
-              message: "Something went Wrong!",
+              message: "Something Wrong!",
               status: "danger",
               pos: "bottom-left",
               timeout: 5000
             });
+          }
+        })
+        .catch(err => {
+          console.error(err);
+          UIkit.notification({
+            message: "Something went Wrong!",
+            status: "danger",
+            pos: "bottom-left",
+            timeout: 5000
           });
-      }
+        });
+    }
+
+    function simpleLogin(self) {
+      const formData = new FormData();
+      formData.append("pcontact", self.state.phone);
+      formData.append("pwd", self.state.password);
+      axios
+        .post("/book/login", formData)
+        .then(res => {
+          if (res.data.loggedIn) {
+            const user = JSON.stringify({
+              phone: self.state.phone,
+              name: res.data.pname
+            });
+            localStorage.setItem("user", user);
+            self.props.history.push("/profile");
+          }
+        })
+        .catch(err => {
+          console.error(err);
+          UIkit.notification({
+            message: "Something went Wrong!",
+            status: "danger",
+            pos: "bottom-left",
+            timeout: 5000
+          });
+        });
+    }
+
+    if (this.state.fromBook) {
+      UIkit.notification({
+        message: "Please Login to continue",
+        status: "primary",
+        pos: "bottom-left",
+        timeout: 5000
+      });
+      userFromBooking(this);
+    } else {
+      simpleLogin(this);
     }
   }
   render() {

@@ -7,7 +7,15 @@ import firebase from "firebase";
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      hasError: false
+    };
     this.initializeFirebase();
+  }
+  componentDidCatch(error, info) {
+    this.setState({
+      hasError: true
+    });
   }
   initializeFirebase() {
     const config = {
@@ -22,6 +30,18 @@ class App extends React.Component {
     firebase.auth().useDeviceLanguage();
   }
   render() {
+    if (this.state.hasError) {
+      return (
+        <div data-uk-alert className="uk-alert-danger">
+          <h3>Something went wrong</h3>
+          <p>
+            We are working to correct the error. Please stay patient and try
+            after some time.
+          </p>
+          <p>Thank You</p>
+        </div>
+      );
+    }
     return (
       <Router>
         <div>
