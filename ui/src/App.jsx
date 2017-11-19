@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Front from "./Front";
+import "./index.css";
 import Profile from "./Profile";
 import firebase from "firebase";
 
