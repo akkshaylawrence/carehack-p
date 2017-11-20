@@ -1,4 +1,4 @@
-importScripts("workbox-sw.prod.v2.1.1.js");
+importScripts('workbox-sw.prod.v2.1.1.js');
 
 /**
  * DO NOT EDIT THE FILE MANIFEST ENTRY
@@ -19,20 +19,20 @@ importScripts("workbox-sw.prod.v2.1.1.js");
  */
 const fileManifest = [
   {
-    url: "9af6116ea4a67d2db437.bundle.js",
-    revision: "bf201f5f2dceb8c537771bb6d8f0bd21"
+    "url": "e752cc813cb520dae562.bundle.js",
+    "revision": "05b7f35c83f3fe21fcbfc40a0a07dd13"
   },
   {
-    url: "http://findcare.000webhostapp.com/",
-    revision: "e5c24b3d614c110344ec38a14e9e45b5"
+    "url": "index.html",
+    "revision": "e4f8aa80ad85cfff3efe964dcfc6951e"
   },
   {
-    url: "styles.css",
-    revision: "18f01a2d8a39d0ed8d5d0fd8ea4306fc"
+    "url": "styles.css",
+    "revision": "7d280c3e9c08f4a96632189944c36f96"
   },
   {
-    url: "vendor.js",
-    revision: "2eb17f8fda0c85d6935faedf85026ff2"
+    "url": "vendor.js",
+    "revision": "fbd502df2e58ad44ca484bb7f911f7a3"
   }
 ];
 

@@ -176,7 +176,7 @@
             },
         });
         pcontact = 123456789;
-        pwd = 1234;
+        pwd = 123;
         console.log('pcontact :'+pcontact);
          var url = "<?= $base_url ?>/book/login";
         $.ajax({
@@ -185,6 +185,34 @@
             data: {
               pcontact: pcontact,
               pwd: pwd
+            },
+            dataType: "json",
+            beforeSend: function(XMLHttpRequest) {
+            
+            },
+            complete: function(XMLHttpRequest, textStatus) {
+            },
+            success: function(response) {
+              console.log(response);
+            },
+            error:function(XMLHttpRequest, textStatus) {
+               console.log("errorevdeyo1");
+            },
+        });
+           pcontact = 123456789;
+        doctor = 'Mazahir';
+        start = '2017-11-16 11:16:13';
+        hospital = 'PrincetonPlainsboroTeachingHospital';
+        email ='mazahirharoon@gmail.com';
+         var url = "https://849h7ad3u1.execute-api.us-west-2.amazonaws.com/beta";
+        $.ajax({
+            url: url,
+            type: "POST",
+            data: {
+              start: start,
+              hospital: hospital,
+              doctor: doctor,
+              email: email
             },
             dataType: "json",
             beforeSend: function(XMLHttpRequest) {

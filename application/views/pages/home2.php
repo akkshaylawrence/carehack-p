@@ -42,18 +42,10 @@
   <!--
       <link rel="canonical" href="http://www.example.com/">
       -->
-<!-- <link href="styles.css" rel="stylesheet"></head>
-
-<body>
-  <div id="root" />
-<script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="e752cc813cb520dae562.bundle.js"></script></body>
-
-</html> -->
-
 <link href="<?= $js ?>/styles.css" rel="stylesheet"></head>
 
 <body>
   <div id="root" />
-<script type="text/javascript" src="<?= $js ?>/vendor.js"></script><script type="text/javascript" src="<?= $js ?>/e752cc813cb520dae562.bundle.js"></script></body>
+<script type="text/javascript" src="<?= $js ?>/vendor.js"></script><script type="text/javascript" src="<?= $js ?>/9af6116ea4a67d2db437.bundle.js"></script></body>
 
 </html>
