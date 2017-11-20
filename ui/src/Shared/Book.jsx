@@ -125,7 +125,7 @@ class Book extends React.Component {
     if (user) {
       const formData = new FormData();
       formData.append("pcontact", user.phone);
-      formData.append("bdate", this.state.date);
+      formData.append("bdate", new Date(this.state.date).toISOString());
       formData.append("doctor", this.state.selDoctor);
       axios
         .post("/book/booking", formData)
