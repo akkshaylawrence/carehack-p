@@ -233,6 +233,7 @@ class Book extends React.Component {
                 options={{
                   enableTime: false,
                   minDate: "today",
+                  dateFormat: "Y-m-d",
                   maxDate: new Date().fp_incr(30),
                   disable: this.state.busyDates
                 }}
