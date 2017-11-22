@@ -6,34 +6,14 @@ class Book extends CI_Controller {
 
     function __construct () {
             parent::__construct ();
-            $this->load->model('data');        
+            $this->load->model('data');
     }
-    /**
-     * Index Page for this controller.
-     *
-     * Maps to the following URL
-     *      http://example.com/index.php/welcome
-     *  - or -
-     *      http://example.com/index.php/welcome/index
-     *  - or -
-     * Since this controller is set as the default controller in
-     * config/routes.php, it's displayed at http://example.com/
-     *
-     * So any other public methods not prefixed with an underscore will
-     * map to /index.php/welcome/<method_name>
-     * @see https://codeigniter.com/user_guide/general/urls.html
-     */
-
-    // public function index() {
-    //     $data = $this->init->initPath ('/article');
-    //     $this->load->view('pages/test',$data);
-    // }
     public function login() {
         $data = $this->init->initPath ('/book');
         $pcontact = $this->input->post('pcontact');
         $pwd = $this->input->post('pwd');
         $userData = $this->data->checklogin ($pcontact, $pwd);
-        
+
         if ($userData['authStatus'] == FALSE) {
                 $newdata = array(
                 'loggedIn' => FALSE
@@ -75,7 +55,7 @@ class Book extends CI_Controller {
 
         $doctors = $this->data->fetchDoctorBySpec($spec);
 
-        
+
         if ($doctors){
             $response['status'] = TRUE;
             $response['msg'] =  "Data Fetched";
@@ -90,13 +70,13 @@ class Book extends CI_Controller {
         // $response['sata'] = "blaaaa";
         // echo json_encode ($response);
         // return 1;
-    } 
+    }
      public function getspec() {
         $data = $this->init->initPath ('/book');
 
         $doctors = $this->data->fetchSpec();
 
-        
+
         if ($doctors){
             $response['status'] = TRUE;
             $response['msg'] =  "Data Fetched";
@@ -111,7 +91,7 @@ class Book extends CI_Controller {
         // $response['sata'] = "blaaaa";
         // echo json_encode ($response);
         // return 1;
-    } 
+    }
 
     public function checkforslot() {
         $data = $this->init->initPath ('/book');
@@ -170,7 +150,7 @@ class Book extends CI_Controller {
         }
             // echo json_encode ($response);
             // return $addArticle;
-    } 
+    }
 
          public function Booking() {
 
@@ -212,7 +192,7 @@ class Book extends CI_Controller {
         }
             // echo json_encode ($response);
             // return $addArticle;
-    } 
+    }
 
          public function RegandBookSlot() {
 
@@ -329,9 +309,9 @@ class Book extends CI_Controller {
     public function CheckUser() {
         $data = $this->init->initPath ('/book');
         $pcontact = $this->input->post('pcontact');
-        
+
         $present = $this->data->datacheckuser($pcontact);
-    
+
         if ($present==0){
             $response['data'] = "0";
             echo json_encode ($response);
@@ -339,10 +319,10 @@ class Book extends CI_Controller {
         }else if($present==1){
                 $response['data'] = "1";
                 echo json_encode ($response);
-                return 1;   
+                return 1;
         }
             // echo json_encode ($response);
-        
+
         // $response['sata'] = "blaaaa";
         // echo json_encode ($response);
         // return 1;
@@ -376,10 +356,10 @@ class Book extends CI_Controller {
         $data = $this->init->initPath ('/book');
         $pcontact = $this->input->post('pcontact');
         $doctor = $this->input->post('doctor');
-       
+
         $doctors = $this->data->fetchpastAp($pcontact, $doctor);
 
-            
+
             if ($doctors){
                 $response['status'] = TRUE;
                 $response['msg'] =  "Data Fetched";
@@ -399,7 +379,7 @@ class Book extends CI_Controller {
         // $response['sata'] = "blaaaa";
         // echo json_encode ($response);
         // return 1;
-    } 
+    }
 
           // Check for user login process
     public function userLoginProcess() {

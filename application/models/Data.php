@@ -5,15 +5,12 @@ class Data extends CI_Model {
     function __construct () {
         parent::__construct ();
     }
-    //Booking Page--------------------------------------
-
-    //Initial Call--------------------------------------
-
+    
     function fetchSpec () {
     $doctorListArray = array();
     $this->db->select('dspec');
     $this->db->from ('doctor');
-    $this->db->distinct();  
+    $this->db->distinct();
     $query    = $this->db->get ();
     if ($query->num_rows() < 0){
         foreach ($query->result () as $art){
@@ -62,7 +59,7 @@ class Data extends CI_Model {
       //log_message('info',print_r($doctorListArray,TRUE));
       return $doctorListArray;
     }
-      } 
+      }
 
     function fetchDoctorBySpec ($spec) {
     $categoryList = array();
@@ -89,7 +86,7 @@ class Data extends CI_Model {
       return $categoryListArray;
       }else{
       foreach ($query->result () as $art){
-          
+
        $categoryList['did'] = $art->did;
         $categoryList['dname'] = $art->dname;
          $categoryList['dspec'] = $art->dspec;
@@ -125,7 +122,7 @@ class Data extends CI_Model {
       return $categoryListArray;
       }else{
       foreach ($query->result () as $art){
-          
+
        $categoryList['did'] = $art->did;
         $categoryList['dname'] = $art->dname;
          $categoryList['dspec'] = $art->dspec;
@@ -176,7 +173,7 @@ function fetchSlot ($bdate,$doctor) {
       //   );
       // $this->db->where('catid', $cid);
       // $this->db->where('ctype', 'news');
-      // $this->db->update('tdb_category', $data); 
+      // $this->db->update('tdb_category', $data);
     }
     function dataBookSlot ($article) {
       $data = array(
@@ -192,7 +189,7 @@ function fetchSlot ($bdate,$doctor) {
       //   );
       // $this->db->where('catid', $cid);
       // $this->db->where('ctype', 'news');
-      // $this->db->update('tdb_category', $data); 
+      // $this->db->update('tdb_category', $data);
     }
   function datacheckuser ($pcontact) {
     $categoryList = array();
@@ -235,12 +232,12 @@ function fetchSlot ($bdate,$doctor) {
             $flag=1;
             array_push ($dateListArray, $checkdate);
           }else{
-             
+
           }
       }
     }
       if($flag==0){
-       
+
         return 0;
       }else{
       return $dateListArray;
@@ -276,18 +273,18 @@ function fetchSlot ($bdate,$doctor) {
       return $categoryListArray;
       }else{
       foreach ($query->result () as $art){
-          
+
        $categoryList['adid'] = $art->adid;
        $categoryList['apcontact'] = $art->apcontact;
        $categoryList['aslot'] = $art->aslot;
        $categoryList['adate'] = $art->adate;
        $categoryList['doctor'] = $art->dname;
        $categoryList['hospital'] = $art->dhospital;
-               
+
 
        array_push ($categoryListArray, $categoryList);
         }
-    
+
        // log_message('info','articleDataList '.$this->db->last_query());
      //log_message('info',print_r($cat,TRUE));
       return $categoryListArray;
@@ -295,11 +292,11 @@ function fetchSlot ($bdate,$doctor) {
     }
     }
   //    function unamed ($spec) {
-      
+
   //   $doctorListArray = array();
   //   $this->db->select('dspec');
   //   $this->db->from ('doctor');
-  //   $this->db->distinct();  
+  //   $this->db->distinct();
   //   $query    = $this->db->get ();
   //   if ($query->num_rows() < 0){
   //       foreach ($query->result () as $art){
@@ -313,7 +310,7 @@ function fetchSlot ($bdate,$doctor) {
   //   }
   //   $lenof = sizeof($doctorListArray)
   //   $lenof = $lenof - 1;
-  //   for ($i=0; $i < $lenof ; $i++) { 
+  //   for ($i=0; $i < $lenof ; $i++) {
 
   //   $categoryList = array();
   //   $categoryListArray = array();
@@ -332,7 +329,7 @@ function fetchSlot ($bdate,$doctor) {
   //     return $categoryListArray;
   //     }else{
   //     foreach ($query->result () as $art){
-          
+
   //     $categoryList['did'] = $art->did;
   //     $categoryList['dname'] = $art->dname;
 

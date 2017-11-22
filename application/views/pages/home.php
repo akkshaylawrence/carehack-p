@@ -39,11 +39,8 @@
   <meta name="theme-color" content="#040935">
 
   <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-  <!--
-      <link rel="canonical" href="http://www.example.com/">
-      -->
+  <!--<link rel="canonical" href="http://www.example.com/">-->
 <!-- <link href="styles.css" rel="stylesheet"></head>
-
 <body>
   <div id="root" />
 <script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="e752cc813cb520dae562.bundle.js"></script></body>
