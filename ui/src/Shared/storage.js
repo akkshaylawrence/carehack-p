@@ -28,7 +28,6 @@ class storage {
 
   /**
    * Clear all items from storage
-   * @param {object} item - item to be deleted
    */
   static clear() {
     sessionStorage.clear();
